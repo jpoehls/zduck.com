@@ -1,9 +1,0 @@
----
-
-title: This is the title
-layout: default
-categories: first-category second
-
----
-
-This is the first post woohoo
