@@ -111,6 +111,8 @@ It also has some other tools for working with junctions that I won't cover here.
 
 Read more about hardlinks and junctions [on MSDN][4].
 
+_I also cross-posted this to [my company blog](https://www.interworks.com/blogs/jpoehls/2012/06/07/soft-links-hard-links-junctions-oh-my-symlinks-windows-how "Read this post on the InterWorks blog.")._
+
   [1]: http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx
   [2]: http://technet.microsoft.com/en-us/library/cc753059(v=WS.10).aspx
   [3]: http://technet.microsoft.com/en-us/sysinternals/bb896768.aspx
