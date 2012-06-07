@@ -71,7 +71,7 @@ What they look like.
                    3 File(s)             30 bytes
                    5 Dir(s)  145,497,268,224 bytes free
 
-![Screenshot of folder in Windows Explorer](https://github.com/jpoehls/jpoehls.github.com/raw/master/_posts/2012/2012-06-07-1.png "Screenshot of folder in Windows Explorer")
+![Screenshot of folder in Windows Explorer](https://github.com/jpoehls/jpoehls.github.com/raw/master/images/2012-06-07-1.png "Screenshot of folder in Windows Explorer")
 
 **Note for PowerShell users:**  
 MKLINK isn't an executable that you can just call from PowerShell. You have to call it through the command prompt.
