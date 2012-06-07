@@ -77,6 +77,10 @@ What they look like.
 MKLINK isn't an executable that you can just call from PowerShell. You have to call it through the command prompt.
 
     cmd /c mklink /D symlink_dir real_dir
+
+Alternatively, you can use [this module](https://gist.github.com/2891103) I wrote that has native PowerShell wrappers for MKLINK.
+
+<script src="https://gist.github.com/2891103.js?file=mklink.psm1"></script>
     
 [Read about MSLINK on MSDN.][1]
 
