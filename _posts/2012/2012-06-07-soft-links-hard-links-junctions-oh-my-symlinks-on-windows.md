@@ -1,6 +1,6 @@
 ---
 
-title: "Soft links, hard links, junctions, oh my! Or, symlinks on Windows, a how-to."
+title: "Soft links, hard links, junctions, oh my! Symlinks on Windows, a how-to."
 layout: default
 categories: windows
 
@@ -8,29 +8,29 @@ categories: windows
 
 First, a quick definition of terms. There are three kinds of "[symlinks](https://en.wikipedia.org/wiki/Symbolic_link)" on Windows.
 
-  * soft links (also called symlinks, or symbolic links)
-  * hard links
-  * junctions (a type of soft link only for directories)
+* soft links (also called symlinks, or symbolic links)
+* hard links
+* junctions (a type of soft link only for directories)
 
 Soft links can be created for files or directories.
 
 Hard links can only be created for files.
 
-Neither soft links or hard links can be created for files or directories that are located on a different volume. i.e. You can't link a file or directory on `C:\` to a location on `D:\`. 
+Both soft and hard links must be created on the same volume as the target. i.e. You can't link something on `C:\` to something on `D:\`.
 
-The real difference comes in when you want to delete the file.
+### Deleting Links
 
-Deleting the original target file (or directory) will cause soft links to stop working. What it points to is gone. Hard links however will keep right on working until you delete the hard link itself. The hard link acts just like the original file, because for all intents and purposes, it is the original file.
+This is where the difference between soft and hard links is most evident.
+
+Deleting the target will cause soft links to stop working. What it points to is gone. Hard links however will keep right on working until you delete the hard link itself. The hard link acts just like the original file, because for all intents and purposes, it is the original file.
+
+### Junctions
 
 Windows also has another type of link just for directories, called Junctions.
 
-Junctions look and act like soft links but are implemented a little differently. The key difference is that they allow you to link directories that are located on different local volumes on the same computer. You can't create a junction to a network location.
+Junctions look and act like soft links. The key difference is that they allow you to link directories that are located on different local volumes (but still on the same computer). You can't create a junction to a network location.
 
-How do you create these links? Glad you asked. I'll run through creating the various links and you can see what they look like.
-
-### Using MKLINK
-
-MSDN: http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx
+## Using MKLINK
 
 Create a soft link to a directory.
 
@@ -71,16 +71,16 @@ What they look like.
                    3 File(s)             30 bytes
                    5 Dir(s)  145,497,268,224 bytes free
 
-![Screenshot of folder in Windows Explorer](/2012/2012-06-07-1.png "Screenshot of folder in Windows Explorer")
+![Screenshot of folder in Windows Explorer](https://github.com/jpoehls/jpoehls.github.com/raw/master/_posts/2012/2012-06-07-1.png "Screenshot of folder in Windows Explorer")
 
 **Note for PowerShell users:**  
 MKLINK isn't an executable that you can just call from PowerShell. You have to call it through the command prompt.
 
     cmd /c mklink /D symlink_dir real_dir
+    
+[Read about MSLINK on MSDN.](http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx)
 
-### Using FSUTIL
-
-MSDN: http://technet.microsoft.com/en-us/library/cc753059(v=WS.10).aspx
+## Using FSUTIL
 
 FSUTIL is another way to create hard links (but not soft links). This is the same as `mklink /H`.
 
@@ -90,9 +90,9 @@ FSUTIL is another way to create hard links (but not soft links). This is the sam
     c:\symlink_test> fsutil hardlink create hardlink_file.txt real_file.txt
     Hardlink created for c:\symlink_test\hardlink_file.txt <<===>> c:\symlink_test\real_file.txt
 
-### Using Junction
+[Read about FSUTIL on MSDN.](http://technet.microsoft.com/en-us/library/cc753059(v=WS.10).aspx)
 
-Download: http://technet.microsoft.com/en-us/sysinternals/bb896768.aspx
+## Using Junction
 
 Junction is a tool provided by Sysinternals and provides another way to create junctions. Same as `mklink /J`.
 It also has some other tools for working with junctions that I won't cover here.
@@ -104,6 +104,8 @@ It also has some other tools for working with junctions that I won't cover here.
 
     Created: c:\symlink_test\junction_dir
     Targetted at: c:\symlink_test\real_dir
+    
+[Download the Junction tool from Sysinternals.](http://technet.microsoft.com/en-us/sysinternals/bb896768.aspx)
 
 --------------------
 
