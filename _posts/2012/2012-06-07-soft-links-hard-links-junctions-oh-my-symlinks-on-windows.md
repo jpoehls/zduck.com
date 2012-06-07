@@ -78,7 +78,7 @@ MKLINK isn't an executable that you can just call from PowerShell. You have to c
 
     cmd /c mklink /D symlink_dir real_dir
     
-[Read about MSLINK on MSDN.](http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx)
+[Read about MSLINK on MSDN.][1]
 
 ## Using FSUTIL
 
@@ -90,7 +90,7 @@ FSUTIL is another way to create hard links (but not soft links). This is the sam
     c:\symlink_test> fsutil hardlink create hardlink_file.txt real_file.txt
     Hardlink created for c:\symlink_test\hardlink_file.txt <<===>> c:\symlink_test\real_file.txt
 
-[Read about FSUTIL on MSDN.](http://technet.microsoft.com/en-us/library/cc753059(v=WS.10).aspx)
+[Read about FSUTIL on MSDN.][2]
 
 ## Using Junction
 
@@ -105,8 +105,13 @@ It also has some other tools for working with junctions that I won't cover here.
     Created: c:\symlink_test\junction_dir
     Targetted at: c:\symlink_test\real_dir
     
-[Download the Junction tool from Sysinternals.](http://technet.microsoft.com/en-us/sysinternals/bb896768.aspx)
+[Download the Junction tool from Sysinternals.][3]
 
 --------------------
 
-Read more about hardlinks and junctions [on MSDN](http://msdn.microsoft.com/en-us/library/aa365006%28VS.85%29.aspx).
+Read more about hardlinks and junctions [on MSDN][4].
+
+  [1]: http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx
+  [2]: http://technet.microsoft.com/en-us/library/cc753059(v=WS.10).aspx
+  [3]: http://technet.microsoft.com/en-us/sysinternals/bb896768.aspx
+  [4]: http://msdn.microsoft.com/en-us/library/aa365006%28VS.85%29.aspx
