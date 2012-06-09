@@ -19,3 +19,5 @@ For code blocks.
 <pre data-language="generic">
 For colored code blocks.
 </pre>
+
+Use {{site.domain}} in image urls or they won't show in feedburner.
