@@ -7,7 +7,7 @@ categories: raspberry-pi
 
 Storing your Raspberry Pi's configuration files in Git is a great way to protect yourself from really bad accidents. You get a backup of all your configs and revision control to rollback those nasty changes. Best of all, you don't have to manually create backup copies of each individual file. (`cp rc.conf rc.conf.bak` anyone?)
 
-I should note that I'm running Arch Linux ARM, but this should apply fairly equally to Debian and other distros.
+I should note that I'm running [Arch Linux ARM](http://archlinuxarm.org), but this should apply fairly equally to Debian and other distros.
 
 First, install [Git](http://git-scm.com) (if you haven't already).
 
