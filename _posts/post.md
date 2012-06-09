@@ -20,4 +20,4 @@ For code blocks.
 For colored code blocks.
 </pre>
 
-Use {{site.domain}} in image urls or they won't show in feedburner.
+Use {{site.url}} in image URLs or they won't show in feedburner.

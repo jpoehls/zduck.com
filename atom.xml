@@ -2,13 +2,13 @@
 layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{site.domain}}">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{site.url}}">
  
  <title>Joshua Poehls</title>
- <link href="{{site.domain}}/atom.xml" rel="self"/>
- <link href="{{site.domain}}"/>
+ <link href="{{site.url}}/atom.xml" rel="self"/>
+ <link href="{{site.url}}"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{site.domain}}</id>
+ <id>{{site.url}}</id>
  <author>
    <name>Joshua Poehls</name>
    <email>joshua@zduck.com</email>
@@ -17,7 +17,7 @@ layout: nil
  {% for post in site.posts limit:10 %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
-   <link href="{{site.domain}}{{ post.url }}"/>
+   <link href="{{site.url}}{{ post.url }}"/>
    <author>
      <name>Joshua Poehls</name>
    </author>
@@ -25,7 +25,7 @@ layout: nil
      <category term="{{ category }}" />
    {% endfor %}
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{site.domain}}{{ post.id }}</id>
+   <id>{{site.url}}{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
     <rights type="html">
       &amp;copy; {{post.date | date: "%Y"}} Joshua Poehls
