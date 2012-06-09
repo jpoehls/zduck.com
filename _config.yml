@@ -1,2 +1,5 @@
 # Jekyll
 permalink: /:year/:title/
+
+# post.url will be added to the end to get a shareable permalink
+domain: http://zduck.com
