@@ -2,7 +2,7 @@
 layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{site.domain}}">
+<feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Joshua Poehls</title>
  <link href="http://zduck.com/atom.xml" rel="self"/>
@@ -15,7 +15,7 @@ layout: nil
  </author>
 
  {% for post in site.posts limit:10 %}
- <entry>
+ <entry xml:base="{{site.domain}}">
    <title>{{ post.title | xml_escape }}</title>
    <link href="http://zduck.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
