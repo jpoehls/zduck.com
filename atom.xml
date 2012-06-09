@@ -18,9 +18,18 @@ layout: nil
  <entry>
    <title>{{ post.title | xml_escape }}</title>
    <link href="{{site.domain}}{{ post.url }}"/>
+   <author>
+     <name>Joshua Poehls</name>
+   </author>
+   {% for category in post.categories %}
+     <category term="{{ category }}" />
+   {% endfor %}
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{site.domain}}{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
+    <rights type="html">
+      &amp;copy; {{post.date | date: "%Y"}} Joshua Poehls
+    </rights>
  </entry>
  {% endfor %}
  
