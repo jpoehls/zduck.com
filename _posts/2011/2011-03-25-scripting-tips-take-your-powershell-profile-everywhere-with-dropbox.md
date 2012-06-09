@@ -44,7 +44,7 @@ Among other things, Dropbox makes keeping your files in sync across computers de
     <pre>
 	PS&gt; ". $dropbox\scripts\profile.ps1" &gt; $PROFILE</pre>
 
-**Pro Tip!** As an alternative to dot sourcing your profile from Dropbox, you could instead [create a symlink](/2012/soft-links-hard-links-junctions-oh-my-symlinks-on-windows/) to it.
+**Pro Tip!** As an alternative to dot sourcing your profile from Dropbox, you could instead [create a symlink]({{site.domain}}/2012/soft-links-hard-links-junctions-oh-my-symlinks-on-windows/) to it.
     
 <pre>
 PS&gt; /cmd /c mklink `"$PROFILE`" `"$dropbox\scripts\profile.ps1`"
