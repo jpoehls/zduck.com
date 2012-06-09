@@ -1,5 +1,5 @@
 ---
-title: PowerShell Search & Destroy
+title: Recursively deleting files with PowerShell
 layout: post
 categories: powershell
 ---

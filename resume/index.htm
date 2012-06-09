@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Joshua Poehls' Resume</title>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            margin: .25in;
+        }
+        
+        html {
+            background-color: #333;
+        }
+        
+        body {
+            font-family: Calibri, Helvetica, Arial, Sans-Serif;
+            width: 7.7in;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #999;
+            background-color: #fff;
+            padding: 1em;
+            padding-top: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            font-variant: small-caps;
+            font-size: 3.25em;
+            margin-bottom: 0;
+            margin-top: 0em;
+            letter-spacing: .08em;
+        }
+        
+        #contact {
+            text-align: center;
+            letter-spacing: .1em;
+            font-style: italic;
+        }
+        #contact span.email {
+            font-variant: small-caps;
+            font-size: 1.25em;
+        }
+        #contact span.space {
+            padding-right: 2em;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            margin-top: 2em;
+        }
+        
+        blockquote {
+            font-variant: small-caps;
+            font-size: 1.5em;
+            width: 18em;
+            margin-left: 2em;
+            height: 125px;
+        }
+        blockquote div {
+            padding-top: 1em;
+        }
+        
+        p {
+            letter-spacing: .05em;
+            text-align: justify;
+        }
+        
+        h3 {
+            font-size: 1.25em;
+            margin-bottom: .2em;
+            text-align: center;
+        }
+        h3 .date {
+            font-weight: normal;
+            padding-left: 1em;
+        }
+        
+        h4 {
+            font-size: 1.1em;
+            margin-bottom: 0;
+            letter-spacing: .1em;
+        }
+        
+        .project {
+            margin-left: 2em;
+            page-break-inside: avoid;
+        }
+        
+        .oneliner {
+            font-style: italic;
+            font-weight: normal;
+            letter-spacing: normal;
+            font-size: .9em;
+            padding-left: 1em;
+        }
+        
+        ul.tags, ul.cloud {
+            list-style-type: none;
+            margin-top: 0;
+            clear: left;
+        }
+        
+        ul.tags li {
+            display: inline;
+            border: 1px outset #999;
+            border-radius: 5px;
+            padding: 0 .5em 0 .5em;
+            margin: 0 .5em 0 .5m;
+            text-transform: uppercase;
+            font-size: .8em;
+            letter-spacing: .1em;
+        }
+        
+        .job {
+            width: 100%;
+            clear: both;
+            border-top: 1px solid #cecece;
+            min-height: 205px;
+        }
+        
+        .job h3 {
+            text-align: left;
+        }
+        
+        .job img {
+            float: right;
+        }
+        
+        #exp-summary {
+            float: right;
+            margin-top: 2em;
+            list-style-type: none;
+            line-height: 1.7em;
+            border: 1px solid #cecece;
+            padding-right: 1em;
+            padding-left: 1em;
+            margin-left: 1em;
+        }
+        #exp-summary li {
+            border-bottom: 1px dashed #999;
+        }
+        #exp-summary li.last {
+            border-bottom: 0;
+        }
+        #exp-summary .lbl {
+            display: block;
+            float: left;
+            width: 7em;
+        }
+        #exp-summary .rate {
+        }
+        
+        
+        /* ext[endend] information that is too bulky
+           for the consise resume but necessary
+           for my memory and maybe interviews. */
+        .ext {
+            display: none;
+        }
+        /* alt[ernate] information that is redundant with
+           other information shown but may be useful
+           at some point later. */
+        .alt {
+            display: none;
+        }
+    </style>
+    <style media="print">
+        body {
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Joshua Poehls</h1>
+    <div id="contact">
+        <span>(918) 766-6871</span><span class="space"> </span><span class="email">joshua@zduck.com</span>
+    </div>
+    <ul id="exp-summary">
+        <li><span class="lbl">ASP.NET</span> <span class="rate">&#10010; &#10010; &#10010; &#10010;
+            &#10010;</span></li>
+        <li><span class="lbl">C#</span> <span class="rate">&#10010; &#10010; &#10010; &#10010;
+            &#10010;</span></li>
+        <li><span class="lbl">Classic ASP</span> <span class="rate">&#10010; &#10010; &#10010;</span></li>
+        <li><span class="lbl">Git</span> <span class="rate">&#10010; &#10010;</span></li>
+        <li><span class="lbl">HTML & CSS</span> <span class="rate">&#10010; &#10010; &#10010;
+            &#10010; &#10010;</span></li>
+        <li><span class="lbl">Javascript</span> <span class="rate">&#10010; &#10010; &#10010;</span></li>
+        <li><span class="lbl">NHibernate</span> <span class="rate">&#10010; &#10010; &#10010;</span></li>
+        <li><span class="lbl">Silverlight</span> <span class="rate">&#10010; &#10010;</span></li>
+        <li><span class="lbl">SQL Server</span> <span class="rate">&#10010; &#10010; &#10010;
+            &#10010; &#10010;</span></li>
+        <li><span class="lbl">Subversion</span> <span class="rate">&#10010; &#10010; &#10010;</span></li>
+        <li><span class="lbl">
+            <abbr title="Microsoft Team Foundation Server">
+                TFS</abbr></span> <span class="rate">&#10010; &#10010; &#10010;</span></li>
+        <li><span class="lbl">VB.NET</span> <span class="rate">&#10010; &#10010; &#10010;</span></li>
+        <li><span class="lbl">
+            <abbr title="Windows Communication Foundation">
+                WCF</abbr></span> <span class="rate">&#10010; &#10010;</span></li>
+        <li><span class="lbl">Web Services</span> <span class="rate">&#10010; &#10010;</span></li>
+        <li><span class="lbl">WinForms</span> <span class="rate">&#10010; &#10010; &#10010;</span></li>
+        <li class="last"><span class="lbl">WPF</span> <span class="rate">&#10010; &#10010;</span></li>
+    </ul>
+    <h2>
+        I'm looking for a great team!</h2>
+    <blockquote>
+        <img src="../resume/Joshua.jpg" alt="Headshot" style="float: left; margin-right: .8em;" />
+        <div>
+            "Being a developer isn't my <i>job</i> or my <i>career</i> &mdash; it's just me."</div>
+    </blockquote>
+    <!--<p>
+        My experience has been across the board.</p>
+    <ul class="cloud">
+        <li>Web</li>
+        <li>Desktop</li>
+        <li>Services</li>
+        <li>SOA</li>
+        <li>Client/Server</li>
+    </ul>-->
+    <p>
+        I'm looking for an opportunity to continue developing my skills by joining a highly
+        interactive team that I can <b>contribute</b> to <b>and learn</b> from.</p>
+    <p>
+        I enjoy solving challenges with elegant and <b>maintainable</b> solutions. I am
+        a big fan of opinionated software, clean code and YAGNI.</p>
+    <p>
+        I have always been instrumental in both envisioning and guiding the direction of
+        products I've worked on. I look forward to continuing this trend.
+    </p>
+    <p>
+        I often spend much of my own time improving my skill sets by working on hobby projects,
+        exploring open-source projects, other areas such as dynamic languages (Ruby) and
+        pretty much <i>any</i> knowledge or tool that I can add to my arsenal.</p>
+    <p>
+        So that's me in a nutshell.</p>
+    <p>
+        If you feel we'd make a good team then I'd love to hear from you.<br />I currently live in Bartlesville, Oklahoma but I am open to relocating.</p>
+    <p>
+        <b><i>I have recommendations available upon request.</i></b></p>
+    <div class="job">
+        <!-- 30% ASP.NET/C#, 35% WinForms, 10% WCF & Ria Services, 15% SQL Server, 10% Silverlight, 5% WPF -->
+        <!-- http://chart.apis.google.com/chart?chs=300x205&amp;cht=p&amp;chd=s:SVGJGD&amp;chl=ASP.NET%2FC%23|WinForms|WCF+%26+RIA+Services|SQL+Server|Silverlight|WPF&amp;chma=110,75&amp;chco=2F4087 -->
+        <img src="../resume/sgs-chart.png" width="300" height="205" alt="SGS Experience Chart" />
+        <h3>
+            SGS, Inc. <span class="date">2006 &mdash; Present</span></h3>
+        <ul class="tags">
+            <li>small team</li>
+            <li>line-of-business</li>
+        </ul>
+        <p>
+            SGS is a field inspection and asset integrity management business. I work on a small,
+            3 person team that creates and maintains applications to support the day-to-day
+            operations of our offices (~300 people). We also develop several specialized applications
+            to fulfil client requests.
+        </p>
+        <p class="ext">
+            I work as part of a small (~3 person) team that supports the day-to-day operations
+            of a field inspection and asset integrity management business. On any given day
+            I work on any of our various data entry programs, automated document and CAD drawing
+            processing utilities, web applications and serving as technical support for our
+            internal users.
+        </p>
+        <p class="ext">
+            In addition to development work I also acted as the Team Foundation Server source
+            control administrator for our group and implemented a build and deployment process
+            for our applications.
+        </p>
+        <div class="project">
+            <h4>
+                Pipewrx Mobile <span class="oneliner">A field inspection application for tablet computers.
+                </span>
+            </h4>
+            <ul class="tags inline">
+                <li>C#</li>
+                <li>WinForms</li>
+                <li>WCF</li>
+                <li>WPF</li>
+                <li>SQL Server CE</li>
+            </ul>
+            <p class="ext">
+                I am the primary developer of SGS' industry leading application for gather inspection
+                data in the field via tablet computers. Pipewrx Mobile is in active use by over
+                30 of our field inspectors and the number keeps growing as more clients see this
+                technology as the future of inspections.</p>
+            <p class="ext">
+                Pipewrx Mobile has given SGS a leading edge in the industry and is actively opening
+                up new opportunities for the company across the world. I'm proud to have been the
+                pioneering developer to bring this project from concept to production.</p>
+            <p class="ext">
+                The tablet application is written in WinForms/C# with ASP.NET Web Services in the
+                back-end and is supported by several utility data processing apps.</p>
+        </div>
+        <div class="project">
+            <h4>
+                Junction <span class="oneliner">A field inspection processing application. </span>
+            </h4>
+            <ul class="tags">
+                <li>C#</li>
+                <li>WCF RIA Services</li>
+                <li>Silverlight</li>
+                <li>SQL Server</li>
+            </ul>
+            <p class="ext">
+                Junction is the office side of Pipewrx Mobile that provides a fast and efficient
+                interface for data entry personel to process the field inspection reports from Pipewrx
+                Mobile.</p>
+        </div>
+        <div class="project">
+            <h4>
+                MIMS <span class="oneliner">A web reporting and data management front-end. </span>
+            </h4>
+            <ul class="tags">
+                <li>C#</li>
+                <li>ASP.NET</li>
+                <li>MSMQ</li>
+                <li>Silverlight</li>
+                <li>SQL Server</li>
+            </ul>
+            <p class="ext">
+                MIMS is the client facing web application that provides access to the processed
+                inspection reports, related reports and metrics, as well as a host of other data
+                entry and management utilities.</p>
+            <p class="alt ext">
+                I played a leading role in the development of their mechanical inspection suite
+                of web applications. This suite provides clients with the ability to view and analyze
+                their data, spot problem areas with scorecards, and plan for future work with scheduling
+                reports. I led several innovations in this system, including work on a virtual equipment
+                tree that groups and organizes the digital documentation for equipment from several
+                separate systems into a single, user friendly UI.
+            </p>
+            <p class="ext">
+                This web application is written in ASP.NET/C# and leverages Silverlight for several
+                of its features.</p>
+        </div>
+    </div>
+    <div class="job">
+        <!-- 25% ASP.NET/C#, 25% WinForms, 25% WCF, 15% SQL Server, 10% WPF -->
+        <!-- http://chart.apis.google.com/chart?chs=300x205&amp;cht=p&amp;chd=s:PPPJG&amp;chl=ASP.NET%2FC%23|WinForms|WCF|SQL+Server|WPF&amp;chma=80,80&amp;chco=2F4087 -->
+        <img src="../resume/contract-chart.png" width="300" height="205" alt="Contract Experience Chart" />
+        <h3>
+            Contract Jobs <span class="date">2009 &mdash; 2010</span></h3>
+        <ul class="tags">
+            <li>telecommute</li>
+            <li>solo developer</li>
+        </ul>
+        <p class="ext">
+            I started the project by doing the initial prototyping and have since continued
+            the development towards a version 1.0 product that is actively (and successfully)
+            being marketed to companies.</p>
+        <p class="ext">
+            The application itself is a SOA application with a WinForms/WPF (mixed) client front-end
+            that communicates to WCF services for the data processing and storage.</p>
+        <div class="project">
+            <h4>
+                SolidAIM <span class="oneliner">An inspection data management application.</span></h4>
+            <ul class="tags">
+                <li>ASP.NET/C#</li>
+                <li>WCF</li>
+                <li>WinForms</li>
+                <li>WPF</li>
+                <li>SQL&nbsp;Server</li>
+            </ul>
+            <p>
+                I was contracted by an inspection company to develop an inspection data management
+                application from the ground up.
+            </p>
+        </div>
+    </div>
+    <div class="job">
+        <!-- 60% ASP.NET/C#, 20% SQL Server, 10% Web Services, 10% Classic ASP -->
+        <!-- http://chart.apis.google.com/chart?chs=300x205&amp;cht=p&amp;chd=s:lMGG&amp;chl=ASP.NET%2FC%23|SQL+Server|Web+Services|Classic+ASP&amp;chma=80,80&amp;chco=2F4087 -->
+        <img src="../resume/digicomb-chart.png" width="300" height="205" alt="Digicomb Experience Chart" />
+        <h3>
+            Digital Honeycomb, Inc. <span class="date">2003 &mdash; 2009</span></h3>
+        <ul class="tags">
+            <li>telecommute</li>
+            <li>small team</li>
+        </ul>
+        <p>
+            Digital Honeycomb (Digicomb) is a technology consultant and development firm. I
+            worked on various Classic ASP and ASP.NET web applications, as well as maintaining
+            Windows 2003/IIS6 development servers and Subversion repositories.
+        </p>
+        <div class="project">
+            <h4>
+                FONengine <span class="oneliner">A custom branded e-commerce portal for cell phones
+                    &amp; service.</span></h4>
+            <ul class="tags">
+                <li>ASP.NET/C#</li>
+                <li>Web Services</li>
+                <li>SQL Server</li>
+            </ul>
+            <p class="ext">
+                I lead development of an e-commerce portal for companies who offer discounts on
+                cellular phones and plans to their employees and partners. I was responsible for
+                application design decisions, development, and keeping current services stable while
+                rapidly adding new features. I also worked with business partners to ensure our
+                service was staying ahead of our competitors and to plan new features. This was
+                all in ASP.NET/C# with SQL Server 2005; I worked on this project from its inception
+                through 3 major releases with continuous development in between.</p>
+        </div>
+        <div class="project">
+            <h4>
+                Various Sub-Contracts</h4>
+            <ul class="tags">
+                <li>ASP.NET/C#</li>
+                <li>Classic ASP</li>
+                <li>SQL Server</li>
+            </ul>
+            <p class="ext">
+                Worked on a variety of CRM (Customer Relations Management) applications and other
+                sales-centric projects for a various Digicomb clients.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
