@@ -48,7 +48,7 @@ Here is what mine looks like right now.
 !nginx/conf/nginx.conf
 </pre>
 
-The **!** prefix negates the pattern, basically creating a whitelist. Cool huh?
+The **!** prefix negates the pattern, basically creating a whitelist. Cool, huh?
 
 Now we can do our initial commit.
 
