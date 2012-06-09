@@ -1,9 +1,8 @@
 ---
-
 title: "Soft links, hard links, junctions, oh my! Symlinks on Windows, a how-to."
-layout: default
+layout: post
 categories: windows
-
+iwpost: https://www.interworks.com/blogs/jpoehls/2012/06/07/soft-links-hard-links-junctions-oh-my-symlinks-windows-how
 ---
 
 First, a quick definition of terms. There are three kinds of "[symlinks](https://en.wikipedia.org/wiki/Symbolic_link)" on Windows.
@@ -17,6 +16,8 @@ Soft links can be created for files or directories.
 Hard links can only be created for files.
 
 Both soft and hard links must be created on the same volume as the target. i.e. You can't link something on `C:\` to something on `D:\`.
+
+You can read more about hardlinks and junctions [on MSDN][4].
 
 ### Deleting Links
 
@@ -34,49 +35,61 @@ Junctions look and act like soft links. The key difference is that they allow yo
 
 Create a soft link to a directory.
 
-    c:\symlink_test> mklink symlink_dir real_dir
-    symbolic link created for symlink_dir <<===>> real_dir
+<pre>
+c:\symlink_test&gt; mklink symlink_dir real_dir
+symbolic link created for symlink_dir &lt;&lt;===&gt;&gt; real_dir
+</pre>
 
 Create junction link to a directory.
 
-    c:\symlink_test> mklink /J junction_dir real_dir
-    Junction created for junction_dir <<===>> real_dir
+<pre>
+c:\symlink_test&gt; mklink /J junction_dir real_dir
+Junction created for junction_dir &lt;&lt;===&gt;&gt; real_dir
+</pre>
 
 Create a soft link to a file.
 
-    c:\symlink_test> mklink symlink_file.txt real_file.txt
-    symbolic link created for symlink_file.txt <<===>> real_file.txt
+<pre>
+c:\symlink_test&gt; mklink symlink_file.txt real_file.txt
+symbolic link created for symlink_file.txt &lt;&lt;===&gt;&gt; real_file.txt
+</pre>
 
 Create a hard link to a file.
 
-    c:\symlink_test> mklink /H hardlink_file.txt real_file.txt
-    Hardlink created for hardlink_file.txt <<===>> real_file.txt
+<pre>
+c:\symlink_test&gt; mklink /H hardlink_file.txt real_file.txt
+Hardlink created for hardlink_file.txt &lt;&lt;===&gt;&gt; real_file.txt
+</pre>
 
 What they look like.
 
-    c:\symlink_test> dir
-    Volume in drive C is OS
-    Volume Serial Number is 7688-08EC
+<pre>
+c:\symlink_test&gt; dir
+Volume in drive C is OS
+Volume Serial Number is 7688-08EC
 
-    Directory of c:\symlink_test
+Directory of c:\symlink_test
 
-    06/07/2012  10:32 AM    <DIR>          .
-    06/07/2012  10:32 AM    <DIR>          ..
-    06/07/2012  09:51 AM                15 hardlink_file.txt
-    06/07/2012  09:59 AM    <JUNCTION>     junction_dir [c:\symlink_test\real_dir]
-    06/07/2012  09:47 AM    <DIR>          real_dir
-    06/07/2012  09:51 AM                15 real_file.txt
-    06/07/2012  10:00 AM    <SYMLINKD>     symlink_dir [real_dir]
-    06/07/2012  10:31 AM    <SYMLINK>      symlink_file.txt [real_file.txt]
-                   3 File(s)             30 bytes
-                   5 Dir(s)  145,497,268,224 bytes free
+06/07/2012  10:32 AM    &lt;DIR&gt;          .
+06/07/2012  10:32 AM    &lt;DIR&gt;          ..
+06/07/2012  09:51 AM                15 hardlink_file.txt
+06/07/2012  09:59 AM    &lt;JUNCTION&gt;     junction_dir [c:\symlink_test\real_dir]
+06/07/2012  09:47 AM    &lt;DIR&gt;          real_dir
+06/07/2012  09:51 AM                15 real_file.txt
+06/07/2012  10:00 AM    &lt;SYMLINKD&gt;     symlink_dir [real_dir]
+06/07/2012  10:31 AM    &lt;SYMLINK&gt;      symlink_file.txt [real_file.txt]
+               3 File(s)             30 bytes
+               5 Dir(s)  145,497,268,224 bytes free
+</pre>
 
-![Screenshot of folder in Windows Explorer](/images/2012-06-07-1.png "Screenshot of folder in Windows Explorer")
+![Screenshot of folder in Windows Explorer](/assets/forposts/mklink/explorer-screenshot.png "Screenshot of folder in Windows Explorer")
 
 **Note for PowerShell users:**  
 MKLINK isn't an executable that you can just call from PowerShell. You have to call it through the command prompt.
 
-    cmd /c mklink /D symlink_dir real_dir
+<pre>
+cmd /c mklink /D symlink_dir real_dir
+</pre>
 
 Alternatively, you can use [this module](https://gist.github.com/2891103) I wrote that has native PowerShell wrappers for MKLINK.
    
@@ -86,11 +99,13 @@ Alternatively, you can use [this module](https://gist.github.com/2891103) I wrot
 
 FSUTIL is another way to create hard links (but not soft links). This is the same as `mklink /H`.
 
-    c:\symlink_test>where fsutil
-    C:\Windows\System32\fsutil.exe
+<pre>
+c:\symlink_test&gt;where fsutil
+c:\Windows\System32\fsutil.exe
 
-    c:\symlink_test> fsutil hardlink create hardlink_file.txt real_file.txt
-    Hardlink created for c:\symlink_test\hardlink_file.txt <<===>> c:\symlink_test\real_file.txt
+c:\symlink_test&gt; fsutil hardlink create hardlink_file.txt real_file.txt
+Hardlink created for c:\symlink_test\hardlink_file.txt &lt;&lt;===&gt;&gt; c:\symlink_test\real_file.txt
+</pre>
 
 [Read about FSUTIL on MSDN.][2]
 
@@ -99,21 +114,17 @@ FSUTIL is another way to create hard links (but not soft links). This is the sam
 Junction is a tool provided by Sysinternals and provides another way to create junctions. Same as `mklink /J`.
 It also has some other tools for working with junctions that I won't cover here.
 
-    c:\symlink_test> junction junction_dir real_dir
-    Junction v1.06 - Windows junction creator and reparse point viewer
-    Copyright (C) 2000-2010 Mark Russinovich
-    Sysinternals - www.sysinternals.com
+<pre>
+c:\symlink_test&gt; junction junction_dir real_dir
+Junction v1.06 - Windows junction creator and reparse point viewer
+Copyright (C) 2000-2010 Mark Russinovich
+Sysinternals - www.sysinternals.com
 
-    Created: c:\symlink_test\junction_dir
-    Targetted at: c:\symlink_test\real_dir
+Created: c:\symlink_test\junction_dir
+Targetted at: c:\symlink_test\real_dir
+</pre>
     
 [Download the Junction tool from Sysinternals.][3]
-
---------------------
-
-Read more about hardlinks and junctions [on MSDN][4].
-
-_I also cross-posted this to [my company blog](https://www.interworks.com/blogs/jpoehls/2012/06/07/soft-links-hard-links-junctions-oh-my-symlinks-windows-how "Read this post on the InterWorks blog.")._
 
   [1]: http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx
   [2]: http://technet.microsoft.com/en-us/library/cc753059(v=WS.10).aspx

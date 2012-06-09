@@ -1,28 +1,67 @@
 ---
-layout: nil
-is_index: true
+published: true
 ---
+<!DOCTYPE html>
+<title>Joshua Poehls</title>
+<link href=//feeds.feedburner.com/zduck rel=alternate type=application/atom+xml>
+<style>
+body {
+    width: 800px;
+    margin: auto;
+    font-family: verdana
+}
+a {
+    color: #00438A;
+    text-decoration: none;
+}
+a:hover {
+    color: #00438A;
+    text-decoration: underline;
+}
+p { float: right; }
+ul { list-style: none; padding: 0; margin: 0; }
+a, li { padding: 15px; }
+h1 {
+    background-image: url(assets/j-shield50.png);
+    background-repeat: no-repeat;
+    background-position: left middle;
+    height: 80px;
+    padding-left: 70px;
+    padding-top: 0em;
+    margin-bottom: 0;
+    color: rgb(77,56,33);
+}
+.date {
+    display: inline-block;
+    width: 7em;
+}
+</style>
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32459558-1']);
+  _gaq.push(['_trackPageview']);
 
-{% include header.html %}
-    {% for post in paginator.posts %}
-      {% include post.html %}
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<p>
+    <a href=//github.com/jpoehls>github</a>
+    <a href=//twitter.com/joshuapoehls>twitter</a>
+    <a href=//plus.google.com/118086936663780802301>google+</a>
+    <a href=mailto:joshua@zduck.com>email</a>
+    <a href=//feeds.feedburner.com/zduck>rss</a>
+</p>
+<h1>Guten Tag.</h1>
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <span class="date">{{ post.date | date_to_string }}</span>
+        <a href={{ post.url }}>{{ post.title | escape}}</a>
+    </li>
     {% endfor %}
-	
-	<div class="pagination" id="bottom_page">
-		<ul>
-			{% if paginator.previous_page %}
-				{% if paginator.previous_page == 1 %}
-				<li class="previous"><a href="{{ site.baseurl }}">&larr; Previous</a></li>
-				{% else %}
-				<li class="previous"><a href="{{ site.baseurl }}/page{{ paginator.previous_page }}">&larr; Previous</a></li>
-				{% endif %}
-			{% endif %}
-				<li><p>Page {{ paginator.page }} of {{ paginator.total_pages }}</p></li>
-			{% if paginator.next_page %}
-				<li class="next"><a href="{{ site.basurl }}/page{{ paginator.next_page }}">Next &rarr;</a></li>
-			{% endif %}
-		</ul>
-	</div>
-
-{% include footer.html %}
+</ul>

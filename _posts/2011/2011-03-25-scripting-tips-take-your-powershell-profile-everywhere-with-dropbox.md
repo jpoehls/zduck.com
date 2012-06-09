@@ -1,14 +1,9 @@
 ---
-
-title: "Scripting Tips: Take your PowerShell profile everywhere with Dropbox"
-layout: default
+title: "Take your PowerShell profile everywhere with Dropbox"
+layout: post
 categories: powershell
-
+iwpost: http://www.interworks.com/blogs/jpoehls/2011/03/25/scripting-tips-take-your-powershell-profile-everywhere-dropbox
 ---
-
-Scripting Tips is an on-again-off-again series for command line fiends. I'll try to keep these short and sweet. To dig a 'lil deeper you can [find me on Twitter](http://www.twitter.com/joshuapoehls).
-
---------------------
 
 I'll cover these prerequisites in brief, but for this tip I'm going to assume a few things:
 
@@ -34,20 +29,23 @@ Among other things, Dropbox makes keeping your files in sync across computers de
 
 2. **Create a folder in Dropbox to hold your scripts.**
 
-		PS> New-Item $dropbox\scripts
+    <pre>
+    PS&gt; New-Item $dropbox\scripts</pre>
 
 	_Anywhere you see `$dropbox`, assume this to be the path to your Dropbox folder. By default on Windows 7 this is `%USERPROFILE%\Dropbox`._
 
 3. **Copy your profile `ps1` file into your new scripts folder.**
 
-		PS> Copy-Item $PROFILE $dropbox\scripts\profile.ps1
+    <pre>
+    PS&gt; Copy-Item $PROFILE $dropbox\scripts\profile.ps1</pre>
 
 4. **Edit your profile `ps1` file (the original one) and "dot source" the one in your Dropbox folder.**
 
-		PS> ". $dropbox\scripts\profile.ps1" > $PROFILE
+    <pre>
+	PS&gt; ". $dropbox\scripts\profile.ps1" &gt; $PROFILE</pre>
 
-**Pro Tip!** As an alternative to dot sourcing your profile from Dropbox, you could instead create a symlink to it.  
-
-	PS> fsutil hardlink create `"$PROFILE`" `"$dropbox\scripts\profile.ps1`"
-
-_I also cross-posted this to [my company blog](http://www.interworks.com/blogs/jpoehls/2011/03/25/scripting-tips-take-your-powershell-profile-everywhere-dropbox "Read this post on the InterWorks blog.")._
+**Pro Tip!** As an alternative to dot sourcing your profile from Dropbox, you could instead [create a symlink](/2012/soft-links-hard-links-junctions-oh-my-symlinks-on-windows/) to it.
+    
+<pre>
+PS&gt; /cmd /c mklink `"$PROFILE`" `"$dropbox\scripts\profile.ps1`"
+</pre>

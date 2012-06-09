@@ -1,8 +1,21 @@
 ---
-
 title: Title goes here
-layout: default
-
+layout: post
+published: false
+categories: list of tags
+iwpost: http://interworks.com/link/to/post
 ---
 
-content goes here
+Content goes here.
+
+## Big section header.
+
+### Little section header.
+
+<pre>
+For code blocks.
+</pre>
+
+<pre data-language="generic">
+For colored code blocks.
+</pre>

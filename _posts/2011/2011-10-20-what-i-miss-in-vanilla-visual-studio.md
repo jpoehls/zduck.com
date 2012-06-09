@@ -1,9 +1,7 @@
 ---
-
 title: What I miss in vanilla Visual Studio
-layout: default
+layout: post
 categories: visual-studio
-
 ---
 
 For the past week or so I've gone without any Visual Studio enhancements. No [ReSharper](http://www.jetbrains.com/resharper). No [CodeRush](http://www.devexpress.com/coderush). I knew that I didn't leverage even a fraction of what these tools offer so I wanted to find out what I would miss.

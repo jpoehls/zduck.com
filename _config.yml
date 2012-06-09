@@ -1,6 +1,2 @@
 # Jekyll
 permalink: /:year/:title/
-paginate: 10 
-exclude: 
-name: Zduck
-pygments: true

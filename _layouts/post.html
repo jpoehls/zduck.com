@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link href="/assets/site.css" rel="stylesheet">
+    <script src="/assets/rainbow.js"></script>
+    <link href="//feeds.feedburner.com/zduck" rel="alternate" type="application/atom+xml">
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32459558-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+    <div id="title"><a href="/" id="home">home</a><h1>{{ page.title  | xml_escape }}</h1><span> {{ page.date | date_to_string }}</div>
+    <div id="a">{{ content }}
+    <div class="footer">
+      <p>Questions and comments are always welcome, just <a href=//twitter.com/joshuapoehls>tweet @JoshuaPoehls</a>.</p>
+    {% if page.iwpost %}
+      <p class="crosspost">I also published this article on <a href={{ page.iwpost }} title="Read this post on my InterWorks blog.">my InterWorks blog</a>.</p>
+    {% endif %}
+    </div>
+    </div>
+  </body>
+</html>
