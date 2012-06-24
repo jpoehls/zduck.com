@@ -8,7 +8,9 @@ categories: powershell
 
 `PowerShell.exe` doesn't return correct exit codes when using the `-File` option. Use `-Command` instead.
 
-[This](#bat-wrapper) is a batch file wrapper for executing PowerShell scripts. It forwards arguments to PowerShell and correctly bubbles up the exit code.
+[This](#bat-wrapper) is a batch file wrapper for executing PowerShell scripts. It forwards arguments to PowerShell and correctly bubbles up the exit code (when it can).
+
+`PowerShell.exe` still [returns a passing (0) exit code when a `ParserError` is thrown](#command-parsererror). Even when using `-Command`. I haven't found a workaround for this.
 
 You can use [black magic](#black-magic) to include spaces and quotes in the arguments you pass through the batch file wrapper to PowerShell.
 
@@ -77,6 +79,8 @@ Exec { cmd /C exit 1 }
 Write-Host "You'll never see this."
 </pre>
 
+### Throwing & exit codes
+
 The `throw` keyword is how you generate a terminating error in PowerShell. It will, sometimes, cause your PowerShell script to return a failing exit code (1). Wait, when does it _not_ cause a failing exit code, you ask? This is where PowerShell's warts start to show. Let me demonstrate some scenarios.
 
 <pre data-language="powershell">
@@ -85,7 +89,7 @@ The `throw` keyword is how you generate a terminating error in PowerShell. It wi
 throw "I'm broken"
 </pre>
 
-**From the PowerShell command prompt:**
+*From the PowerShell command prompt:*
 
 <pre>
 PS&gt; .\broken.ps1
@@ -99,7 +103,7 @@ PS&gt; $LastExitCode
 1
 </pre>
 
-**From the Windows command prompt:**
+*From the Windows command prompt:*
 
 <pre>
 &gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -Command ".\broken.ps1"
@@ -115,10 +119,10 @@ At C:\broken.ps1:1 char:6
 
 That worked, too. Good.
 
-**Again, from the Windows command prompt:**
+*Again, from the Windows command prompt:*
 
 <pre>
-&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -File ".\broken.ps1"
+&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted <b>-File</b> ".\broken.ps1"
 <span style="color: red;">I'm broken.
 At C:\broken.ps1:1 char:6
 + throw &lt;&lt;&lt;&lt;  "I'm broken."
@@ -130,6 +134,8 @@ At C:\broken.ps1:1 char:6
 </pre>
 
 Whoa! We still saw the error, but PowerShell returned a passing exit code. What the heck?! Yes, this is the wart.
+
+### A workaround for `-File`
 
 `-File` allows you to pass in a script for PowerShell to execute, however terminating errors in the script will not cause PowerShell to return a failing exit code. I have no idea why this is the case. If you know why, please share!
 
@@ -146,21 +152,46 @@ trap
 throw "I'm broken."
 </pre>
 
-**From the Windows command prompt:**
+*From the Windows command prompt:*
 
 <pre>
-&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -File ".\script.ps1"
+&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted <b>-File</b> ".\script.ps1"
 <span style="color: red;">C:\broken.ps1 : I'm broken.
     + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
     + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,broken.ps1</span>
 
 &gt; echo %errorlevel%
 1
-</pre>
+</pre>  
 
 Notice that we got the correct exit code this time, but our error output didn't include as much detail. Specifically, we didn't get the line number of the error like we were getting in the previous tests. So it isn't a perfect workaround.
 
 **Remember.** Use `-Command` instead of `-File` whenever possible. If for some reason you must use `-File` or your script needs to support being run that way, then use the trap workaround above.
+
+<a id="command-parsererror"> </a>
+
+### `-Command` can still fail
+
+I've discovered that PowerShell will still exit with a success code (0) when a `ParserError` is thrown. Even when using `-Command`.
+
+*From the Windows command prompt:*
+
+<pre>
+&gt; PowerShell.exe -NoProfile -NonInteractive -Command "Write-Host 'You will never see this.'" <b>"\"</b>
+<span style="color: red;">The string starting:
+At line:1 char:39
++ Write-Host 'You will never see this.'  &lt;&lt;&lt;&lt; "
+is missing the terminator: ".
+At line:1 char:40
++ Write-Host 'You will never see this.' " &lt;&lt;&lt;&lt;
+    + CategoryInfo          : <b>ParserError</b>: (:String) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString</span>
+
+&gt; echo %errorlevel%
+0
+</pre>
+
+I'm not aware of any workaround for this behavior. This is very disturbing, because these parser errors can be caused by arguments (as I demonstrated above). This means there is no way to guarantee your script will exit with the correct code when it fails.
 
 _Note: This was tested in PowerShell v2, on Windows 7 (x64)._
 
@@ -197,7 +228,7 @@ Write-Host "Arg 1: $Arg1"
 Write-Host "Arg 2: $Arg2"
 </pre>
 
-**From the Windows command prompt:**
+*From the Windows command prompt:*
 
 <pre data-language="batch">
 &gt; script.bat happy scripting
@@ -227,7 +258,7 @@ Please don't ask me to explain this black magic, I only know that it works. Much
 
 For comparison, here is how you would do it if you were executing the script from PowerShell, without using the batch file wrapper.
 
-**From the PowerShell command prompt:**
+*From the PowerShell command prompt:*
 
 <pre data-language="batch">
 PS&gt; .\script.ps1 happy scripting
