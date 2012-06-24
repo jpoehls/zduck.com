@@ -102,9 +102,9 @@ PS&gt; $LastExitCode
 **From the Windows command prompt:**
 
 <pre>
-&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -Command ".\script.ps1"
+&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -Command ".\broken.ps1"
 <span style="color: red;">I'm broken.
-At C:\code\pserrorexit\broken.ps1:1 char:6
+At C:\broken.ps1:1 char:6
 + throw &lt;&lt;&lt;&lt;  "I'm broken."
     + CategoryInfo          : OperationStopped: (I'm broken.:String) [], RuntimeException
     + FullyQualifiedErrorId : I'm broken.</span>
@@ -118,9 +118,9 @@ That worked, too. Good.
 **Again, from the Windows command prompt:**
 
 <pre>
-&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -File ".\script.ps1"
+&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -File ".\broken.ps1"
 <span style="color: red;">I'm broken.
-At C:\code\pserrorexit\broken.ps1:1 char:6
+At C:\broken.ps1:1 char:6
 + throw &lt;&lt;&lt;&lt;  "I'm broken."
     + CategoryInfo          : OperationStopped: (I'm broken.:String) [], RuntimeException
     + FullyQualifiedErrorId : I'm broken.</span>
