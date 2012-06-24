@@ -66,3 +66,12 @@ Rainbow.extend([
         'pattern': /(function)\s(.*?)(?=\()/g
     }
 ]);
+
+
+
+Rainbow.extend('powershell', [
+    {
+        'name': 'comment',
+        'pattern': /\#.*$/gm
+    }
+], true);

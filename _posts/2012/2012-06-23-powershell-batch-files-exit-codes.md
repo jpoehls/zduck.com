@@ -20,7 +20,7 @@ This is a <strike>quick</strike> tour of working with exit codes in PowerShell s
 
 Let's start easy. Say you need to run a command line app, or batch file from your PowerShell script. How can you check the exit code of that process?
 
-<pre data-language="generic">
+<pre data-language="powershell">
 # script.ps1
 
 cmd /C exit 1
@@ -31,7 +31,7 @@ Write-Host $LastExitCode    # 1
 
 Remember though, `$LastExitCode` doesn't do squat for PowerShell commands. Use `$?` for that.
 
-<pre data-language="generic">
+<pre data-language="powershell">
 # script.ps1
 
 Get-ChildItem "C:\"
@@ -43,7 +43,7 @@ Write-Host $?    # False
 
 Anytime you run an external command like this, you need to check the exit code and throw an exception if needed. Otherwise the PowerShell script will keep right on trucking after a failure.
 
-<pre data-language="generic">
+<pre data-language="powershell">
 # script.ps1
 
 cmd /C exit 1
@@ -55,7 +55,7 @@ Write-Host "You'll never see this."
 
 Writing these assertions all the time will get old. Fortunately you can use a helper function, like this one found in the [excellent psake project](http://github.com/psake/psake).
 
-<pre data-language="generic">
+<pre data-language="powershell">
 # script.ps1
 
 function Exec
@@ -79,7 +79,7 @@ Write-Host "You'll never see this."
 
 The `throw` keyword is how you generate a terminating error in PowerShell. It will, _sometimes_ cause your PowerShell script to return a failing exit code (1). Wait, when does it _not_ cause a failing exit code, you ask? Ah, this is where PowerShell's warts start to show. Let me demonstrate some scenarios.
 
-<pre data-language="generic">
+<pre data-language="powershell">
 # broken.ps1
 
 throw "I'm broken"
@@ -135,7 +135,7 @@ Whoa! We still saw the error, but PowerShell returned a passing exit code. What 
 
 A workaround is to add a `trap` statement to the top of your PowerShell script. (Thanks, Chris Oldwood, for [pointing this out](http://chrisoldwood.blogspot.com/2011/05/powershell-throwing-exceptions-exit.html)!)
 
-<pre data-language="generic">
+<pre data-language="powershell">
 # broken.ps1
 
 trap
@@ -189,7 +189,7 @@ This wrapper will execute the PowerShell script with the same file name (i.e. `s
 
 Let's test it out.
 
-<pre data-language="generic">
+<pre data-language="powershell">
 # script.ps1
 
 param($Arg1, $Arg2)
