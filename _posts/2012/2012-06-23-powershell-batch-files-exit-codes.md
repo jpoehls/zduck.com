@@ -177,7 +177,7 @@ Whatever the reason, writing a batch file wrapper for a PowerShell script is eas
 
 This is a safe template for you to use. Bookmark it.
 
-<pre>
+<pre data-language="batch">
 :: script.bat
 
 @ECHO OFF
@@ -199,7 +199,7 @@ Write-Host "Arg 2: $Arg2"
 
 **From the Windows command prompt:**
 
-<pre>
+<pre data-language="batch">
 &gt; script.bat happy scripting
 Arg 1: happy
 Arg 2: scripting
@@ -207,7 +207,7 @@ Arg 2: scripting
 
 What if we want "happy scripting" to be passed as a single argument?
 
-<pre>
+<pre data-language="batch">
 &gt; script.bat "happy scripting"
 Arg 1: happy
 Arg 2: scripting
@@ -217,7 +217,7 @@ Arg 2: scripting
 
 Well that didn't work at all. This is the secret recipe.
 
-<pre>
+<pre data-language="batch">
 &gt; script.bat "'Happy scripting with single '' and double \" quotes!'"
 Arg 1: Happy scripting with single ' and double " quotes!
 Arg 2:
@@ -229,7 +229,7 @@ For comparison, here is how you would do it if you were executing the script fro
 
 **From the PowerShell command prompt:**
 
-<pre>
+<pre data-language="batch">
 PS&gt; .\script.ps1 happy scripting
 Arg 1: happy
 Arg 2: scripting

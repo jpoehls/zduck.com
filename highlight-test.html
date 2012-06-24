@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Highlighter Test</title>
+    <link href="/assets/site.css" rel="stylesheet">
+    <script src="/assets/rainbow.js"></script>
+  </head>
+  <body>
+    <div id="a">
+      <br/>
+      <pre data-language="batch">
+&gt; PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -File ".\script.ps1"
+<span style="color: red;">C:\broken.ps1 : I'm broken.
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,broken.ps1</span>
+
+&gt; echo %errorlevel%
+1
+
+:: script.bat
+
+@ECHO OFF
+PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -Command "&amp; %~d0%~p0%~n0.ps1" %*
+EXIT /B %errorlevel%
+
+&gt; script.bat happy scripting
+Arg 1: happy
+Arg 2: scripting
+
+PS&gt; .\script.ps1 happy scripting
+Arg 1: happy
+Arg 2: scripting
+
+PS&gt; .\script.ps1 "Happy scripting with single ' and double `" quotes included!"
+Arg 1: Happy scripting with single ' and double " quotes included!
+Arg 2: 
+      </pre>
+
+      <pre data-language="powershell">
+# comment
+
+cmd /C exit 1
+Write-Host $LastExitCode    # comment
+
+Get-ChildItem "C:\"
+Write-Host $?    # True
+
+Get-ChildItem "Z:\some\non-existant\path"
+Write-Host $?    # False
+
+cmd /C exit 1
+if ($LastExitCode -ne 0) {
+    throw "Command failed with exit code $LastExitCode."
+}
+Write-Host "You'll never see this."
+
+function Exec
+{
+    [CmdletBinding()]
+    param (
+        [Parameter(Position=0, Mandatory=1)]
+        [scriptblock]$Command,
+        [Parameter(Position=1, Mandatory=0)]
+        [string]$ErrorMessage = "Execution of command failed.`n$Command"
+    )
+    & $Command
+    if ($LastExitCode -ne 0) {
+        throw "Exec: $ErrorMessage"
+    }
+}
+
+Exec { cmd /C exit 1 }
+Write-Host "You'll never see this."
+
+throw "I'm broken"
+      </pre>
+    </div>
+  </body>
+</html>

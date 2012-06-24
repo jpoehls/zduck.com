@@ -73,5 +73,50 @@ Rainbow.extend('powershell', [
     {
         'name': 'comment',
         'pattern': /\#.*$/gm
+    },
+    {
+        'name': 'keyword',
+        'pattern': /(throw|function|param|if|\$LastExitCode|\$\?)/gm
+    },
+    {
+        'name': 'keyword.operator',
+        'pattern': /(\-ne)/gm
+    },
+    {
+        'name': 'constant.language',
+        'pattern': /\$true|\$false|\$null/gm
+    },
+    {
+        'name': 'constant.numeric',
+        'pattern': /\d+/gi
+    },
+    {
+        'name': 'comment.prompt',
+        'pattern': /^\s+(PS)?&gt;/gmi
+    }
+], true);
+
+
+
+Rainbow.extend('batch', [
+    {
+        'name': 'comment',
+        'pattern': /(\:\:|REM).*$/gm
+    },
+    {
+        'name': 'keyword',
+        'pattern': /(throw|function|param|if|\$LastExitCode|\$\?)/gm
+    },
+    {
+        'name': 'keyword.operator',
+        'pattern': /@echo|exit/gi
+    },
+    {
+        'name': 'constant.language',
+        'pattern': /[^\w](%errorlevel%|on|off)[^\w]/gi
+    },
+    {
+        'name': 'comment.prompt',
+        'pattern': /^\s+(PS)?&gt;/gmi
     }
 ], true);
