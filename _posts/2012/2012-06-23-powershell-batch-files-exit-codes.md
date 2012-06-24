@@ -8,17 +8,17 @@ categories: powershell
 
 `PowerShell.exe` doesn't return correct exit codes when using the `-File` option. Use `-Command` instead.
 
-[This](#bat-wrapper) is a batch file wrapper for executing PowerShell scripts. It forwards arguments to PowerShell, and correctly bubbles up the exit code.
+[This](#bat-wrapper) is a batch file wrapper for executing PowerShell scripts. It forwards arguments to PowerShell and correctly bubbles up the exit code.
 
 You can use [black magic](#black-magic) to include spaces and quotes in the arguments you pass through the batch file wrapper to PowerShell.
 
 ## PowerShell
 
-PowerShell is a great scripting environment, and it is my preferred tool for writing build scripts for .NET apps. Exit codes are vital in build scripts because they are how your Continuous Integration server knows whether the build passed, or failed.
+PowerShell is a great scripting environment, and it is my preferred tool for writing build scripts for .NET apps. Exit codes are vital in build scripts because they are how your Continuous Integration server knows whether the build passed or failed.
 
-This is a <strike>quick</strike> tour of working with exit codes in PowerShell scripts, and batch files. I'm including batch files because they are often necessary to wrap the execution of your PowerShell scripts.
+This is a <strike>quick</strike> tour of working with exit codes in PowerShell scripts and batch files. I'm including batch files because they are often necessary to wrap the execution of your PowerShell scripts.
 
-Let's start easy. Say you need to run a command line app, or batch file from your PowerShell script. How can you check the exit code of that process?
+Let's start easy. Say you need to run a command line app or batch file from your PowerShell script. How can you check the exit code of that process?
 
 <pre data-language="powershell">
 # script.ps1
@@ -77,7 +77,7 @@ Exec { cmd /C exit 1 }
 Write-Host "You'll never see this."
 </pre>
 
-The `throw` keyword is how you generate a terminating error in PowerShell. It will, _sometimes_ cause your PowerShell script to return a failing exit code (1). Wait, when does it _not_ cause a failing exit code, you ask? Ah, this is where PowerShell's warts start to show. Let me demonstrate some scenarios.
+The `throw` keyword is how you generate a terminating error in PowerShell. It will, sometimes, cause your PowerShell script to return a failing exit code (1). Wait, when does it _not_ cause a failing exit code, you ask? This is where PowerShell's warts start to show. Let me demonstrate some scenarios.
 
 <pre data-language="powershell">
 # broken.ps1
@@ -113,7 +113,7 @@ At C:\code\pserrorexit\broken.ps1:1 char:6
 1
 </pre>
 
-That worked too. Good.
+That worked, too. Good.
 
 **Again, from the Windows command prompt:**
 
@@ -160,9 +160,9 @@ throw "I'm broken."
 
 Notice that we got the correct exit code this time, but our error output didn't include as much detail. Specifically, we didn't get the line number of the error like we were getting in the previous tests. So it isn't a perfect workaround.
 
-**Remember.** Use `-Command` instead of `-File` whenever possible. If for some reason you must use `-File`, or your script needs to support being run that way, then use the trap workaround above.
+**Remember.** Use `-Command` instead of `-File` whenever possible. If for some reason you must use `-File` or your script needs to support being run that way, then use the trap workaround above.
 
-_Note: This was tested under PowerShell v2, on Windows 7 (x64)._
+_Note: This was tested in PowerShell v2, on Windows 7 (x64)._
 
 ## Batch files
 
@@ -185,7 +185,7 @@ PowerShell.exe -NoProfile -NonInteractive -ExecutionPolicy unrestricted -Command
 EXIT /B %errorlevel%
 </pre>
 
-This wrapper will execute the PowerShell script with the same file name (i.e. `script.ps1` if the batch file is named `script.bat`), and then exit with the same code that PowerShell exited with. It will also forward any arguments passed to the batch file, to the PowerShell script.
+This wrapper will execute the PowerShell script with the same file name (i.e., `script.ps1` if the batch file is named `script.bat`), and then exit with the same code that PowerShell exited with. It will also forward any arguments passed to the batch file, to the PowerShell script.
 
 Let's test it out.
 
