@@ -6,11 +6,11 @@ categories: powershell
 
 ## TL;DR;
 
-`PowerShell.exe` doesn't return correct exit codes when using the `-File` option. Use `-Command` instead.
+`PowerShell.exe` doesn't return correct exit codes when using the `-File` option. Use `-Command` instead. *([Vote for this issue](https://connect.microsoft.com/PowerShell/feedback/details/750653/powershell-exe-doesn-t-return-correct-exit-codes-when-using-the-file-option) on Microsoft Connect.)*
 
 [This](#bat-wrapper) is a batch file wrapper for executing PowerShell scripts. It forwards arguments to PowerShell and correctly bubbles up the exit code (when it can).
 
-`PowerShell.exe` still [returns a passing (0) exit code when a `ParserError` is thrown](#command-parsererror). Even when using `-Command`. I haven't found a workaround for this.
+`PowerShell.exe` still [returns a passing (0) exit code when a `ParserError` is thrown](#command-parsererror). Even when using `-Command`. I haven't found a workaround for this. *([Vote for this issue](https://connect.microsoft.com/PowerShell/feedback/details/750654/powershell-exe-returns-a-passing-0-exit-code-when-a-parsererror-is-thrown) on Microsoft Connect.)*
 
 You can use [black magic](#black-magic) to include spaces and quotes in the arguments you pass through the batch file wrapper to PowerShell.
 
@@ -194,6 +194,8 @@ At line:1 char:40
 I'm not aware of any workaround for this behavior. This is very disturbing, because these parser errors can be caused by arguments (as I demonstrated above). This means there is no way to guarantee your script will exit with the correct code when it fails.
 
 _Note: This was tested in PowerShell v2, on Windows 7 (x64)._
+
+There are [other](https://connect.microsoft.com/PowerShell/feedback/details/637113/powershell-command-line-exit-codes-inconsistency) [known](https://connect.microsoft.com/PowerShell/feedback/details/638771/powershell-return-code-and-parameters) bugs with PowerShell's exit codes. Beware.
 
 ## Batch files
 
