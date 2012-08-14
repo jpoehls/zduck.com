@@ -52,13 +52,15 @@ comments: false
           seriesType: "bars",
           series: {5: {type: "line"}}
         });
+
+        document.getElementById('visualization').style.backgroundImage = 'none';
       }
       
 
       google.setOnLoadCallback(drawVisualization);
     </script>
 
-    <div id="visualization" style="width: 600px; height: 400px;"></div>
+    <div id="visualization" style="width: 600px; height: 400px; background-image: url(/assets/forposts/crime-rates-are-dropping.png);"></div>
 
     <p style="font-size: .8em;">Bureau of Justice Statistics.
       Generated using the <a href="http://bjs.ojp.usdoj.gov/index.cfm?ty=nvat">NCVS Victimization Analysis Tool</a> at <a href="www.bjs.gov">www.bjs.gov</a>. 13-Aug-12
