@@ -93,7 +93,7 @@ cmd /c mklink /D symlink_dir real_dir
 
 Alternatively, you can use [this module](https://gist.github.com/2891103) I wrote that has native PowerShell wrappers for MKLINK.
    
-[Read about MSLINK on MSDN.][1]
+[Read about MKLINK on MSDN.][1]
 
 ## Using FSUTIL
 

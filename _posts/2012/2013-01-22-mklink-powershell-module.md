@@ -4,7 +4,7 @@ layout: post
 categories: powershell
 ---
 
-MKLINK is a very useful utility on Windows. Unfortunately there aren't any native PowerShell functions that replace it so we still have to shell out to the command prompt.
+[MKLINK][1] is a very useful utility on Windows. Unfortunately there aren't any native PowerShell functions that replace it so we still have to shell out to the command prompt.
 
 This can be made less painful with a helper function that will pipe all arguments to the MKLINK command.
 
@@ -190,3 +190,5 @@ Import-Module "bookmarks.psm1"
 </pre>
 
 I've heard it rumored that the [PowerShell Community Extensions](http://pscx.codeplex.com/) project has a lot of these functions as well, and more. It might be worth looking into if you want a more robust solution.
+
+  [1]: http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx
