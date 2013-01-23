@@ -12,7 +12,15 @@ This can be made less painful with a helper function that will pipe all argument
 function mklink { cmd /c mklink $args }
 </pre>
 
-Personally though, I prefer to use native PowerShell functions whenever possible so I put together this module that provides wrappers for the key functionality of MKLINK. Enjoy.
+Personally though, I prefer to use native PowerShell functions whenever possible so I put together a module that provides wrappers for the key functionality of MKLINK.
+
+Import this module in your profile and you'll have it whenever you need it.
+
+<pre data-language="powershell">
+# Microsoft.PowerShell_profile.ps1
+
+Import-Module mklink.psm1
+</pre>
 
 <pre data-language="powershell">
 # mklink.psm1
@@ -179,14 +187,6 @@ function mklink {
 }
 
 Export-ModuleMember New-Symlink, New-Hardlink, New-Junction, mklink
-</pre>
-
-Import this module in your profile and you'll have it whenever you need it.
-
-<pre data-language="powershell">
-# Microsoft.PowerShell_profile.ps1
-
-Import-Module "mklink.psm1"
 </pre>
 
 I've heard it rumored that the [PowerShell Community Extensions](http://pscx.codeplex.com/) project has a lot of these functions as well, and more. It might be worth looking into if you want a more robust solution.
