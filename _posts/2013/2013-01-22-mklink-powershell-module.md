@@ -18,7 +18,7 @@ Usage looks like this:
 
 <pre>
 <b>New-Symlink</b> &lt;link_path&gt; &lt;target_path&gt; &lt;force?&gt;
-<b>New-Hardlink</b> &lt;link_path&gt; &lt;target_path&gt; &lt;force?&gt; <i># to list all</i>
+<b>New-Hardlink</b> &lt;link_path&gt; &lt;target_path&gt; &lt;force?&gt;
 <b>New-Junction</b> &lt;link_path&gt; &lt;target_path&gt; &lt;force?&gt;
 <b>mklink</b> &lt;args&gt; <i># raw pipe to mklink</i>
 </pre>
