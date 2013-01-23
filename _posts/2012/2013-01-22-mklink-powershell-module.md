@@ -186,7 +186,7 @@ Import this module in your profile and you'll have it whenever you need it.
 <pre data-language="powershell">
 # Microsoft.PowerShell_profile.ps1
 
-Import-Module "bookmarks.psm1"
+Import-Module "mklink.psm1"
 </pre>
 
 I've heard it rumored that the [PowerShell Community Extensions](http://pscx.codeplex.com/) project has a lot of these functions as well, and more. It might be worth looking into if you want a more robust solution.
