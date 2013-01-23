@@ -14,6 +14,15 @@ function mklink { cmd /c mklink $args }
 
 Personally though, I prefer to use native PowerShell functions whenever possible so I put together a module that provides wrappers for the key functionality of MKLINK.
 
+Usage looks like this:
+
+<pre>
+<b>New-Symlink</b> &lt;link_path&gt; &lt;target_path&gt; &lt;force?&gt;
+<b>New-Hardlink</b> &lt;link_path&gt; &lt;target_path&gt; &lt;force?&gt; <i># to list all</i>
+<b>New-Junction</b> &lt;link_path&gt; &lt;target_path&gt; &lt;force?&gt;
+<b>mklink</b> &lt;args&gt; <i># raw pipe to mklink</i>
+</pre>
+
 Import this module in your profile and you'll have it whenever you need it.
 
 <pre data-language="powershell">

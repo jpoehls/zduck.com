@@ -35,6 +35,7 @@ Here is the module. Happy bookmarking!
 
 <pre data-language="powershell">
 # bookmarks.psm1
+# Exports: Set-Bookmark, Get-Bookmark, Remove-Bookmark, Clear-Bookmarks, Invoke-Bookmark
 
 # holds hash of bookmarked locations
 $_bookmarks = @{}
