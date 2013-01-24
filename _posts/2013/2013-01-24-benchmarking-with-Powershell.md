@@ -5,16 +5,16 @@ categories: powershell
 published: false
 ---
 
-On UNIX we have the `time` command that will measure the execution time of a program. Timings are returned for the wall clock time and CPU time. It looks something like this.
+UNIX has the `time` command that will measure the execution time of a program. Timings are returned for the wall clock and CPU time. It looks something like this.
 
 <pre>
 <b>$</b> time ping google.com -c 1
-PING google.com (74.125.225.232) 56(84) bytes of data.
+<span class="comment">PING google.com (74.125.225.232) 56(84) bytes of data.
 64 bytes from dfw06s26-in-f8.1e100.net (74.125.225.232): icmp_req=1 ttl=54 time=19.7 ms
 
 --- google.com ping statistics ---
 1 packets transmitted, 1 received, 0% packet loss, time 0ms
-rtt min/avg/max/mdev = 19.767/19.767/19.767/0.000ms
+rtt min/avg/max/mdev = 19.767/19.767/19.767/0.000ms</span>
 
 real   0m0.173s
 user   0m0.010s
@@ -53,7 +53,7 @@ Enter `Benchmark-Command`. This PowerShell function does exactly that.
 
 <pre>
 <b>PS&gt;</b> Benchmark-Command { ping google.com -n 1 } -Samples 3
-Pinging google.com [74.125.225.226] with 32 bytes of data:
+<span class="comment">Pinging google.com [74.125.225.226] with 32 bytes of data:
 Reply from 74.125.225.226: bytes=32 time=20ms TTL=54
 
 Ping statistics for 74.125.225.226:
@@ -75,7 +75,7 @@ Reply from 74.125.225.226: bytes=32 time=18ms TTL=54
 Ping statistics for 74.125.225.226:
     Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),
 Approximate round trip times in milli-seconds:
-    Minimum = 18ms, Maximum = 18ms, Average = 18ms
+    Minimum = 18ms, Maximum = 18ms, Average = 18ms</span>
 
 Avg: 56.2542ms
 Min: 49.542ms
@@ -106,26 +106,26 @@ Set-Alias time Benchmark-Command
 # Exports: Benchmark-Command
 
 function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1, [Switch]$Silent, [Switch]$Long) {
-<#
+&lt;#
 .SYNOPSIS
   Runs the given script block and returns the execution duration.
   Hat tip to StackOverflow. http://stackoverflow.com/questions/3513650/timing-a-commands-execution-in-powershell
   
 .EXAMPLE
   Benchmark-Command { ping -n 1 google.com }
-#>
+#&gt;
   $timings = @()
   do {
     $sw = New-Object Diagnostics.Stopwatch
     if ($Silent) {
       $sw.Start()
-      $null = & $Expression
+      $null = &amp; $Expression
       $sw.Stop()
       Write-Host "." -NoNewLine
     }
     else {
       $sw.Start()
-      & $Expression
+      &amp; $Expression
       $sw.Stop()
     }
     $timings += $sw.Elapsed
