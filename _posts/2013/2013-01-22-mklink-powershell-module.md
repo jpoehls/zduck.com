@@ -2,6 +2,7 @@
 title: An MKLINK PowerShell Module
 layout: post
 categories: powershell
+description: MKLINK is a very useful utility on Windows. Unfortunately there aren't any native PowerShell functions that replace it so we still have to shell out to the command prompt. This can be made less painful with a helper function that will pipe all arguments to the MKLINK command. Personally though, I prefer to use native PowerShell functions whenever possible so I put together a module that provides wrappers for the key functionality of MKLINK.
 ---
 
 [MKLINK][1] is a very useful utility on Windows. Unfortunately there aren't any native PowerShell functions that replace it so we still have to shell out to the command prompt.

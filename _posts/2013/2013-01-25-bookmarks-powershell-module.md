@@ -3,6 +3,7 @@ title: Using bookmarks to quickly navigate in PowerShell
 layout: post
 categories: powershell
 published: false
+description: "There are a few folders that I spend a lot of time and it is surprisingly slow to type `cd c:\path\to\my\project` many times a day. I solved this by creating a module that allows me to bookmark directories and navigate to them using aliases. Simply put, I can shorten the previous command to `g project`."
 ---
 
 There are a few folders that I spend a lot of time and it is surprisingly slow to type `cd c:\path\to\my\project` many times a day. I solved this by creating a module that allows me to bookmark directories and navigate to them using aliases. Simply put, I can shorten the previous command to `g project`.
