@@ -2,8 +2,20 @@
 published: true
 ---
 <!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile# fb: http://ogp.me/ns/fb#">
 <title>Joshua Poehls</title>
 <link href=//atom.xml rel=alternate type=application/atom+xml>
+
+<meta property="og:type" content="profile" /> 
+<meta property="og:url" content="{{ site.url }}" />
+<meta property="og:image" content="{{ site.url }}/assets/j-shield256.png" />
+<meta property="og:title" content="Joshua Poehls" />
+<meta property="profile:first_name" content="Joshua" />
+<meta property="profile:last_name" content="Poehls" />
+<meta property="profile:gender" content="male" />
+<meta property="fb:profile_id" content="_WmHuzJwwQfqCnqb6q8Ol7mMzE0">
+
 <style>
 body {
     width: 800px;
@@ -36,19 +48,8 @@ h1 {
     width: 7em;
 }
 </style>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32459558-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+</head>
+<body>
 <p>
     <a href=//github.com/jpoehls>github</a>
     <a href=//twitter.com/joshuapoehls>twitter</a>
@@ -66,3 +67,18 @@ h1 {
     </li>
     {% endfor %}
 </ul>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32459558-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
