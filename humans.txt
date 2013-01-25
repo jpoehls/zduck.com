@@ -1,0 +1,12 @@
+---
+published: true
+---
+/* TEAM */
+
+Creator:  Joshua Poehls
+Twitter:  @JoshuaPoehls
+Location: Earth
+
+/* SITE */
+Last update: {{ site.time }}
+Components: GitHub Pages, Jekyll, Disqus
