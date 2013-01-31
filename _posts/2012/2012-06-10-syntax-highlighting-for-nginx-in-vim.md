@@ -2,6 +2,7 @@
 title: Syntax highlighting for Nginx in VIM
 layout: post
 categories: vim nginx
+description: "Adding syntax highlighting of Nginx config files to VIM is a breeze. Here's how you do it."
 ---
 
 Thanks to [Evan Miller](http://www.vim.org/scripts/script.php?script_id=1886), adding VIM syntax highlighting for Nginx config files is a breeze.
