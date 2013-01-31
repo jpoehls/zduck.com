@@ -11,8 +11,8 @@
     <meta property="og:description" content="{{ page.description | truncatewords: 200 | strip_newlines }}" />
     <meta name="description" content="{{ page.description | truncatewords: 200 | strip_newlines }}" />
     {% else %}
-    <meta property="og:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines }}" />
-    <meta name="description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines }}" /> 
+    <meta property="og:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape }}" />
+    <meta name="description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape }}" /> 
     {% endif %}
     {% if page.og_image %}
     <meta property="og:image" content="{{ site.url }}/assets/og/{{ page.og_image }}" /> 
