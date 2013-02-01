@@ -8,11 +8,11 @@
     <meta property="og:site_name" content="Zduck" />
     <meta property="og:locale" content="en_US" />
     {% if page.description %}
-    <meta property="og:description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape }}" />
-    <meta name="description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape }}" />
+    <meta property="og:description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}" />
+    <meta name="description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}" />
     {% else %}
-    <meta property="og:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape }}" />
-    <meta name="description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape }}" /> 
+    <meta property="og:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}" />
+    <meta name="description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}" /> 
     {% endif %}
     {% if page.og_image %}
     <meta property="og:image" content="{{ site.url }}/assets/og/{{ page.og_image }}" /> 
