@@ -9,8 +9,8 @@ Using an enum flags property to hold users' roles is just one trick
 I've learned from [@SeiginoRaikou](https://twitter.com/SeiginoRaikou),
 one of my co-geniuses at [InterWorks](https://www.interworks.com/).
 
-Historically I always modeled user roles with a separate Roles table
-and a many-to-many relationship with my Users table.
+Historically I always modeled user roles with a `Role` table
+and a many-to-many relationship with my `User` table.
 
 <pre>    +-------------------+
     | User              |
@@ -27,7 +27,7 @@ and a many-to-many relationship with my Users table.
     +-------------------+</pre>
 
 Compared to a flags enum approach this is downright wasteful.
-With flags, there is only ever one column work with and it is an integer data type.
+With flags, there is only ever one column to work with and it is an integer.
 No second table. No joins or second query.
 
 <pre>    +--------------------+
@@ -56,7 +56,7 @@ class User {
   }
  
   public void RemoveRole(UserRole roleToRemove) {
-    this.Role &= ~roleToRemove;
+    this.Role &amp;= ~roleToRemove;
   }
   
   public bool IsInRole(UserRole roleToCheck) {
@@ -72,10 +72,10 @@ Flag enumerations are just as accessible in SQL.
 UPDATE [User] SET [Role] = ([Role] | 4)
 
 -- Remove the Admin role
-UPDATE [User] SET [Role] = ([Role] - ([Role] & 4))
+UPDATE [User] SET [Role] = ([Role] - ([Role] &amp; 4))
 
 -- Find all users with the Admin role
-SELECT * FROM [User] WHERE [Role] & 4 <> 0
+SELECT * FROM [User] WHERE [Role] &amp; 4 <> 0
 </pre>
 
 Go forth and simplify, my friends.
