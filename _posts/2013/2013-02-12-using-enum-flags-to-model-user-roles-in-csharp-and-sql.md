@@ -9,7 +9,7 @@ Using an enum flags property to hold users' roles is just one trick
 I've learned from [@SeiginoRaikou](https://twitter.com/SeiginoRaikou),
 one of my co-geniuses at [InterWorks](https://www.interworks.com/).
 
-Historically I always modeled user roles with a `Role` table
+Historically I have always modeled user roles with a `Role` table
 and a many-to-many relationship with my `User` table.
 
 <pre>    +-------------------+
