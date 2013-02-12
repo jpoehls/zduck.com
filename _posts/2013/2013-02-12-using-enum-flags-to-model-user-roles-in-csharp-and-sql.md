@@ -75,7 +75,7 @@ UPDATE [User] SET [Role] = ([Role] | 4)
 UPDATE [User] SET [Role] = ([Role] - ([Role] &amp; 4))
 
 -- Find all users with the Admin role
-SELECT * FROM [User] WHERE [Role] &amp; 4 <> 0
+SELECT * FROM [User] WHERE [Role] &amp; 4 &lt;&gt; 0
 </pre>
 
 Go forth and simplify, my friends.
