@@ -68,14 +68,14 @@ class User {
 Flag enumerations are just as accessible in SQL.
 
 <pre data-language="sql">
--- Add the Admin role
-UPDATE [User] SET [Role] = ([Role] | 4)
+-- Add users to the Admin role
+UPDATE [User] SET [Roles] = ([Roles] | 4)
 
--- Remove the Admin role
-UPDATE [User] SET [Role] = ([Role] - ([Role] &amp; 4))
+-- Remove users from the Admin role
+UPDATE [User] SET [Roles] = ([Roles] - ([Roles] &amp; 4))
 
--- Find all users with the Admin role
-SELECT * FROM [User] WHERE [Role] &amp; 4 &lt;&gt; 0
+-- Find all users in the Admin role
+SELECT * FROM [User] WHERE [Roles] &amp; 4 &lt;&gt; 0
 </pre>
 
 Go forth and simplify, my friends.
