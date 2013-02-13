@@ -1,115 +1,119 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://zduck.com/2007/powershell-search-and-destroy/</loc>
+        <loc>/2007/powershell-search-and-destroy/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2007/clearing-aspnet-control-values/</loc>
+        <loc>/2007/clearing-aspnet-control-values/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2007/aspnet-viewstate-and-dropdownlists/</loc>
+        <loc>/2007/aspnet-viewstate-and-dropdownlists/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2007/running-vbs-scripts-under-different-credentials/</loc>
+        <loc>/2007/running-vbs-scripts-under-different-credentials/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2009/thought-on-the-internet-age/</loc>
+        <loc>/2009/thought-on-the-internet-age/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2009/how-to-recover-deleted-files-in-tfs/</loc>
+        <loc>/2009/how-to-recover-deleted-files-in-tfs/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2009/from-windows-live-mesh-to-dropbox/</loc>
+        <loc>/2009/from-windows-live-mesh-to-dropbox/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2009/installing-python-pygments-on-windows/</loc>
+        <loc>/2009/installing-python-pygments-on-windows/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2010/why-i-love-silverlight/</loc>
+        <loc>/2010/why-i-love-silverlight/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2010/ria-services-lessons-learned-while-getting-started/</loc>
+        <loc>/2010/ria-services-lessons-learned-while-getting-started/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2010/installing-ruby-on-windows/</loc>
+        <loc>/2010/installing-ruby-on-windows/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2011/scripting-tips-take-your-powershell-profile-everywhere-with-dropbox/</loc>
+        <loc>/2011/scripting-tips-take-your-powershell-profile-everywhere-with-dropbox/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2011/tortoise-svn-powershell-helper-function/</loc>
+        <loc>/2011/tortoise-svn-powershell-helper-function/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2011/what-i-miss-in-vanilla-visual-studio/</loc>
+        <loc>/2011/what-i-miss-in-vanilla-visual-studio/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2011/use-autohotkey-to-remap-your-numpad-keys-to-something-useful/</loc>
+        <loc>/2011/use-autohotkey-to-remap-your-numpad-keys-to-something-useful/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2012/cant-access-network-resources-over-vpn-on-mac-osx/</loc>
+        <loc>/2012/cant-access-network-resources-over-vpn-on-mac-osx/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2012/soft-links-hard-links-junctions-oh-my-symlinks-on-windows/</loc>
+        <loc>/2012/soft-links-hard-links-junctions-oh-my-symlinks-on-windows/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2012/storing-your-raspberry-pi-config-in-git/</loc>
+        <loc>/2012/storing-your-raspberry-pi-config-in-git/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2012/syntax-highlighting-for-nginx-in-vim/</loc>
+        <loc>/2012/syntax-highlighting-for-nginx-in-vim/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2012/powershell-batch-files-exit-codes/</loc>
+        <loc>/2012/powershell-batch-files-exit-codes/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2012/Crime-rates-are-dropping/</loc>
+        <loc>/2012/Crime-rates-are-dropping/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2012/killing-processes-in-disconnected-terminal-service-sessions/</loc>
+        <loc>/2012/killing-processes-in-disconnected-terminal-service-sessions/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2013/mklink-powershell-module/</loc>
+        <loc>/2013/mklink-powershell-module/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2013/ousting-feedburner/</loc>
+        <loc>/2013/ousting-feedburner/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2013/benchmarking-with-Powershell/</loc>
+        <loc>/2013/benchmarking-with-Powershell/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2013/bookmarks-powershell-module/</loc>
+        <loc>/2013/bookmarks-powershell-module/</loc>
         <lastmod>2013-01-31T21:36:16-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/2013/open-graph-twitter-cards-and-your-blog/</loc>
+        <loc>/2013/open-graph-twitter-cards-and-your-blog/</loc>
         <lastmod>2013-01-31T22:21:31-06:00</lastmod>
     </url>
     <url>
-        <loc>http://zduck.com/</loc>
-        <lastmod>2013-01-31T22:21:31-06:00</lastmod>
+        <loc>/2013/using-enum-flags-to-model-user-roles-in-csharp-and-sql/</loc>
+        <lastmod>2013-02-12T18:02:39-06:00</lastmod>
+    </url>
+    <url>
+        <loc>/</loc>
+        <lastmod>2013-02-12T18:02:39-06:00</lastmod>
     </url>
 </urlset>
