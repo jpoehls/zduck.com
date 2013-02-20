@@ -2,7 +2,7 @@
 title: Use AutoHotkey to remap your numpad keys to something useful.
 layout: post
 published: true
-categories: windows
+categories: windows autohotkey
 iwpost: https://www.interworks.com/blogs/jpoehls/2011/12/14/how-use-autohotkey-remap-your-numpad-keys-something-useful
 ---
 

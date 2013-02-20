@@ -1,7 +1,7 @@
 ---
 title: Using Unix terminal keyboard shortcuts in the Windows command prompt
 layout: post
-categories: powershell
+categories: powershell autohotkey windows
 description: "Using an enum flags property to hold users' roles is just one trick I've learned from @SeiginoRaikou, one of my co-geniuses at InterWorks."
 ---
 
@@ -22,3 +22,5 @@ Add this magic to your AutoHotkey script to enable these shortcuts in the Window
 ^D::SendInput , {Esc}exit{Enter}
 ^V::SendInput , {Raw}%clipboard%
 #IfWinActive</pre>
+
+Back away from the mouse, my friends.
