@@ -28,7 +28,7 @@ The element you are animating **must** have a `clip` style specified. Otherwise,
 
 <pre data-language="javascript">
 $('.element').animate({
-	clip: 'rect(0px 155px 31px 146px)'
+    clip: 'rect(0px 155px 31px 146px)'
 }, 500);
 </pre>
 
