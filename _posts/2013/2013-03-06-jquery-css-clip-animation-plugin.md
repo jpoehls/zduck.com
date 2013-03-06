@@ -54,7 +54,7 @@ jQuery.fx.step.clip = function(fx){
             fx.end = cRE.exec( fx.end.replace(/,/g, '') );
         }
     }
-    if (fx.start && fx.end) {
+    if (fx.start &amp;&amp; fx.end) {
         var sarr = new Array(), earr = new Array(), spos = fx.start.length, epos = fx.end.length,
             emOffset = fx.start[ss+1] == 'em' ? ( parseInt($(fx.elem).css('fontSize')) * 1.333 * parseInt(fx.start[ss]) ) : 1;
         for ( var ss = 1; ss &lt; spos; ss+=2 ) { sarr.push( parseInt( emOffset * fx.start[ss] ) ); }
