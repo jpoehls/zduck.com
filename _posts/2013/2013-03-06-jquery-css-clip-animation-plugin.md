@@ -13,10 +13,10 @@ So here you go, a forked and updated copy of the plugin which will work with jQu
 
 Changes include:
 
-	* Support for jQuery 1.8.0+
-	* Support for the element's initial clip value to be specified via a stylesheet instead of an inline style
-	* Support for decimal clip values (thanks to a comment by Manoel Quirino Neto)
-	* Type checking `fx.end` to guard against errors in some scenarios
+* Support for jQuery 1.8.0+
+* Support for the element's initial clip value to be specified via a stylesheet instead of an inline style
+* Support for decimal clip values (thanks to a comment by Manoel Quirino Neto)
+* Type checking `fx.end` to guard against errors in some scenarios
 
 The element you are animating **must** have a `clip` style specified. Otherwise, usage is as you would expect.
 
