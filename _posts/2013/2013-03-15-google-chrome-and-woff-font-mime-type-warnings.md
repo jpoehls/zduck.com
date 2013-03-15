@@ -35,4 +35,4 @@ The steps to fix this will vary by web server but for IIS Express this is how yo
 3. Change **mimeType** to `application/font-woff`
 
         <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
-4. Restart your IIS Express site and the warnings should be gone.
+4. Restart your IIS Express site.
