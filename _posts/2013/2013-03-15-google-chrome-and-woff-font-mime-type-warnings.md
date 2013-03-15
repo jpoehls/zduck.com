@@ -24,10 +24,15 @@ Until it is merged into a Chrome release you have a couple of options.
 
 Since the warnings are only annoying I would recommend switching to the approved MIME type right away. The warnings will resolve themselves in time.
 
+### IIS Express
+
 The steps to fix this will vary by web server but for IIS Express this is how you'd do it.
 
 1. Open `~/Documents/IISExpress/config/applicationhost.config`
-2. Search for **".woff"** and you'll find a line like this:  
-     `<mimeMap fileExtension=".woff" mimeType="font/x-woff" />`
-2. Change **mimeType** to `application/font-woff`
-3. Restart your IIS Express site and the warnings should be gone.
+2. Search for **".woff"** and you'll find a line like this:
+
+        <mimeMap fileExtension=".woff" mimeType="font/x-woff" />
+3. Change **mimeType** to `application/font-woff`
+
+        <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
+4. Restart your IIS Express site and the warnings should be gone.
