@@ -2,7 +2,7 @@
 title: Google Chrome and WOFF font MIME type warnings
 layout: post
 categories: css
-description: "If you are getting warnings like ""Resource interpreted as Font but transferred with MIME type font/x-woff"" in Google Chrome then it means your web server is serving the font with the wrong MIME type. I'll show you how to fix that."
+description: "If you are getting warnings like 'Resource interpreted as Font but transferred with MIME type font/x-woff' in Google Chrome then it means your web server is serving the font with the wrong MIME type. I'll show you how to fix that."
 ---
 
 If you are getting warnings like **Resource interpreted as Font but transferred with MIME type font/x-woff** in Google Chrome then it means your web server is serving the font with the wrong MIME type.
