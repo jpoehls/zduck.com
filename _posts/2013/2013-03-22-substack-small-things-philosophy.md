@@ -17,4 +17,4 @@ _Paraphrased from the video._
 > So you're just wasting your time by writing big things because they won't be  
 > with us in the future. It's really wasted effort.
 
-<div><iframe src="http://player.vimeo.com/video/56219478" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/56219478">Substack - Small things</a> from <a href="http://vimeo.com/mikeal">mikeal</a> on <a href="http://vimeo.com">Vimeo</a>.</p></div>
+<div><iframe src="http://player.vimeo.com/video/56219478" width="500" height="281" frameborder="0" webkitAllowFullScreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen"></iframe> <p><a href="http://vimeo.com/56219478">Substack - Small things</a> from <a href="http://vimeo.com/mikeal">mikeal</a> on <a href="http://vimeo.com">Vimeo</a>.</p></div>
