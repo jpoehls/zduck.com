@@ -1,5 +1,5 @@
 ---
-title: Substack's philosophy of small things
+title: "Substack's philosophy of small things"
 layout: post
 categories: nodejs
 description: "Substack is a prolific package author in the Node.js community. He strongly believes
