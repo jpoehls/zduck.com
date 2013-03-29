@@ -19,7 +19,7 @@ var person = { age: 18 };
 person.name = 'Joshua';
 person['color'] = 'Red';
 
-Object.keys(person); <b>=&gt; ['age', 'name', 'color']</b>
+Object.keys(person); // ['age', 'name', 'color']
 </pre>
 
 That is how you typically create and assign properties. We know that they are enumerable because they show up when you call `Object.keys(person)`.
@@ -30,8 +30,8 @@ To create a non-enumerable property we have to use [`Object.defineProperty()`][1
 var person = { age: 18 };
 Object.defineProperty(person, 'name', { value: 'Joshua', enumerable: false });
 
-person.name; <b>=&gt; 'Joshua'</b>
-Object.keys(person); <b>=&gt; ['age']</b>
+person.name; // 'Joshua'
+Object.keys(person); // ['age']
 </pre>
 
 See there? Our `name` property didn't show up because it wasn't enumerable. Consequently, doing `JSON.stringify(person)` would not include the `name` property either.
