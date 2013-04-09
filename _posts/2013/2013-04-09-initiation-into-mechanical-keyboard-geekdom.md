@@ -2,6 +2,7 @@
 title: Initiation into mechanical keyboard geekdom
 layout: post
 categories: gear
+og_image: ducky-keyboard.png
 description: "I recently switched from a cheap Logitech keyboard to a Ducky DK9087 mechanical keyboard with Cherry MX Brown switches and Green LED backlighting. Now I'm totally hooked on mechanical keyboards!"
 ---
 
