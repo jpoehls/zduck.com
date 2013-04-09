@@ -24,7 +24,7 @@ Buying this keyboard has been like buying new shoes. You stand straighter, walk 
 
 A quick breakdown is in order:
 
-* Those funky etches you see on the keys? That's Chinese, or rather [zhuyin](https://en.wikipedia.org/wiki/Bopomofo) which is a phonetic system for transcribing Chinese. I opted for the Chinese version of the keyboard which is identical to the US version except it ads these additional characters to the keys.
+* Those funky etches you see on the keys? That's Chinese, or rather [zhuyin](https://en.wikipedia.org/wiki/Bopomofo) which is a phonetic system for transcribing Chinese. I opted for the Chinese version of the keyboard which is identical to the US version except that it adds these additional characters to the keys.
 * I got the green LEDs but they make the board with blue, white, yellow, and red as well. It was a tough decision!
 * The LEDs have 5 brightness levels ranging from humane to blinding. You can even program which keys are lit up and save them as presets.
 * All of the standard media keys are there. Play, pause, stop, volume, mute, and skip.
