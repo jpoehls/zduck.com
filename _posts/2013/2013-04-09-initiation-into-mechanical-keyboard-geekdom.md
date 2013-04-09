@@ -13,7 +13,7 @@ A few months ago I started digging into mechanical keyboards. They had caught my
 
 After a lot of research into the [various mechanical switches](http://mechanicalkeyboards.com/faqs.php?faq=mechanical_switch_difference) and watching many YouTube videos, I finally decided. I ordered my first mechanical keyboard from, fittingly enough, [MechanicalKeyboards.com](http://mechanicalkeyboards.com/).
 
-My new [Ducky DK9087 Shine II](http://duckychannel.com.tw/en/DK9087_shine2.html) arrived and it was love at first press. I'm still training my fingers to the slightly different layout but this thing is amazing.
+My new [Ducky DK9087 Shine 2](http://duckychannel.com.tw/en/DK9087_shine2.html) arrived and it was love at first press. I'm still training my fingers to the slightly different layout but this thing is amazing.
 
 Buying this keyboard has been like buying new shoes. You stand straighter, walk taller, type faster, feel better.
 
