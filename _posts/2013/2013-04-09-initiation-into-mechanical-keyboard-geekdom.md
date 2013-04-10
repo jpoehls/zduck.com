@@ -39,3 +39,9 @@ I opted for the Cherry MX Brown switches which are a good middle ground between 
 What is the typing like? Oh, so sweet. Each press resonates and builds a rhythm in your fingers. It is like switching from organ keys to real piano keys. You feel the depth and play with new feeling. If typing is your art then you absolutely must try this quality instrument!
 
 I went out on a limb and bought this thing without ever having tried it in person. I totally scored. If you have never considered a mechanical keyboard before then I seriously recommend you check it out. Take the plunge, go get one!
+
+### Edit
+
+I just ran across these photos of [MechanicalKeyboards.com display room](http://www.flickr.com/photos/mashby/sets/72157633200776744/).
+They were taken when a [GeekHack Meetup toured the facility](http://geekhack.org/index.php?topic=38767.msg847189#msg847189).
+So cool!
