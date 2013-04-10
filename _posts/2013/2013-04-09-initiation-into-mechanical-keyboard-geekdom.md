@@ -42,6 +42,6 @@ I went out on a limb and bought this thing without ever having tried it in perso
 
 ### Edit
 
-I just ran across these photos of [MechanicalKeyboards.com display room](http://www.flickr.com/photos/mashby/sets/72157633200776744/).
+I just ran across these photos of [the MechanicalKeyboards.com display room](http://www.flickr.com/photos/mashby/sets/72157633200776744/).
 They were taken when a [GeekHack Meetup toured the facility](http://geekhack.org/index.php?topic=38767.msg847189#msg847189).
 So cool!
