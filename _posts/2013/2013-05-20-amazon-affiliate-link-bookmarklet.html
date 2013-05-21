@@ -1,0 +1,169 @@
+---
+title: A custom Amazon bookmarklet to support affiliates
+layout: post
+categories: misc
+description: "Create a custom Amazon bookmarklet to support your favorite affiliates."
+---
+
+<p>Do you like to support your favorite podcasts or friends by using their affiliate links when you shop on Amazon? Me too. I never remember though, so I came up with this bookmarklet to help.</p>
+
+<p>The bookmark is magic. Click it whenever you are on an Amazon page and it will reload the page with next affiliate code in your list. Click it any other time and it will take you to Amazon.com. Either way, an affiliate code you care about will be used.</p>
+
+<p>Sound like something useful? Give it a shot, let me know what you think.</p>
+
+<hr/>
+
+<h4>Create your Amazon bookmark!</h4>
+
+<div style="background-color: #eee; border: 1px solid #eee; border-radius: 10px; margin: 1em; padding: 1em;">
+
+	<p>
+		<label><input type="checkbox" id="showCode" /> Show which affiliate code was picked?</label>
+		<br/><small><i>An <code>alert()</code> will be shown each time you click the bookmarklet.</i></small>
+	</p>
+	<p>
+		<label>Enter the affiliate codes you want to support.</label>
+		<br/><small><i>One per line.</i></small>
+		<br/>
+		<textarea id="affcodes" style="width: 200px; height: 100px;">POEHLS-20
+DANCARLINCOM-20</textarea>
+		<br/>
+		<small><i>You are totally awesome if you support my code! <b><code>POEHLS-20</code></b></i></small>
+	</p>
+	<p>
+		<input type="button" value="Create your bookmarklet" onclick="generate();" />
+	</p>
+	<p id="result" style="display: none;">
+		Drag this to your bookmarks:
+		<a href="javascript:void(0);" id="bookmarklet">Amazon.com</a>
+	</p>
+
+</div>
+
+<p>
+	That second code, <code>DANCARLINCOM-20</code>, is a plug for one of my favorite podcasts. <a href="http://dancarlin.com/">Hardcore History</a> is amazing, you should listen if you haven't already.
+</p>
+
+<script>
+	(function() {
+		window.generate = function generate() {
+			var resultEl = document.getElementById('result');
+			var bookmarkletEl = document.getElementById('bookmarklet');
+
+			var affiliates = document.getElementById('affcodes').value.split(/\n/);
+
+			var validAffiliates = [];
+			for (var i=0; i<affiliates.length; i++) {
+				if (/\w+/.test(affiliates[i])) {
+					// Trim it if supported by the browser.
+					if (typeof affiliates[i].trim === 'function') {
+						validAffiliates.push(affiliates[i].trim());
+					}
+					else {
+						validAffiliates.push(affiliates[i]);
+					}
+				}
+			}
+			console.log(validAffiliates);
+
+			if (validAffiliates.length === 0) {
+				alert('Enter at least one affiliate code.')
+				resultEl.style.display = 'none';
+				return;
+			}
+
+			var showCode = document.getElementById('showCode').checked;
+
+			var bookmarklet = "void(function(){var showWhichAffiliateCodeWasPicked="
+				+ JSON.stringify(showCode)
+				+ ";function appendQS(qs,key,value){var keys=(qs||'').replace(/^\\?/,'').split('&');var i,kv,found;for(i=0;i<keys.length;i++){kv=keys[i].split('=');if(key.toLowerCase()===kv[0].toLowerCase()){kv[1]=encodeURIComponent(value);keys[i]=kv[0]+'='+kv[1];found=true}}if(!found){keys.push(key+'='+encodeURIComponent(value))}return'?'+keys.join('&').replace(/^&/,'')}function updateAmazonQS(affiliateId){return appendQS(window.location.search,'tag',affiliateId)}var affiliateCodes="
+				+ JSON.stringify(validAffiliates)
+				+ ";function lastUsed(num){var storageKey='__AA_BOOKMARKLET';if(typeof num==='number'){localStorage[storageKey]=JSON.stringify(num);return num}else{if(localStorage[storageKey]){return JSON.parse(localStorage[storageKey])}else{return-1}}}function pickCode(){var nextIndex=lastUsed()+1;if(nextIndex>affiliateCodes.length-1){nextIndex=0}lastUsed(nextIndex);return affiliateCodes[nextIndex]}var code=pickCode();if(showWhichAffiliateCodeWasPicked){alert('Using affiliate code: '+code)}if(/amazon\\.com/.test(window.location.host)){window.location.href=updateAmazonQS(code)}else{window.location.href='https://amazon.com?tag='+encodeURIComponent(code)}}());";
+
+			bookmarkletEl.setAttribute('href', 'javascript:' + bookmarklet);
+			resultEl.style.display = 'block';
+		}
+	}());
+</script>
+
+<!--
+// RAW CODE
+
+// To use this:
+// 1: Edit the affiliate code array as desired
+// 2. Create a new bookmark and in the URL paste all of this code after "javascript:".
+// 3. You can use http://javascriptcompressor.com/ to compress the code into a single-line if you want.
+
+void(function() {
+  
+  // Set this to `false` if you don't want to see the alerts.
+  var showWhichAffiliateCodeWasPicked = true;
+  
+function appendQS(qs, key, value) {
+  var keys = (qs || '').replace(/^\?/, '').split('&');
+  var i, kv, found;
+  for (i=0; i<keys.length; i++) {
+    kv = keys[i].split('=');
+    if (key.toLowerCase() === kv[0].toLowerCase()) {
+      kv[1] = encodeURIComponent(value);
+      keys[i] = kv[0] + '=' + kv[1];
+      found = true;
+    }
+  }
+  
+  if (!found) {
+    keys.push(key + '=' + encodeURIComponent(value));
+  }
+  
+  return '?' + keys.join('&').replace(/^&/, '');
+}
+
+function updateAmazonQS(affiliateId) {
+  return appendQS(window.location.search, 'tag', affiliateId);
+}
+
+var affiliateCodes = [
+  'steubingme-20',
+  'dancarlincom-20'
+];
+
+function lastUsed(num) {
+  var storageKey = '__AA_BOOKMARKLET';
+  if (typeof num === 'number') {
+     localStorage[storageKey] = JSON.stringify(num); 
+     return num;
+  }
+  else {
+    if (localStorage[storageKey]) {
+        return JSON.parse(localStorage[storageKey]);
+    }
+    else {
+     return -1; 
+    }
+  }
+}
+
+function pickCode() {
+  var nextIndex = lastUsed() + 1;
+  if (nextIndex > affiliateCodes.length - 1) {
+     nextIndex = 0; 
+  }
+  
+  lastUsed(nextIndex);
+  return affiliateCodes[nextIndex];
+}
+
+  var code = pickCode();
+  if (showWhichAffiliateCodeWasPicked) {
+    alert('Using affiliate code: ' + code);
+  }
+  
+if (/amazon\.com/.test(window.location.host)) {
+  window.location.href = updateAmazonQS(code);
+} else {
+  window.location.href = 'https://amazon.com?tag=' + encodeURIComponent(code);
+}
+
+}());
+
+-->
