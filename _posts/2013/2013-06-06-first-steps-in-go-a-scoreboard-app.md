@@ -41,6 +41,4 @@ If this sounds interesting to you then I encourage you to watch a couple of vide
 * [Go: a simple programming environment](https://vimeo.com/53221558) - Andrew Gerrand, November 2012
 * [Go at Google](http://www.infoq.com/presentations/Go-Google) - Rob Pike, October 2012
 
------
-
 So, what do you think of Go? Let me know! And don't forget to [create a scoreboard](http://scores.zduck.com) and let me know what you think of that as well!
