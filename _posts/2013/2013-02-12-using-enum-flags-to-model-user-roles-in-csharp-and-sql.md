@@ -1,7 +1,7 @@
 ---
-title: Using enum flags to model user roles in C# and SQL
+title: Using enum flags to model user roles in C#, SQL, and Go
 layout: post
-categories: c# sql
+categories: c# sql golang
 description: "Using an enum flags property to hold users' roles is just one trick I've learned from @SeiginoRaikou, one of my co-geniuses at InterWorks."
 ---
 
@@ -79,3 +79,34 @@ SELECT * FROM [User] WHERE [Roles] &amp; 4 &lt;&gt; 0
 </pre>
 
 Go forth and simplify, my friends.
+
+**Update for Go:**
+
+Bonus! I've been having fun with [Go](http://www.golang.org) lately
+so here is how you might model this in Go.
+
+<pre data-language="golang">
+type User struct {
+    Roles    Roles
+}
+
+type Roles int
+
+const (
+    // Roles must be powers of two.
+    RoleAdmin Roles = 2
+    RoleUser        = 3
+)
+
+func (user *User) HasRole(role Roles) bool {
+  return (user.Roles &amp; role) != 0
+}
+
+func (user *User) AddRole(role Roles) {
+  user.Roles |= role
+}
+
+func (user *User) RemoveRole(role Roles) {
+  user.Roles &amp;= ^role
+}
+</pre>
