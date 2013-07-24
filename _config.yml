@@ -3,3 +3,5 @@ permalink: /:year/:title/
 
 # post.url will be added to the end to get a shareable permalink
 url: http://zduck.com
+
+exclude: ['withdrawn/**']

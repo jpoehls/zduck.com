@@ -80,33 +80,44 @@ SELECT * FROM [User] WHERE [Roles] &amp; 4 &lt;&gt; 0
 
 Go forth and simplify, my friends.
 
-**Update for Go:**
+**Update for Go**
 
-Bonus! I've been having fun with [Go](http://www.golang.org) lately
-so here is how you might model this in Go.
+Bonus! Here is how you might model this in [Go](http://www.golang.org).
 
 <pre data-language="golang">
 type User struct {
     Roles    Roles
 }
 
-type Roles int
+type Roles uint
 
 const (
     // Roles must be powers of two.
-    RoleAdmin Roles = 2
-    RoleUser        = 3
+    RoleEmployee Roles = 1
+    RoleManager        = 2
+    RoleAdmin          = 4
 )
-
-func (user *User) HasRole(role Roles) bool {
-  return (user.Roles &amp; role) != 0
-}
 
 func (user *User) AddRole(role Roles) {
   user.Roles |= role
 }
 
 func (user *User) RemoveRole(role Roles) {
-  user.Roles &amp;= ^role
+  user.Roles &amp;^= role
 }
+
+func (user *User) IsInRole(role Roles) bool {
+  return (user.Roles &amp; role) != 0
+}
+</pre>
+
+An even cleaner way would be to use [`iota`](http://golang.org/pkg/builtin/#iota) to have Go automatically assign the flag values in powers of two. You can see this method used by Go's own [text/tabwriter](http://golang.org/pkg/text/tabwriter/#pkg-constants) package.
+
+<pre data-language="golang">
+const (
+  // Roles must be powers of two.
+  RoleEmployee Roles = 1 &lt;&lt; iota
+  RoleManager
+  RoleAdmin
+)
 </pre>
