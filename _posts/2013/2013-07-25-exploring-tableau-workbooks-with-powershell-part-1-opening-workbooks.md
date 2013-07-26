@@ -12,8 +12,6 @@ Tableau workbooks (TWB files) are just XML files. Packaged workbooks (TWBX files
 
 This is wonderful because it means it is very easy to go spelunking through workbook files without a **gui**de.
 
--------------
-
 ## Opening Workbooks
 
 I mentioned that TWB files are just XML files and that TWBX files are ZIP files that contain a TWB. This means we need different logic for opening a TWB vs a TWBX. Let's write a simple little PowerShell function to fix that. We'll call this function Get-TableauWorkbookXml and it will take a file path and return the workbook's XML. It will abstract away the different ahandling of TWB and TWBX files for us.
