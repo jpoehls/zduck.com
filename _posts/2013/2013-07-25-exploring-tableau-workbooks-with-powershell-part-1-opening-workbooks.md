@@ -22,7 +22,7 @@ I mentioned that TWB files are just XML files and that TWBX files are ZIP files 
 # Requires -Version 3
 
 function Get-TableauWorkbookXml {
-<#
+&lt;#
 .SYNOPSIS
     Gets the workbook XML from a specified TWB or TWBX file.
 
@@ -31,7 +31,7 @@ function Get-TableauWorkbookXml {
 
 .NOTES
     Author: Joshua Poehls &lt;joshua@zduck.com&gt;
-#>
+#&gt;
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
