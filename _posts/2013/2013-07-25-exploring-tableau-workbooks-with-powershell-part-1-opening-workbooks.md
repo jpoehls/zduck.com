@@ -81,14 +81,14 @@ function Get-TableauWorkbookXml {
 
 Let's try it out from PowerShell.
 
-	Get-TableauWorkbookXml .\MyWorkbook.twb
+`Get-TableauWorkbookXml .\MyWorkbook.twb`
 
 TWBX files are just as easy.
 
-	Get-TableauWorkbookXml .\MyPackagedWorkbook.twbx
+`Get-TableauWorkbookXml .\MyPackagedWorkbook.twbx`
 
 Cool, right? How about opening a bunch of workbooks at once? This is PowerShell after all.
 
-	Get-ChildItem *.twb* | Get-TableauWorkbookXml
+`Get-ChildItem *.twb* | Get-TableauWorkbookXml`
 
 In the next post I'll show some tricks for exploring XML with aggregate XPath searches.
