@@ -17,8 +17,6 @@ This is wonderful because it means it is very easy to go spelunking through work
 I mentioned that TWB files are just XML files and that TWBX files are ZIP files that contain a TWB. This means we need different logic for opening a TWB vs a TWBX. Let's write a simple little PowerShell function to fix that. We'll call this function Get-TableauWorkbookXml and it will take a file path and return the workbook's XML. It will abstract away the different ahandling of TWB and TWBX files for us.
 
 <pre data-language="powershell">
-# Requires -Version 3
-
 function Get-TableauWorkbookXml {
 &lt;#
 .SYNOPSIS
@@ -37,11 +35,14 @@ function Get-TableauWorkbookXml {
     )
 
     begin {
+        $originalCurrentDirectory = [System.Environment]::CurrentDirectory
+
         # System.IO.Compression.FileSystem requires at least .NET 4.5
         [System.Reflection.Assembly]::LoadWithPartialName("System.IO.Compression") | Out-Null
     }
 
     process {
+        [System.Environment]::CurrentDirectory = (Get-Location).Path
         $extension = [System.IO.Path]::GetExtension($Path)
         if ($extension -eq ".twb") {
             return [xml](Get-Content -LiteralPath $Path)
@@ -75,6 +76,10 @@ function Get-TableauWorkbookXml {
         else {
             throw "Unknown file type. Expected a TWB or TWBX file extension."
         }
+    }
+
+    end {
+        [System.Environment]::CurrentDirectory = $originalCurrentDirectory
     }
 }
 </pre>
