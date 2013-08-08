@@ -10,7 +10,7 @@ description: "In part 1 I showed you how to open a Tableau workbook in PowerShel
 
 Welcome back! Last time I showed you how to open a Tableau workbook (TWB or TWBX) in PowerShell so you could start exploring the raw XML. Today I'll show the next logical thing, saving the changes you make.
 
-If you are only opening TWB files then saving your changes couldn't be easier. Since TWBs are just XML files we can simply write it to a file, like so.
+If you are only opening TWB files, then saving your changes couldn't be easier. Since TWBs are just XML files we can simply write it to a file, like so.
 
 <pre>
 $workbook = Get-TableauWorkbookXml 'MyWorkbook.twb'
