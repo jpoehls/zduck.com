@@ -2,6 +2,7 @@
 title: "Tableau via PowerShell, Part 2: Saving Changes"
 layout: post
 categories: powershell tableau
+iwpost: https://www.interworks.com/blogs/jpoehls/2013/08/07/tableau-powershell-part-2-saving-changes
 description: "In part 1 I showed you how to open a Tableau workbook in PowerShell to start editing the workbook XML. Now I'll show you how to save those changes back to a TWB or TWBX file!"
 ---
 
@@ -181,7 +182,7 @@ function Export-TableauPackagedWorkbook {
 }
 </pre>
 
-Not bad right? Here are some quick usage examples.
+Not too bad. Here are some quick usage examples.
 
 **Convert a TWB into a TWBX**
 

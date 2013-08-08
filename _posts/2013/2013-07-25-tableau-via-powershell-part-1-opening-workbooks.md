@@ -3,7 +3,7 @@ title: "Tableau via PowerShell, Part 1: Opening Workbooks"
 layout: post
 categories: powershell tableau
 permalink: "2013/exploring-tableau-workbooks-with-powershell-part-1-opening-workbooks/"
-iwpost: https://www.interworks.com/blogs/jpoehls/2013/07/25/exploring-tableau-workbooks-powershell-part-1-opening-workbooks
+iwpost: https://www.interworks.com/blogs/jpoehls/2013/07/25/tableau-powershell-part-1-opening-workbooks
 description: "In this mini-series I'm going to show you some cookbook style examples for using PowerShell to explore your Tableau workbooks. Follow along, this is going to be fun!"
 ---
 
