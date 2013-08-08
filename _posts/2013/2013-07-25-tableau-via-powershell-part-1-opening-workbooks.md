@@ -1,7 +1,8 @@
 ---
-title: "Exploring Tableau Workbooks with PowerShell, Part 1: Opening Workbooks"
+title: "Tableau via PowerShell, Part 1: Opening Workbooks"
 layout: post
 categories: powershell tableau
+permalink: "2013/exploring-tableau-workbooks-with-powershell-part-1-opening-workbooks/"
 iwpost: https://www.interworks.com/blogs/jpoehls/2013/07/25/exploring-tableau-workbooks-powershell-part-1-opening-workbooks
 description: "In this mini-series I'm going to show you some cookbook style examples for using PowerShell to explore your Tableau workbooks. Follow along, this is going to be fun!"
 ---
@@ -26,7 +27,7 @@ function Get-TableauWorkbookXml {
     The literal file path of the TWB or TWBX file.
 
 .NOTES
-    Author: Joshua Poehls &lt;joshua@zduck.com&gt;
+    Author: Joshua Poehls &lt;{{site.email}}&gt;
 #&gt;
     [CmdletBinding()]
     param(
@@ -96,4 +97,4 @@ Cool, right? How about opening a bunch of workbooks at once? This is PowerShell 
 
 `Get-ChildItem *.twb* | Get-TableauWorkbookXml`
 
-In the next post I'll show some tricks for exploring XML with aggregate XPath searches.
+Stay tuned, in part 2 we'll cover saving changes back to the TWB/TWBX file.
