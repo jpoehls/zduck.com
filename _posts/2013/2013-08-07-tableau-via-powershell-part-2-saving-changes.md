@@ -29,6 +29,10 @@ We will also support the common `-WhatIf` and `-Confirm` parameters that are so 
 
 Here is our function:
 
+> If you find this helpful then check out [TableauKit]({{site.url}}/2013/tableaukit-powershell-module-for-tableau/);
+> a full on PowerShell module for working with Tableau files. It contains a new and improved
+> version of the function below and much more.
+
 <pre data-language="powershell">
 function Export-TableauPackagedWorkbook {
 &lt;#

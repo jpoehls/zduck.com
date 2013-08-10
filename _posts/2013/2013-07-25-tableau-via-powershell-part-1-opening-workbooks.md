@@ -17,6 +17,10 @@ This is wonderful because it means it is very easy to go spelunking through work
 
 I mentioned that TWB files are just XML files and that TWBX files are ZIP files that contain a TWB. This means we need different logic for opening a TWB vs a TWBX. Let's write a simple little PowerShell function to fix that. We'll call this function Get-TableauWorkbookXml and it will take a file path and return the workbook's XML. It will abstract away the different ahandling of TWB and TWBX files for us.
 
+> If you find this helpful then check out [TableauKit]({{site.url}}/2013/tableaukit-powershell-module-for-tableau/);
+> a full on PowerShell module for working with Tableau files. It contains a new and improved
+> version of the function below and much more.
+
 <pre data-language="powershell">
 function Get-TableauWorkbookXml {
 &lt;#
