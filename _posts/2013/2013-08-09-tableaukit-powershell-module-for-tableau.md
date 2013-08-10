@@ -18,7 +18,7 @@ know there are a lot of cool things you can do with Tableau workbooks using
 PowerShell. Up until now I've been sharing helper functions in a stand-alone
 fashion. No longer.
 
-I'd like to introduce you to [TableauKit][2]. A pure script-based PowerShell
+I'd like to introduce you to [TableauKit][2]. A pure, script-based PowerShell
 module for working with Tableau files.
 
 ## Say what?
@@ -31,22 +31,21 @@ Today TableauKit is shipping with the following commands:
   parameters in the workbook. It also contains metadata like the version of
   Tableau that saved the workbook.</p>
 
-  <p>You can dig a bit deeper and find the
+  <p>You can dig a bit deeper to find the
   parameter values and which worksheets are included on specific dashboards.</p>
   
-
   <p><i>No XPath required!</i></p>
 </li>
 <li><b>Get-TableauXml</b> - Opens up a TWB or TWBX file and returns the workbook's
   raw XML. <i>XPath Heaven.</i></li>
 
-<li><b>Export-Tableau</b> - Let's you save changes you've made to the workbook's
+<li><b>Export-Tableau</b> - Lets you save changes you've made to the workbook's
   XML back into a new or existing TWB or TWBX file.</li>
 </ul>
 
 You'll probably recognize **Get-TableauXml** and **Export-Tableau** from my
 [previous][1] [posts][3] about them. They are much better than when you last
-met them though! Several bugs have been fixed and the names are shorter now.
+met them, though! Several bugs have been fixed and the names are shorter now.
 
 **Get-TableauObject** is all new. Just because you _can_ dig through the
 workbook with XPath doesn't mean it's fun. This command provides quick access
@@ -111,7 +110,7 @@ C:\users\jpoehls\desktop\Shakespeare_Extract.twb
 
 ### List all dashboard worksheets
 
-How about we get a list of all dashboards and their worksheets for all
+Let's get a list of all dashboards and their worksheets for all
 of our workbooks.
 
 Oh, and we want that list presented in a GUI that we can
@@ -215,7 +214,7 @@ TableauKit is open-source and distributed under the Apache License 2.0.
 
 ## Roadmap
 
-The future is wide open for this. What kinds of functionality would you like to
+The future is wide open for this. What kind of functionality would you like to
 see added? Let me know in the comments!
 
 [1]: {{site.url}}/2013/exploring-tableau-workbooks-with-powershell-part-1-opening-workbooks/
