@@ -1,5 +1,5 @@
 ---
-title: Using Unix terminal keyboard shortcuts in the Windows command prompt
+title: Using Unix terminal shortcuts in the Windows command prompt
 layout: post
 categories: powershell autohotkey windows
 description: "Unix terminals have a few basic keyboard shortcuts that the Windows command prompt doesn't support. I'll show you how to fix that with AutoHotkey."
