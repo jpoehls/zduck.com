@@ -1,0 +1,504 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1411" measuredH="1678" mockupW="1368" mockupH="1649">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="115" y="67" w="319" h="-1" measuredW="171" measuredH="41" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Acme%20Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="160" y="149" w="-1" h="-1" measuredW="44" measuredH="24" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="213" y="144" w="245" h="-1" measuredW="79" measuredH="34" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="130" y="193" w="-1" h="-1" measuredW="74" measuredH="24" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="213" y="193" w="245" h="-1" measuredW="79" measuredH="34" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TitleWindow" x="100" y="29" w="400" h="361" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Link" x="213" y="315" w="-1" h="-1" measuredW="146" measuredH="22" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Forgot%20your%20password%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="213" y="254" w="100" h="39" measuredW="61" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::IconLabel" x="652" y="125" w="-1" h="-1" measuredW="194" measuredH="22" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>11820806</color>
+        <icon>AsteriskIcon%7Cxsmall</icon>
+        <labelPosition>right</labelPosition>
+        <size>14</size>
+        <text>Incorrect%20email%20or%20password</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::TitleWindow" x="527" y="29" w="400" h="361" measuredW="450" measuredH="400" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Title" x="542" y="67" w="-1" h="-1" measuredW="171" measuredH="41" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Acme%20Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="593" y="164" w="-1" h="-1" measuredW="44" measuredH="24" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::TextInput" x="646" y="159" w="245" h="-1" measuredW="164" measuredH="34" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>you@domain.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Label" x="563" y="208" w="-1" h="-1" measuredW="74" measuredH="24" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::TextInput" x="646" y="208" w="245" h="-1" measuredW="79" measuredH="34" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Link" x="646" y="330" w="-1" h="-1" measuredW="146" measuredH="22" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Forgot%20your%20password%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Button" x="646" y="269" w="100" h="39" measuredW="61" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::TitleWindow" x="100" y="425" w="400" h="361" measuredW="450" measuredH="400" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Title" x="115" y="463" w="319" h="-1" measuredW="205" measuredH="41" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Acme%20Sign%20Up</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="160" y="545" w="-1" h="-1" measuredW="44" measuredH="24" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::TextInput" x="213" y="540" w="245" h="-1" measuredW="79" measuredH="34" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="130" y="589" w="-1" h="-1" measuredW="74" measuredH="24" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::TextInput" x="213" y="589" w="245" h="-1" measuredW="79" measuredH="34" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Button" x="213" y="642" w="100" h="39" measuredW="78" measuredH="27" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Sign%20Up</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::TitleWindow" x="527" y="425" w="400" h="361" measuredW="450" measuredH="400" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Title" x="542" y="463" w="319" h="-1" measuredW="205" measuredH="41" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Acme%20Sign%20Up</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="587" y="561" w="-1" h="-1" measuredW="44" measuredH="24" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::TextInput" x="640" y="556" w="245" h="-1" measuredW="164" measuredH="34" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>you@domain.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Label" x="557" y="605" w="-1" h="-1" measuredW="74" measuredH="24" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::TextInput" x="640" y="605" w="245" h="-1" measuredW="79" measuredH="34" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Button" x="640" y="658" w="100" h="39" measuredW="78" measuredH="27" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Sign%20Up</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::IconLabel" x="563" y="518" w="-1" h="-1" measuredW="281" measuredH="22" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>11820806</color>
+        <icon>AsteriskIcon%7Cxsmall</icon>
+        <labelPosition>right</labelPosition>
+        <size>14</size>
+        <text>There%20is%20already%20an%20account%20for%20this%20email.</text>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::Link" x="846" y="518" w="-1" h="-1" measuredW="48" measuredH="22" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>14</size>
+        <text>Login%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::TitleWindow" x="100" y="810" w="400" h="257" measuredW="450" measuredH="400" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Title" x="115" y="848" w="364" h="-1" measuredW="159" measuredH="41" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Thank%20you%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::Paragraph" x="137" y="904" w="327" h="136" measuredW="200" measuredH="80" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>16</size>
+        <text>We%27ve%20sent%20an%20email%20to%20*you@domain.com*.%0A%20%0APlease%20click%20the%20link%20in%20that%20message%20to%20activate%20your%20account.</text>
+      </controlProperties>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::TitleWindow" x="527" y="810" w="400" h="302" measuredW="450" measuredH="400" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::Title" x="542" y="848" w="370" h="-1" measuredW="302" measuredH="41" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Confirmation%20Needed</text>
+      </controlProperties>
+    </control>
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::Paragraph" x="564" y="904" w="327" h="183" measuredW="200" measuredH="80" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>16</size>
+        <text>An%20email%20has%20been%20sent%20to%20*you@domain.com*.%0A%20%0APlease%20click%20the%20link%20in%20that%20message%20to%20confirm%20your%20email%20address.%0A%20%0A*%5BResend%20the%20message%5D*%20or%20*%5BChange%20your%20email%5D*%0A%20%0AMake%20sure%20to%20check%20your%20junk%20or%20spam%20folder.%0AThe%20sender%20is%20*robots@zduck.com*.%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Paragraph" x="107" y="1181" w="387" h="121" measuredW="200" measuredH="80" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>16</size>
+        <text>OK.%20We%27ve%20resent%20the%20confirmation%20message%20to%3A%0A*you@domain.com*%0A%20%0AMake%20sure%20to%20check%20your%20junk%20or%20spam%20folder.%0AThe%20sender%20is%20*robots@zduck.com*.</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::TitleWindow" x="100" y="1087" w="400" h="257" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Title" x="115" y="1125" w="370" h="-1" measuredW="210" measuredH="41" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Message%20Sent</text>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Paragraph" x="213" y="713" w="258" h="80" measuredW="200" measuredH="80" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Already%20have%20an%20account%3F%20%5BLogin%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::Paragraph" x="646" y="713" w="258" h="80" measuredW="200" measuredH="80" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Already%20have%20an%20account%3F%20%5BLogin%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="92" controlTypeID="com.balsamiq.mockups::Paragraph" x="320" y="269" w="258" h="80" measuredW="200" measuredH="80" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>or%20*%5BSign%20up%20for%20Acme%5D*</text>
+      </controlProperties>
+    </control>
+    <control controlID="93" controlTypeID="com.balsamiq.mockups::Paragraph" x="753" y="283" w="151" h="80" measuredW="200" measuredH="80" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>or%20*%5BSign%20up%20for%20Acme%5D*</text>
+      </controlProperties>
+    </control>
+    <control controlID="95" controlTypeID="com.balsamiq.mockups::TitleWindow" x="100" y="1366" w="400" h="280" measuredW="450" measuredH="400" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="96" controlTypeID="com.balsamiq.mockups::Paragraph" x="107" y="1460" w="387" h="148" measuredW="200" measuredH="80" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>16</size>
+        <text>An%20email%20has%20been%20sent%20to%20*new@domain.com*.%0A%20%0APlease%20click%20the%20link%20in%20that%20message%20to%0Aconfirm%20your%20email%20address.%0A%20%0AMake%20sure%20to%20check%20your%20junk%20or%20spam%20folder.%0AThe%20sender%20is%20*robots@zduck.com*.</text>
+      </controlProperties>
+    </control>
+    <control controlID="97" controlTypeID="com.balsamiq.mockups::Title" x="115" y="1404" w="370" h="-1" measuredW="212" measuredH="41" zOrder="48" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Email%20Changed</text>
+      </controlProperties>
+    </control>
+    <control controlID="99" controlTypeID="com.balsamiq.mockups::TitleWindow" x="527" y="1398" w="400" h="280" measuredW="450" measuredH="400" zOrder="49" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="100" controlTypeID="com.balsamiq.mockups::Label" x="563" y="1528" w="-1" h="-1" measuredW="44" measuredH="24" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="101" controlTypeID="com.balsamiq.mockups::TextInput" x="616" y="1523" w="245" h="-1" measuredW="177" measuredH="34" zOrder="51" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>used@domain.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="102" controlTypeID="com.balsamiq.mockups::Button" x="616" y="1603" w="100" h="39" measuredW="61" measuredH="27" zOrder="52" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Save</text>
+      </controlProperties>
+    </control>
+    <control controlID="103" controlTypeID="com.balsamiq.mockups::Title" x="542" y="1436" w="370" h="-1" measuredW="264" measuredH="41" zOrder="53" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Change%20your%20email</text>
+      </controlProperties>
+    </control>
+    <control controlID="104" controlTypeID="com.balsamiq.mockups::Paragraph" x="616" y="1562" w="296" h="25" measuredW="200" measuredH="80" zOrder="54" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>6710886</color>
+        <size>14</size>
+        <text>Your%20current%20email%20is%20*you@domain.com.*</text>
+      </controlProperties>
+    </control>
+    <control controlID="105" controlTypeID="com.balsamiq.mockups::IconLabel" x="587" y="1489" w="-1" h="-1" measuredW="281" measuredH="22" zOrder="55" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>11820806</color>
+        <icon>AsteriskIcon%7Cxsmall</icon>
+        <labelPosition>right</labelPosition>
+        <size>14</size>
+        <text>There%20is%20already%20an%20account%20for%20this%20email.</text>
+      </controlProperties>
+    </control>
+    <control controlID="106" controlTypeID="com.balsamiq.mockups::Paragraph" x="724" y="1614" w="97" h="25" measuredW="200" measuredH="80" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>or%20%5Bgo%20back%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="107" controlTypeID="com.balsamiq.mockups::TitleWindow" x="527" y="1131" w="400" h="257" measuredW="450" measuredH="400" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Acme%20Portal</text>
+      </controlProperties>
+    </control>
+    <control controlID="108" controlTypeID="com.balsamiq.mockups::Label" x="563" y="1235" w="-1" h="-1" measuredW="44" measuredH="24" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="109" controlTypeID="com.balsamiq.mockups::TextInput" x="616" y="1230" w="245" h="-1" measuredW="177" measuredH="34" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>used@domain.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="110" controlTypeID="com.balsamiq.mockups::Button" x="616" y="1310" w="100" h="39" measuredW="61" measuredH="27" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Save</text>
+      </controlProperties>
+    </control>
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::Title" x="542" y="1169" w="370" h="-1" measuredW="264" measuredH="41" zOrder="61" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Change%20your%20email</text>
+      </controlProperties>
+    </control>
+    <control controlID="112" controlTypeID="com.balsamiq.mockups::Paragraph" x="616" y="1269" w="296" h="25" measuredW="200" measuredH="80" zOrder="62" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>6710886</color>
+        <size>14</size>
+        <text>Your%20current%20email%20is%20*you@domain.com.*</text>
+      </controlProperties>
+    </control>
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::Paragraph" x="724" y="1321" w="97" h="25" measuredW="200" measuredH="80" zOrder="63" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>or%20%5Bgo%20back%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="116" controlTypeID="com.balsamiq.mockups::CallOut" x="43" y="37" w="-1" h="-1" measuredW="37" measuredH="37" zOrder="64" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1</text>
+      </controlProperties>
+    </control>
+    <control controlID="117" controlTypeID="com.balsamiq.mockups::CallOut" x="940" y="37" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="65" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>2</text>
+      </controlProperties>
+    </control>
+    <control controlID="118" controlTypeID="com.balsamiq.mockups::CallOut" x="940" y="440" w="-1" h="-1" measuredW="39" measuredH="40" zOrder="66" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>4</text>
+      </controlProperties>
+    </control>
+    <control controlID="119" controlTypeID="com.balsamiq.mockups::CallOut" x="43" y="440" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="67" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>3</text>
+      </controlProperties>
+    </control>
+    <control controlID="120" controlTypeID="com.balsamiq.mockups::CallOut" x="940" y="833" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="68" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>6</text>
+      </controlProperties>
+    </control>
+    <control controlID="121" controlTypeID="com.balsamiq.mockups::CallOut" x="43" y="833" w="-1" h="-1" measuredW="38" measuredH="37" zOrder="69" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>5</text>
+      </controlProperties>
+    </control>
+    <control controlID="122" controlTypeID="com.balsamiq.mockups::CallOut" x="940" y="1146" w="-1" h="-1" measuredW="38" measuredH="39" zOrder="70" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>8</text>
+      </controlProperties>
+    </control>
+    <control controlID="123" controlTypeID="com.balsamiq.mockups::CallOut" x="43" y="1102" w="-1" h="-1" measuredW="38" measuredH="37" zOrder="71" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>7</text>
+      </controlProperties>
+    </control>
+    <control controlID="124" controlTypeID="com.balsamiq.mockups::CallOut" x="940" y="1413" w="-1" h="-1" measuredW="44" measuredH="39" zOrder="72" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>10</text>
+      </controlProperties>
+    </control>
+    <control controlID="125" controlTypeID="com.balsamiq.mockups::CallOut" x="43" y="1381" w="-1" h="-1" measuredW="38" measuredH="39" zOrder="73" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>9</text>
+      </controlProperties>
+    </control>
+    <control controlID="126" controlTypeID="com.balsamiq.mockups::TitleWindow" x="1011" y="810" w="400" h="257" measuredW="450" measuredH="400" zOrder="74" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="127" controlTypeID="com.balsamiq.mockups::Title" x="1029" y="916" w="364" h="-1" measuredW="347" measuredH="41" zOrder="75" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <bold>false</bold>
+        <color>6710886</color>
+        <size>32</size>
+        <text>Thanks%20for%20joining%20Acme%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="128" controlTypeID="com.balsamiq.mockups::Paragraph" x="1029" y="976" w="364" h="64" measuredW="200" measuredH="80" zOrder="76" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>16</size>
+        <text>Please%20click%20the%20link%20below%20to%20confirm%20your%20email%3A%20%5Bhttp%3A//app.acme.com/confirm%3F79384DFA%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="129" controlTypeID="com.balsamiq.mockups::Paragraph" x="1018" y="841" w="364" h="60" measuredW="200" measuredH="80" zOrder="77" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <size>13</size>
+        <text>To%3A%20you@domain.com%0AFrom%3A%20robots@acme.com%0ASubject%3A%20Welcome%20to%20Acme%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="130" controlTypeID="com.balsamiq.mockups::HRule" x="1011" y="894" w="400" h="-1" measuredW="100" measuredH="10" zOrder="78" locked="false" isInGroup="-1"/>
+    <control controlID="131" controlTypeID="com.balsamiq.mockups::CallOut" x="1227" y="725" w="-1" h="-1" measuredW="42" measuredH="39" zOrder="79" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>11</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
