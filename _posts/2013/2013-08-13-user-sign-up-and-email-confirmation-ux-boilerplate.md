@@ -2,11 +2,11 @@
 title: "User sign up and email confirmation, a UX boilerplate"
 layout: post
 categories: ux
-description: "Sign up, confirm your email, login in. The three steps that almost all web apps share. This is my boilerplate for the UX during this process. Use it as a starting point for your own projects!"
+description: "Sign up, confirm your email, login. The three steps that almost all web apps share. This is my boilerplate for the UX during this process. Use it as a starting point for your own projects!"
 og_image: signup-boilerplate.png
 ---
 
-Sign up, confirm your email address, login in. The three steps that almost all web apps share.
+Sign up, confirm your email address, login. The three steps that almost all web apps share.
 
 It isn't hard to get this process right but it does take some planning. I've had to implement this a lot so I finally decided to document it. This is my boilerplate for a user sign up process. The interaction flow that I use as the starting point for sign ups in my apps. Along the way I'll point out some key UX (User eXperience) tips. I hope this saves you some time on your next project.
 
