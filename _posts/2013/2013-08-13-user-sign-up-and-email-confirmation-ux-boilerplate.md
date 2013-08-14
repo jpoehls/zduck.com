@@ -8,7 +8,7 @@ og_image: signup-boilerplate.png
 
 Sign up, confirm your email address, login. The three steps that almost all web apps share.
 
-It isn't hard to get this process right but it does take some planning. I've had to implement this a lot so I finally decided to document it. This is my boilerplate for a user sign up process. The interaction flow that I use as the starting point for sign ups in my apps. Along the way I'll point out some key UX (User eXperience) tips. I hope this saves you some time on your next project.
+It isn't hard to get this process right but it does take some planning. I've had to implement this a lot so I finally decided to document it. This is my boilerplate for a user sign up process. The interaction flow that I use as the starting point for sign-ups in my apps. Along the way I'll point out some key UX (User eXperience) tips. I hope this saves you some time on your next project.
 
 > The UI mockups are just that. Mockups. This post isn't about the UI of your pages but rather the flow and functionality. The mockups are intended to communicate features, not a specific design or layout.
 
@@ -78,9 +78,9 @@ If they try to continue without confirming their address:
 
 ## Resending the confirmation
 
-Maybe the user's mail server was offline. Maybe they deleted your message without reading it. Maybe it got trapped by an over zealous spam filter. There are any number of ways the message might get lost. The ability to have it resent is a great UX booster that might just save you an otherwise lost user.
+Maybe the user's mail server was offline. Maybe they deleted your message without reading it. Maybe it got trapped by an over zealous spam filter. There are any number of ways the message might get lost. The ability to have it re-sent is a great UX booster that might just save you an otherwise lost user.
 
-![Confirmation message resent mockup]({{site.url}}/assets/forposts/ux-boilerplate-user-sign-up/message-resent.png "Confirmation message resent mockup")
+![Confirmation message sent mockup]({{site.url}}/assets/forposts/ux-boilerplate-user-sign-up/message-resent.png "Confirmation message sent mockup")
 
 ## Changing their email
 
@@ -93,7 +93,7 @@ This is another little detail that can make a big difference. Maybe the user ent
 
 - Show them their current address on the change form.
 
-The confirmation should be resent to the new address and a friendly message shown once again.
+The confirmation should be sent to the new address and a friendly message shown once again.
 
 > All previously sent confirmation links should be disabled at this point for security. You wouldn't want the wrong address to be confirmed, you only want the new one.
 
