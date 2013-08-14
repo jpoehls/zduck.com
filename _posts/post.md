@@ -3,6 +3,7 @@ title: Title goes here
 layout: post
 published: false
 categories: list of tags
+og_image: image.png
 iwpost: http://interworks.com/link/to/post
 ---
 
