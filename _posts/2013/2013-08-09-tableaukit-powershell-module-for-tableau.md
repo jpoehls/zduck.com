@@ -4,7 +4,6 @@ layout: post
 categories: powershell tableau
 description: "TableauKit is a PowerShell module for working with Tableau files. It is shipping with commands like Get-TableauObject, Get-TableauXml, and Export-Tableau."
 iwpost: https://www.interworks.com/blogs/jpoehls/2013/08/09/tableaukit-powershell-module-tableau
-published: false
 ---
 
 <style>
