@@ -205,12 +205,12 @@ anything you'll reuse into helper functions.
 
 ## What are you waiting for? Go get it!
 
-- [Fork it][2]
-- [Download it][4]
+- [Download it][2]
 
-The [README][2] includes detailed installation and usage instructions.
+After you download it, check the README for detailed installation and usage instructions.
 
-TableauKit is open-source and distributed under the Apache License 2.0.
+TableauKit is a product of [InterWorks](https://www.interworks.com), a fantastic company that
+[you _really_ want to work for](https://www.interworks.com/company/careers)!
 
 ## Roadmap
 
@@ -218,6 +218,5 @@ The future is wide open for this. What kind of functionality would you like to
 see added? Let me know in the comments!
 
 [1]: {{site.url}}/2013/exploring-tableau-workbooks-with-powershell-part-1-opening-workbooks/
-[2]: http://github.com/jpoehls/TableauKit
+[2]: https://www.interworks.com/content/download-tableaukit
 [3]: {{site.url}}/2013/tableau-via-powershell-part-2-saving-changes/
-[4]: https://github.com/jpoehls/TableauKit/archive/master.zip
