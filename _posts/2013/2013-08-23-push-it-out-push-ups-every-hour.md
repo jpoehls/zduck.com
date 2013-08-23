@@ -6,7 +6,7 @@ description: "Push ups. Every hour, on the hour. Can you handle it?"
 og_image: pushitout.png
 ---
 
-Push ups. Every hour, on the hour. Can you handle it?
+**Push ups. Every hour, on the hour. Can you handle it?**
 
 I've been motivated by [a friend](http://www.steubing.me) to start this challenge. Every hour, on the hour, I'm going to drop and do a set of push ups.
 
