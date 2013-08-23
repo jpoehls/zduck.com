@@ -33,3 +33,7 @@ I'd love to hear how this works out for you, let me know in the comments!
 > customize the message, font, and colors by passing in different parameters.
 > Edit the obvious parts of **pushitout.cmd** to customize the nag screen
 > to your liking.
+>
+> **Works on my machine!** ... which happens to be running Windows 7,
+> .NET 4.5 and PowerShell V3. You'll probably need admin rights on your
+> machine in order to install the scheduled task.
