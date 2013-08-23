@@ -1,7 +1,7 @@
 ---
 title: "Push it out! Push ups every hour."
 layout: post
-categories: misc
+categories: powershell
 description: "Push ups. Every hour, on the hour. Can you handle it?"
 og_image: pushitout.png
 ---
