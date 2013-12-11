@@ -17,13 +17,12 @@ There are as many backup strategies, scripts, and apps as there are computers. T
 * I need to backup to a local drive.
 * I need to upload backups to my user share on the company network.
 * I need a scheduled task that will perform the backup on a regular basis.
-* I'm a laptop user so a scheduled task won't work well for the upload portion. I need a desktop shortcut that I can use to initiate the upload to the server. Since I'm only occasionally connected, I'll use this to upload the backups when I know I'll be connected to VPN long enough for it to go through.
 
 **Implementation details**
 
 * Differential backups. Because I'll be uploading these over a VPN, I want them to be as small as possible. Differential backups will allow me to upload a full backup once (or occasionally) and then upload much small backups daily.
-* LZMA compression. Once again, because I'm uploading all of this over a VPN I want my backups as small as possible. I'll sacrifice some speed during the backup stage but save a ton of time on the upload by compressing my backups using 7-zips LZMA (7z) compression format.
-* Local hard drive space is limited so I'll only keep the most recent backup locally. I'll keep past backups on the company network and manually prune old ones when needed. This will be a casual but potentially useful safety net if I ever need to roll back to a specific point in time.
+* LZMA compression. I'll sacrifice some speed during the backup stage but save a ton of time on the upload by compressing my backups using 7-zips LZMA (7z) compression format.
+* Local hard drive space is limited so I'll only keep the most recent backup locally. I'll keep past backups on the company network and manually prune old ones when needed. This will be a casual safety net if I ever need to roll back to a specific point in time.
 
 **Results**
 
@@ -35,7 +34,7 @@ I'll store my most recent backups locally in **C:\backup**. Timestamps in the na
 
 My backup script is stored in [Dropbox][dropbox].
 
-* `backup.ps1` - The meat of the backup script. The various *.cmd scripts are just wrappers around this that pass in the appropriate arguments.
+* `backup.ps1` - The meat of the backup script. The various *.cmd scripts are just wrappers that pass this the appropriate arguments.
 * `upload-backup.cmd` - Starts uploading all existing backups to the company network.
 * `full-backup.cmd` - Starts a full backup.
 * `diff-backup.cmd` - Starts a differential backup.
@@ -44,11 +43,13 @@ My backup script is stored in [Dropbox][dropbox].
 
 ![Screenshot of script folder]({{site.url}}/assets/forposts/differential-backups/script-folder.png "Screenshot of script folder")
 
-I have a Windows Scheduled Task that runs a differential backup (`diff-backup.cmd`) hourly. The differential backup is usually pretty fast, so running hourly is no problem. I have another task that runs the upload (`upload-backup.cmd`) once a day when I am connected to the VPN. Task Scheduler is supposedly smart enough to only run the task if the VPN connection is available and to retry on a regular basis if it isn't. I've never used this feature before so we'll see how it goes. I can always fall back to manually running this via a desktop shortcut.
+I have a Windows Scheduled Task that runs a differential backup (`diff-backup.cmd`) hourly. The differential backup is usually pretty fast, so running hourly is no problem.
+
+I have another task that runs the upload (`upload-backup.cmd`) once a day when I am connected to the VPN. Task Scheduler is supposedly smart enough to only run the task if the VPN connection is available and to retry on a regular basis if it isn't. I've never used this feature before so we'll see how it goes. I can always fall back to manually running this via a desktop shortcut.
 
 ## The Script
 
-My script really isn't suited to sharing verbatim but I do want to share the good parts.
+My script isn't suited to sharing verbatim but I do want to share the good parts.
 
 ### Selecting the most recent full backup
 
@@ -77,6 +78,8 @@ $7zipArgs = @(
 	"$outputFile";                # Output file path (a *.7z file).
 )
 </pre>
+
+Notice that I doubled some quotation marks for the excludes and includes arguments. This escaping is necessary to ensure the path I'm passing in works even if it has spaces in it.
 
 ### 7-zip args for a differential backup
 
@@ -172,7 +175,7 @@ $robocopyArgs = @(
 
 Those arguments will perform a shallow copy of all files in the source folder to the destination.
 
-Note that since robocopy supports the `/UNILOG+` argument I don't have to use `Tee-Object` to append to the log file.
+Note that since robocopy supports the `/UNILOG+` and `/TEE` arguments I don't have to use `Tee-Object` to append to the log file.
 
 Once again, I'll make sure the copy is successful and fail the script if the copy fails.
 
@@ -186,7 +189,7 @@ if ($LASTEXITCODE -ne 0)
 
 ### Passing args from PowerShell to executables
 
-There are a million ways, of course, but my favorite is to put the arguments into an array and let PowerShell splat them. I really like how this keeps the script very readable even when you are passing a ton of arguments around.
+There are a million ways, of course, but my favorite is to put the arguments into an array and let PowerShell splat them. I really like how this keeps the script readable even when you are passing a ton of arguments around.
 
 <pre data-language="powershell">
 $cmdArgs = @(
@@ -199,11 +202,11 @@ $cmdArgs = @(
 
 The only thing to be aware of here is that if one of your `$cmdArg` items contains a SPACE then PowerShell will automatically wrap the argument in double quotes when passing it to the executable.
 
-> If you are having trouble getting your quotes and other special characters escaped properly, I've written [several EchoArgs apps][echoargs] to help. They just echo back the arguments passed in.
+> If you are having trouble getting your quotes and other special characters escaped properly, I've written [several EchoArgs apps][echoargs] to help. They just echo back the arguments passed in so you can see how they are being received.
 
 ## Epilogue
 
-Hopefully this will help you get a jump start on your own backup strategy. Hit me up in the comments if you have any questions regarding other parts of the implementation.
+Hopefully this will help you get a jump start on your own backup strategy. Please, hit me up in the comments if you have any questions.
 
 [7zip]: http://www.7-zip.org
 [robocopy]: http://technet.microsoft.com/en-us/library/cc733145.aspx
