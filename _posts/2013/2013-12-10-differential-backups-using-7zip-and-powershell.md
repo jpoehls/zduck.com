@@ -181,8 +181,9 @@ Once again, I'll make sure the copy is successful and fail the script if the cop
 
 <pre data-language="powershell">
 &amp; $robocopy @robocopyArgs
-if ($LASTEXITCODE -ne 0)
+if ($LASTEXITCODE -ge 8) # exit code when files failed to copy
 {
+	# robocopy exit codes: http://support.microsoft.com/kb/954404
 	throw "robocopy failed with exit code $LASTEXITCODE"
 }
 </pre>
