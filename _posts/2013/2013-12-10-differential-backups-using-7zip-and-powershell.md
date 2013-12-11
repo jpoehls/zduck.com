@@ -165,7 +165,6 @@ $robocopyArgs = @(
 	"$networkDestPath";  # Destination path
 	"/Z";                # Use restartable mode when transferring files.
 	"/FP";               # Log the full paths to files.
-	"/BYTES";            # Log file sizes in bytes.
 	"/NP";               # Don't log progress percentages.
 	"/X";                # Log a list of 'extra' files that exist in the destination but not locally.
 	"/UNILOG+$logfile";  # Append to the specified log file.
