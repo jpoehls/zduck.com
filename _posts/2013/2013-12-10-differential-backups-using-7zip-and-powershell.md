@@ -149,9 +149,9 @@ $allDiffBackups = Get-ChildItem -File -Path "$backupOutputPath\backup-[0-9][0-9]
 if ($allDiffBackups -is [array] ) {
 	[Array]:: Reverse($allDiffBackups)
 	$allDiffBackups | select -Skip 1 | % {
-		Write-Host "Deleting old differential backup. File: $($_. FullName)"
+		Write-Host "Deleting old differential backup. File: $($_.FullName)"
 		# Remove the matching log file.
-		Remove-Item -LiteralPath ([System.IO.Path ]::ChangeExtension($_ .FullName, ".log")) -ErrorAction SilentlyContinue
+		Remove-Item -LiteralPath ([System.IO.Path ]::ChangeExtension($_.FullName, ".log")) -ErrorAction SilentlyContinue
 		$_
 	} | Remove-Item
 } 
