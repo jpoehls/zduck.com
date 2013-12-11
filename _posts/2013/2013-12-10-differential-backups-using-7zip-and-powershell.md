@@ -123,7 +123,7 @@ _You can read more about 7-zip's options in their documentation._
 I want my backup to fail if 7-zip fails.
 
 <pre data-language="powershell">
-& $7zip @7zipArgs | Tee-Object -LiteralPath $logFile
+&amp; $7zip @7zipArgs | Tee-Object -LiteralPath $logFile
 if ($LASTEXITCODE -gt 1) # Ignores warnings which use exit code 1.
 {
 	throw "7zip failed with exit code $LASTEXITCODE"
@@ -177,7 +177,7 @@ Note that since robocopy supports the `/UNILOG+` argument I don't have to use `T
 Once again, I'll make sure the copy is successful and fail the script if the copy fails.
 
 <pre data-language="powershell">
-& $robocopy @robocopyArgs
+&amp; $robocopy @robocopyArgs
 if ($LASTEXITCODE -ne 0)
 {
 	throw "robocopy failed with exit code $LASTEXITCODE"
@@ -194,7 +194,7 @@ $cmdArgs = @(
 	"/UNILOG+$logfile";
 ) 
 
-& some_application.exe @cmdArgs
+&amp; some_application.exe @cmdArgs
 </pre>
 
 The only thing to be aware of here is that if one of your `$cmdArg` items contains a SPACE then PowerShell will automatically wrap the argument in double quotes when passing it to the executable.
