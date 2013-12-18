@@ -13,7 +13,7 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
 
     $ErrorActionPreference = "Stop"
 
-    $scriptPath = Split-Path -LiteralPath $(if ($PSVersionTable.PSVersion.Major -ge 30) { $PSCommandPath } else { & { $MyInvocation.ScriptName } })
+    $scriptPath = Split-Path -LiteralPath $(if ($PSVersionTable.PSVersion.Major -ge 3) { $PSCommandPath } else { & { $MyInvocation.ScriptName } })
 
     $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
 
