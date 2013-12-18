@@ -68,7 +68,7 @@ that are shared with my team.
 	  Using `-Command` with `$ErrorActionPreference = 'Stop'` also ensures that
 	  errors thrown from your script cause PowerShell.exe to return a failing
 	  exit code (1). [PowerShell is quite buggy when it comes to bubbling exit 
-	  codes.](http://zduck.com/2012/powershell-batch-files-exit-codes/)
+	  codes.]({{site.url}}/2012/powershell-batch-files-exit-codes/)
 	  This is the safest method I've found.
 - All of the batch file's arguments are passed through to the PowerShell script.
   _Note that you may have to do some funky stuff to escape special characters in the arguments that you pass to the batch file._
