@@ -43,7 +43,7 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
 
     SET SCRIPTPATH=%~d0%~p0boilerplate-script.ps1
 
-    PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "$ErrorActionPreference = 'Stop'; & '%SCRIPTPATH%' %*; EXIT $LASTEXITCODE" 
+    PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "& { $ErrorActionPreference = 'Stop'; & '%SCRIPTPATH%' @args; EXIT $LASTEXITCODE }" %*
     EXIT /B %ERRORLEVEL%
 
 PowerShell is still kind of a different beast so I usually like to include a
