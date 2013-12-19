@@ -27,7 +27,7 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
         Write-Host "Time to complete: $($stopwatch.Elapsed)"
     }
 
-**Highlights:**
+### Highlights:
 
 - Sets `$ErrorActionPreference` so that unhandled exceptions will halt
   the script execution. By default, PowerShell will roll on when an exceptions
@@ -42,21 +42,34 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
     @ECHO OFF
 
     SET SCRIPTPATH=%~d0%~p0boilerplate-script.ps1
+    
+    SET ARGS=%ARGS:"=\"%
+    SET ARGS=%ARGS:`=``%
+    SET ARGS=%ARGS:'=`'%
+    SET ARGS=%ARGS:$=`$%
+    SET ARGS=%ARGS:{=`{%
+    SET ARGS=%ARGS:}=`}%
+    SET ARGS=%ARGS:(=`(%
+    SET ARGS=%ARGS:)=`)%
+    SET ARGS=%ARGS:,=`,%
+    SET ARGS=%ARGS:^%=%
 
-    PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "& { $ErrorActionPreference = 'Stop'; & '%SCRIPTPATH%' @args; EXIT $LASTEXITCODE }" %*
+    PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "& { $ErrorActionPreference = 'Stop'; & '%SCRIPTPATH%' @args; EXIT $LASTEXITCODE }" %ARGS%
     EXIT /B %ERRORLEVEL%
 
 PowerShell is still kind of a different beast so I usually like to include a
 batch file wrapper for PowerShell scripts that I will be distributing or
 that are shared with my team.
 
-**Highlights:**
+### Highlights:
 
 - Store the full path of the PowerShell script we want to execute in the
   `%SCRIPTPATH%` variable. `%d0%~p0` magic gets the directory path of the
   current batch script. By specifying the full path of the PowerShell script
   like this we can guarantee that it is always executed from the right place
   no matter what your working directory is.
+- Escapes special characters in the arguments so that they are passed to PowerShell
+  as you would expect.
 - Run `PowerShell.exe` with:
     - `-NoProfile` to improve startup performance. Scripts you are distributing
       shouldn't rely on anything in your profile anyway.
@@ -72,5 +85,28 @@ that are shared with my team.
       This is the safest method I've found.
 - All of the batch file's arguments are passed through to the PowerShell script.
   _Note that you may have to do some funky stuff to escape special characters in the arguments that you pass to the batch file._
+
+### Special Character Caveats
+
+Some characters still need to be surrounded by double quotes
+when passing them to the batch file. They have specifial signifiance to batch
+files. These characters are: `^  &  <  >  /?`.
+Note that `/?` is a sequence and is recognized as a help flag when passed to
+a batch file.
+
+> **Example:** `boiler.cmd "I ""am"" quoted"` passes a single argument `I "am" quoted` to PowerShell.
+
+> **Example:** `boiler.cmd "^&<>/?"` passes a single argument `^&<>/?` to PowerShell.
+
+There is one problem I haven't solved yet. Passing an environment variable as an argument
+to the batch file will expand it when passed to PowerShell. I don't know how to avoid this.
+
+> **Example:** `boiler.cmd %CD%` passes `c:\...` to PowerShell
+
+> **Example:** `boiler.cmd ^%CD^%` passes `%CD%` to PowerShell
+
+> **Example:** `boiler.cmd "%CD%"` passes `c:\...` to PowerShell
+
+This is the case I don't know how to avoid. Trying the carrot (^) escape here doesn't work, it passes `^%CD^%` to PowerShell.
 
 Do you have a boilerplate for scripts that you write? What do you include in yours? Let me know in the comments!
