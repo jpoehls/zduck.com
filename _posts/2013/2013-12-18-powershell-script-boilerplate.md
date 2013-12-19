@@ -40,7 +40,7 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
 ## Batch File Wrapper
 
     @ECHO OFF
-
+    
     SET SCRIPTPATH=%~d0%~p0boilerplate-script.ps1
     
     SET ARGS=%ARGS:"=\"%
@@ -53,7 +53,7 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
     SET ARGS=%ARGS:)=`)%
     SET ARGS=%ARGS:,=`,%
     SET ARGS=%ARGS:^%=%
-
+    
     PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "& { $ErrorActionPreference = 'Stop'; & '%SCRIPTPATH%' @args; EXIT $LASTEXITCODE }" %ARGS%
     EXIT /B %ERRORLEVEL%
 
