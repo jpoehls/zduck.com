@@ -109,4 +109,4 @@ to the batch file will expand it when passed to PowerShell. I don't know how to 
 
 This is the case I don't know how to avoid. Trying the carrot (^) escape here doesn't work, it passes `^%CD^%` to PowerShell.
 
-Do you have a boilerplate for scripts that you write? What do you include in yours? Let me know in the comments!
+Do you have a boilerplate for scripts that you write? What do you include in yours? Let me know in the comments! 
