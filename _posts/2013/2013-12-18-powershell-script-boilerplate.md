@@ -27,7 +27,7 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
         Write-Host "Time to complete: $($stopwatch.Elapsed)"
     }
 
-### Highlights:
+### Highlights
 
 - Sets `$ErrorActionPreference` so that unhandled exceptions will halt
   the script execution. By default, PowerShell will roll on when an exceptions
@@ -39,38 +39,40 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
 
 ## Batch File Wrapper
 
-    @ECHO OFF
-    
-    SET SCRIPTPATH=%~d0%~p0boilerplate-script.ps1
-    
-    SET ARGS=%ARGS:"=\"%
-    SET ARGS=%ARGS:`=``%
-    SET ARGS=%ARGS:'=`'%
-    SET ARGS=%ARGS:$=`$%
-    SET ARGS=%ARGS:{=`{%
-    SET ARGS=%ARGS:}=`}%
-    SET ARGS=%ARGS:(=`(%
-    SET ARGS=%ARGS:)=`)%
-    SET ARGS=%ARGS:,=`,%
-    SET ARGS=%ARGS:^%=%
-    
-    PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "& { $ErrorActionPreference = 'Stop'; & '%SCRIPTPATH%' @args; EXIT $LASTEXITCODE }" %ARGS%
-    EXIT /B %ERRORLEVEL%
-
 PowerShell is still kind of a different beast so I usually like to include a
 batch file wrapper for PowerShell scripts that I will be distributing or
 that are shared with my team.
 
-### Highlights:
+<pre>
+@ECHO OFF
 
-- Store the full path of the PowerShell script we want to execute in the
+SET SCRIPTPATH=%~d0%~p0boilerplate-script.ps1
+
+SET ARGS=%ARGS:"=\"%
+SET ARGS=%ARGS:`=``%
+SET ARGS=%ARGS:'=`'%
+SET ARGS=%ARGS:$=`$%
+SET ARGS=%ARGS:&#123;=`&#123;%
+SET ARGS=%ARGS:}=`}%
+SET ARGS=%ARGS:(=`(%
+SET ARGS=%ARGS:)=`)%
+SET ARGS=%ARGS:,=`,%
+SET ARGS=%ARGS:^%=%
+    
+PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "&amp; { $ErrorActionPreference = 'Stop'; &amp; '%SCRIPTPATH%' @args; EXIT $LASTEXITCODE }" %ARGS%
+EXIT /B %ERRORLEVEL%
+</pre>
+
+### Highlights
+
+- Stores the full path of the PowerShell script we want to execute in the
   `%SCRIPTPATH%` variable. `%d0%~p0` magic gets the directory path of the
   current batch script. By specifying the full path of the PowerShell script
   like this we can guarantee that it is always executed from the right place
   no matter what your working directory is.
 - Escapes special characters in the arguments so that they are passed to PowerShell
   as you would expect.
-- Run `PowerShell.exe` with:
+- Runs `PowerShell.exe` with:
     - `-NoProfile` to improve startup performance. Scripts you are distributing
       shouldn't rely on anything in your profile anyway.
     - `-NonInteractive` because usually my scripts don't need input from the user.
@@ -83,10 +85,8 @@ that are shared with my team.
       exit code (1). [PowerShell is quite buggy when it comes to bubbling exit 
       codes.]({{site.url}}/2012/powershell-batch-files-exit-codes/)
       This is the safest method I've found.
-- All of the batch file's arguments are passed through to the PowerShell script.
-  _Note that you may have to do some funky stuff to escape special characters in the arguments that you pass to the batch file._
 
-### Special Character Caveats
+### Escaping Special Characters
 
 Some characters still need to be surrounded by double quotes
 when passing them to the batch file. They have specifial signifiance to batch
@@ -94,19 +94,19 @@ files. These characters are: `^  &  <  >  /?`.
 Note that `/?` is a sequence and is recognized as a help flag when passed to
 a batch file.
 
-> **Example:** `boiler.cmd "I ""am"" quoted"` passes a single argument `I "am" quoted` to PowerShell.
+> `boiler.cmd "I ""am"" quoted"` passes a single argument `I "am" quoted` to PowerShell.
 
-> **Example:** `boiler.cmd "^&<>/?"` passes a single argument `^&<>/?` to PowerShell.
+> `boiler.cmd "^&<>/?"` passes `^&<>/?`
 
 There is one problem I haven't solved yet. Passing an environment variable as an argument
 to the batch file will expand it when passed to PowerShell. I don't know how to avoid this.
 
-> **Example:** `boiler.cmd %CD%` passes `c:\...` to PowerShell
+> `boiler.cmd %CD%` passes `c:\...`
 
-> **Example:** `boiler.cmd ^%CD^%` passes `%CD%` to PowerShell
+> `boiler.cmd ^%CD^%` passes `%CD%`
 
-> **Example:** `boiler.cmd "%CD%"` passes `c:\...` to PowerShell
+> `boiler.cmd "%CD%"` passes `c:\...`
 
-This is the case I don't know how to avoid. Trying the carrot (^) escape here doesn't work, it passes `^%CD^%` to PowerShell.
+The last example is the case I don't know how to avoid.
 
 Do you have a boilerplate for scripts that you write? What do you include in yours? Let me know in the comments! 
