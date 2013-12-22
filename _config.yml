@@ -6,6 +6,6 @@ url: http://zduck.com
 
 email: joshua@zduck.com
 
-exclude: ['withdrawn/**']
+exclude: ['withdrawn/**', 'drafts/**']
 
 markdown: redcarpet

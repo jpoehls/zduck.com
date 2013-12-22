@@ -6,6 +6,6 @@ url: http://localhost:4000
 
 email: joshua@zduck.com
 
-exclude: ['withdrawn/**']
+exclude: ['withdrawn/**', 'drafts/**']
 
 markdown: redcarpet
