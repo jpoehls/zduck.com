@@ -22,3 +22,5 @@ For colored code blocks.
 </pre>
 
 Use {{site.url}} in image URLs or they won't show in feedburner.
+
+Use {{site.email}} for e-mail links.
