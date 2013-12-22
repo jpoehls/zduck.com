@@ -2,6 +2,7 @@
 title: PowerShell Script Module Boilerplate
 layout: post
 categories: powershell
+description: "My boilerplate for PowerShell Script Modules. Basic file structure and a release script for building the manifest and distributable ZIP."
 ---
 
 One of the things I always look for when getting familiar with a new language or environment is examples of the physical file structure and logical organization of the code. How do you layout your project files? What is idiomatic?
