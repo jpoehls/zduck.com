@@ -3,6 +3,7 @@ title: Title goes here
 layout: post
 published: false
 categories: list of tags
+description: "200ish character description"
 og_image: image.png
 iwpost: http://interworks.com/link/to/post
 ---
