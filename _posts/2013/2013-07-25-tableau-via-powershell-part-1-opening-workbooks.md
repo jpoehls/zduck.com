@@ -102,3 +102,5 @@ Cool, right? How about opening a bunch of workbooks at once? This is PowerShell 
 `Get-ChildItem *.twb* | Get-TableauWorkbookXml`
 
 Continue the adventure with [Part 2: Saving Changes]({{site.url}}/2013/tableau-via-powershell-part-2-saving-changes/).
+
+{{site.powershell_book_ad}}

@@ -86,6 +86,8 @@ Here's a `Test-ZipFile` PowerShell cmdlet that will return true or false whether
 
 _`Test-ZipFile` is part of [Poshato][poshato], my personal PowerShell module of miscellaneous goodness._
 
+{{site.powershell_book_ad}}
+
 [magicnumbers]: http://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files
 [so]: http://stackoverflow.com/a/1887113/31308
 [pathinput]: http://stackoverflow.com/a/8506768

@@ -204,3 +204,5 @@ $workbook | Export-TableauPackagedWorkbook 'MyPackagedWorkbook.twbx' -Update
 </pre>
 
 Leave me a comment if you have any questions about working with Tableau workbooks in PowerShell. Maybe I'll cover your topic in the next post!
+
+{{site.powershell_book_ad}}

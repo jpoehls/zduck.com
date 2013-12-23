@@ -201,4 +201,6 @@ Export-ModuleMember New-Symlink, New-Hardlink, New-Junction, mklink
 
 I've heard it rumored that the [PowerShell Community Extensions](http://pscx.codeplex.com/) project has a lot of these functions as well, and more. It might be worth looking into if you want a more robust solution.
 
-  [1]: http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx
+{{site.powershell_book_ad}}
+
+[1]: http://technet.microsoft.com/en-us/library/cc753194(v=WS.10).aspx

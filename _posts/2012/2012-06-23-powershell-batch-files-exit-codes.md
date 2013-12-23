@@ -6,6 +6,8 @@ categories: powershell
 
 ## TL;DR;
 
+> **Update:** If you want to save some time, skip reading this and just use my [PowerShell Script Boilerplate][boilerplate]. It includes an excellent batch file wrapper, argument escaping, and error code bubbling.
+
 `PowerShell.exe` doesn't return correct exit codes when using the `-File` option. Use `-Command` instead. *([Vote for this issue](https://connect.microsoft.com/PowerShell/feedback/details/750653/powershell-exe-doesn-t-return-correct-exit-codes-when-using-the-file-option) on Microsoft Connect.)*
 
 [This](#bat-wrapper) is a batch file wrapper for executing PowerShell scripts. It forwards arguments to PowerShell and correctly bubbles up the exit code (when it can).
@@ -13,6 +15,8 @@ categories: powershell
 `PowerShell.exe` still [returns a passing (0) exit code when a `ParserError` is thrown](#command-parsererror). Even when using `-Command`. I haven't found a workaround for this. *([Vote for this issue](https://connect.microsoft.com/PowerShell/feedback/details/750654/powershell-exe-returns-a-passing-0-exit-code-when-a-parsererror-is-thrown) on Microsoft Connect.)*
 
 You can use [black magic](#black-magic) to include spaces and quotes in the arguments you pass through the batch file wrapper to PowerShell.
+
+{{site.powershell_book_ad}}
 
 ## PowerShell
 
@@ -208,7 +212,9 @@ Whatever the reason, writing a batch file wrapper for a PowerShell script is eas
 
 <a id="bat-wrapper"> </a>
 
-This is a safe template for you to use. Bookmark it.
+<p><del>This is a safe template for you to use. Bookmark it.</del></p>
+
+> **Update:** I've created a _much_ better batch file wrapper for my PowerShell scripts. I recommend you ignore the one below and **[use my new one][newbatwrapper]** instead.
 
 <pre data-language="batch">
 :: script.bat
@@ -273,3 +279,6 @@ Arg 2:
 </pre>
 
 That's all folks!
+
+[boilerplate]: {{site.url}}/2013/powershell-script-boilerplate
+[newbatwrapper]: {{site.url}}/2013/powershell-script-boilerplate#bat-wrapper

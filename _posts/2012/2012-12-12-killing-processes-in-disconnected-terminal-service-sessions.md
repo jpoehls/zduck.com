@@ -137,3 +137,5 @@ else {
     Write-Output "No processes to close"
 }
 </pre>
+
+{{site.powershell_book_ad}}

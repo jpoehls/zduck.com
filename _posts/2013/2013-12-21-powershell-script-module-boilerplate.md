@@ -150,6 +150,8 @@ Here are a few open-source PowerShell modules that I've found to be good example
 I use a very similar file structure for [PowerShell Binary Modules][binary_module] but they do introduce more complexity into the release script. I'll be covering my binary module boilerplate in a future post. 
 -->
 
+{{site.powershell_book_ad}}
+
 [binary_module]: http://msdn.microsoft.com/en-us/library/dd878342(v=vs.85).aspx
 [script_module]: http://msdn.microsoft.com/en-us/library/dd878340(v=vs.85).aspx
 [manifest]: http://msdn.microsoft.com/en-us/library/dd878337(v=vs.85).aspx

@@ -30,3 +30,5 @@ function Svn-Tortoise([string]$Command = "commit") {
 }
 Set-Alias tsvn "Svn-Tortoise"
 </pre>
+
+{{site.powershell_book_ad}}

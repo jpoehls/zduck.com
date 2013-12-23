@@ -49,3 +49,5 @@ Among other things, Dropbox makes keeping your files in sync across computers de
 <pre>
 PS&gt; /cmd /c mklink `"$PROFILE`" `"$dropbox\scripts\profile.ps1`"
 </pre>
+
+{{site.powershell_book_ad}}

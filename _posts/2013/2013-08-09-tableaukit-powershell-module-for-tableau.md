@@ -217,6 +217,8 @@ TableauKit is a product of [InterWorks](https://www.interworks.com), a fantastic
 The future is wide open for this. What kind of functionality would you like to
 see added? Let me know in the comments!
 
+{{site.powershell_book_ad}}
+
 [1]: {{site.url}}/2013/exploring-tableau-workbooks-with-powershell-part-1-opening-workbooks/
 [2]: https://www.interworks.com/content/download-tableaukit
 [3]: {{site.url}}/2013/tableau-via-powershell-part-2-saving-changes/

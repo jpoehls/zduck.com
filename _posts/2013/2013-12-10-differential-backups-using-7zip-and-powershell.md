@@ -208,6 +208,8 @@ The only thing to be aware of here is that if one of your `$cmdArg` items contai
 
 Hopefully this will help you get a jump start on your own backup strategy. Please, hit me up in the comments if you have any questions.
 
+{{site.powershell_book_ad}}
+
 [7zip]: http://www.7-zip.org
 [robocopy]: http://technet.microsoft.com/en-us/library/cc733145.aspx
 [echoargs]: http://github.com/jpoehls/echoargs

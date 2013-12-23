@@ -154,3 +154,5 @@ function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1, [Switch
 
 Export-ModuleMember Benchmark-Command
 </pre>
+
+{{site.powershell_book_ad}}

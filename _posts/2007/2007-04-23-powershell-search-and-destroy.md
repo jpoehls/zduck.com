@@ -42,3 +42,5 @@ And if you want to delete all those `*.BAK` files you just found? Just pipe your
 <pre>
 dir -recurse -filter *.BAK | del
 </pre>
+
+{{site.powershell_book_ad}}

@@ -37,6 +37,8 @@ personal boilerplate for PowerShell scripts. Maybe it can help you as well.
 - Most of the time I want to know how long my script takes to run so I include
   a `$stopwatch` that will always output the elapsed time when the script finishes.
 
+<a id="bat-wrapper"> </a>
+
 ## Batch File Wrapper
 
 PowerShell is still kind of a different beast so I usually like to include a
@@ -110,3 +112,5 @@ to the batch file will expand it when passed to PowerShell. I don't know how to 
 The last example is the case I don't know how to avoid.
 
 Do you have a boilerplate for scripts that you write? What do you include in yours? Let me know in the comments! 
+
+{{site.powershell_book_ad}}
