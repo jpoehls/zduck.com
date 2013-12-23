@@ -4,85 +4,120 @@ layout: post
 categories: powershell
 ---
 
-# Writing a PowerShell cmdlet that accepts file path input
+How often do you write cmdlets that operating on files? Probably all the time. You may be tempted to simply use a `[string]` type for your file path parameter but you may be missing a few things that really make this work well.
 
-## Script cmdlet
+Let's cover a few downsides to using `[string]` as your parameter type.
 
-function Get-TableauXml {
-31 <#
-32 .SYNOPSIS
-33     Gets the workbook XML from a TWB or TWBX file.
-34 
-35 .NOTES
-36     Author: Joshua Poehls <joshua@zduck.com>
-37 #>
-38     [CmdletBinding()]
-39     param(
-40         [Parameter(
-41             Mandatory = $true,
-42             ParameterSetName = "Path",
-43             Position = 0,
-44             ValueFromPipeline = $true,
-45             ValueFromPipelineByPropertyName = $true)]
-46         [ValidateNotNullOrEmpty()]
-47         [string[]]$Path,
-48 
-49         [Parameter(
-50             Mandatory = $true,
-51             ParameterSetName = "LiteralPath",
-52             ValueFromPipeline = $true,
-53             ValueFromPipelineByPropertyName = $true)]
-54         [ValidateNotNullOrEmpty()]
-55         [Alias("FullName")]
-56         [string[]]$LiteralPath
-57     )
-58 
-59     begin {
-60         # System.IO.Compression.FileSystem requires at least .NET 4.5
-61         Add-Type -AssemblyName "System.IO.Compression"
-62     }
-63 
-64     process {
-65         if ($PSCmdlet.ParameterSetName -eq "Path") {
-66             $paths = Resolve-Path -Path $Path | select -ExpandProperty Path
-67         }
-68         elseif ($PSCmdlet.ParameterSetName -eq "LiteralPath") {
-69             $paths = Resolve-Path -LiteralPath $LiteralPath | select -ExpandProperty Path
-70         }
-71 
-72         foreach ($p in $paths) {
-73             #$extension = [System.IO.Path]::GetExtension($p)
-74             if (-not(Test-ZipFile $p)) {
-75                 Write-Output ([xml](Get-Content -LiteralPath $p))
-76             }
-77             else {
-78                 $archiveStream = $null
-79                 $archive = $null
-80                 $reader = $null
-81 
-82                 try {
-83                     $archiveStream = New-Object System.IO.FileStream($p, [System.IO.FileMode]::Open)
-84                     $archive = New-Object System.IO.Compression.ZipArchive($archiveStream)
-85                     $twbEntry = ($archive.Entries | Where-Object { $_.FullName -eq $_.Name -and [System.IO.Path]::GetExtension($_.Name) -eq ".twb" })[0]
-86                     $reader = New-Object System.IO.StreamReader $twbEntry.Open()
-87 
-88                     [xml]$xml = $reader.ReadToEnd()
-89                     Write-Output $xml
-90                 }
-91                 finally {
-92                     if ($reader -ne $null) {
-93                         $reader.Dispose()
-94                     }
-95                     if ($archive -ne $null) {
-96                         $archive.Dispose()
-97                     }
-98                     if ($archiveStream -ne $null) {
-99                         $archiveStream.Dispose()
-100                     }
-101                 }
-102             }
-103         }
-104     }
-105 }
+- You can't pipe multiple file paths to your cmdlet. Using an array `[string[]]` will fix this.
+- You can't (easily) pipe output from `Get-ChildItem` into your cmdlet.
 
-## C# cmdlet
+There are other complexities you may not be thinking about as well.
+
+- Do you resolve relative paths?
+- Do you support `-LiteralPath`?
+- Do you support wildcard paths?
+- What if you want to accept paths that are file system paths? That is, paths from other PSProviders?
+
+The goal of this post is to show you how to write a cmdlet that accepts `-Path` and `-LiteralPath` parameters in a way consistent with the behavior of the built-in cmdlets such as `Test-Path` and `Get-ChildItem`.
+
+Let's get started. I'll show you how to do this in a PowerShell cmdlet first, then in a C# cmdlet. [Skip ahead to the C#][c#] if that's what you need.
+
+> Credit where credit's due. I gathered most of this information from [an excellent post](http://stackoverflow.com/a/8506768) on StackOverflow.
+
+-------------------
+
+## Parameter Sets
+
+If you want to accept either `-Path` or `-LiteralPath` parameters then you'll need to separate them into their own [parameter sets][parameter_sets]. The idea here is that you want to only accept one or the other, not both.
+
+	[CmdletBinding()]
+	param(
+		[Parameter(
+			ParameterSetName = "Path"
+		)]
+		[string[]]$Path,
+
+		[Parameter(
+			ParameterSetName = "LiteralPath"
+		)]
+		[string[]]$LiteralPath
+	)
+
+`[CmdletBinding()]` is necessary to turn this into an [advanced function][advanced_function]. This let's use use the `[Parameter]` attribute.
+
+## Piping from `Get-ChildItem`
+
+You may be surprised that piping `Get-ChildItem` to your cmdlet doesn't work. The reason is that `Get-ChildItem` returns `FileInfo` and `DirectoryInfo` objects, not strings. You work around this by accepting pipeline input by property name.
+
+	[CmdletBinding()]
+	param(
+		[Parameter(
+			ParameterSetName  = "Path",
+			ValueFromPipeline = $true,
+			ValueFromPipelineByPropertyName = $true
+		)]
+		[string[]]$Path,
+
+		[Parameter(
+			ParameterSetName = "LiteralPath",
+			ValueFromPipeline = $true,
+			ValueFromPipelineByPropertyName = $true
+		)]
+		[string[]]$LiteralPath
+	)
+
+Now our parameters accept input from the pipeline and piping input from `Get-ChildItem` works as we'd expect.
+
+## Relative Paths
+
+Typically you'll want to resolve any relative paths before processing them, here's how you might do that.
+
+> Note: `Resolve-Path` will throw an exception for paths that don't exist.
+
+	if ($PSCmdlet.ParameterSetName -eq "Path") {
+		$paths = Resolve-Path -Path $Path |
+				 	select -ExpandProperty Path
+	}
+	elseif ($PSCmdlet.ParameterSetName -eq "LiteralPath") {
+		$paths = Resolve-Path -LiteralPath $LiteralPath |
+				 	select -ExpandProperty Path
+	}
+
+The `$paths` variable now contains fully resolved paths.
+
+## PowerShell Cmdlet
+
+After we put it all together, here's what it looks like:
+
+	[CmdletBinding()]
+	param(
+		[Parameter(
+			ParameterSetName  = "Path",
+			ValueFromPipeline = $true,
+			ValueFromPipelineByPropertyName = $true
+		)]
+		[string[]]$Path,
+
+		[Parameter(
+			ParameterSetName = "LiteralPath",
+			ValueFromPipeline = $true,
+			ValueFromPipelineByPropertyName = $true
+		)]
+		[string[]]$LiteralPath
+	)
+
+	process {
+		if ($PSCmdlet.ParameterSetName -eq "Path") {
+			$paths = Resolve-Path -Path $Path |
+					 	select -ExpandProperty Path
+		}
+		elseif ($PSCmdlet.ParameterSetName -eq "LiteralPath") {
+			$paths = Resolve-Path -LiteralPath $LiteralPath |
+					 	select -ExpandProperty Path
+		}
+
+		# TODO: Insert cmdlet logic here.
+	}
+
+## C# Cmdlet
+
