@@ -50,6 +50,14 @@ that are shared with my team.
 
 SET SCRIPTPATH=%~d0%~p0boilerplate-script.ps1
 
+SET ARGS=%*
+IF [%ARGS%] NEQ [] GOTO ESCAPE_ARGS
+
+:POWERSHELL
+PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "&amp; { $ErrorActionPreference = 'Stop'; &amp; '%SCRIPTPATH%' @args; EXIT $LASTEXITCODE }" %ARGS%
+EXIT /B %ERRORLEVEL%
+
+:ESCAPE_ARGS
 SET ARGS=%ARGS:"=\"%
 SET ARGS=%ARGS:`=``%
 SET ARGS=%ARGS:'=`'%
@@ -60,9 +68,8 @@ SET ARGS=%ARGS:(=`(%
 SET ARGS=%ARGS:)=`)%
 SET ARGS=%ARGS:,=`,%
 SET ARGS=%ARGS:^%=%
-    
-PowerShell.exe -NoProfile -NonInteractive -NoLogo -ExecutionPolicy Unrestricted -Command "&amp; { $ErrorActionPreference = 'Stop'; &amp; '%SCRIPTPATH%' @args; EXIT $LASTEXITCODE }" %ARGS%
-EXIT /B %ERRORLEVEL%
+
+GOTO POWERSHELL
 </pre>
 
 ### Highlights
