@@ -5,7 +5,7 @@ categories: golang
 description: "My KISS recipe for organizing your Go project files and managing dependencies."
 ---
 
-Go is build around the concept of your [GOPATH](http://golang.org/cmd/go/#hdr-GOPATH_environment_variable) which is a common workspace for most (or all) of your Go source code. I think this works pretty well but sometimes you don't want the third party packages you depend on to be in your primary GOPATH. I can think of a few reasons for this:
+Go is build around the concept of a [GOPATH](http://golang.org/cmd/go/#hdr-GOPATH_environment_variable) which is a common workspace for most (or all) of your Go source code. This works well but sometimes you don't want the third party packages you depend on to be in your primary GOPATH. I can think of a few reasons for this:
 
 - You have multiple Go apps and each depend on different versions of the same third party package. Ideally these packages would use a versioned URL so that the import paths are different but this isn't always the case. (See [http://gopkg.in](http://gopkg.in), a great tool for package authors to use for providing versioned URLs.)
 
