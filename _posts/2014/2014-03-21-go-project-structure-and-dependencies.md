@@ -5,7 +5,7 @@ categories: golang
 description: "My KISS recipe for organizing your Go project files and managing dependencies."
 ---
 
-Go is build around the concept of a [GOPATH](http://golang.org/cmd/go/#hdr-GOPATH_environment_variable) which is a common workspace for most (or all) of your Go source code. This works well but sometimes you don't want the third party packages you depend on to be in your primary GOPATH. I can think of a few reasons for this:
+Go is build around the concept of a [GOPATH][gopath] which is a common workspace for most (or all) of your Go source code. This works well but sometimes you don't want the third party packages you depend on to be in your primary GOPATH. I can think of a few reasons for this:
 
 - You have multiple Go apps and each depend on different versions of the same third party package. Ideally these packages would use a versioned URL so that the import paths are different but this isn't always the case. (See [http://gopkg.in](http://gopkg.in), a great tool for package authors to use for providing versioned URLs.)
 
@@ -118,6 +118,15 @@ vet:
 
 - `vendor_update` task in the Makefile is a shotgun approach. It will update all of your dependencies to their latest version. 80% of the time this is what I want. In the 20% cases, I simply manually update the individual packages.
 
-- The `_vendor` directory can be called anything you like but the underscore prefix is important. The `go` tool will ignore any files or directories that begin with `.` or `_`. This means we can run things like `go test` in our repo root without it picking up those third party packages.
+- The `_vendor` directory can be called anything you like but the underscore prefix is important. The [`go`][gocmd] tool will ignore any files or directories that begin with `.` or `_` ([read more](http://golang.org/cmd/go/#hdr-Description_of_package_lists)). This means we can run things like `go test` in our repo root without it picking up those third party packages.
+
+- I've included some useful ancillary tasks as well. Such as the [`doc`][doc], [`fmt`][fmt], [`lint`][lint], and [`vet`][vet] tasks, and the fact that `build` runs [`go vet`][vet] first.
 
 **How do you structure your Go projects?** What does your build script look like? I'm always interested in improving my methods, let me know what's working for you!
+
+[vet]: http://godoc.org/code.google.com/p/go.tools/cmd/vet
+[doc]: http://godoc.org/code.google.com/p/go.tools/cmd/godoc
+[fmt]: http://golang.org/cmd/go/#hdr-Run_gofmt_on_package_sources
+[lint]: https://github.com/golang/lint
+[gocmd]: http://golang.org/cmd/go
+[gopath]: http://golang.org/cmd/go/#hdr-GOPATH_environment_variable
