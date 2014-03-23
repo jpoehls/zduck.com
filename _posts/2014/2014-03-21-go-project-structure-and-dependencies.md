@@ -71,7 +71,7 @@ export GOPATH
 
 default: build
 
-build:
+build: vet
 	go build -v -o ./bin/main_app ./src/main_app
 
 doc:
