@@ -9,6 +9,8 @@ Go is build around the concept of a [GOPATH][gopath] which is a common workspace
 
 - You have multiple Go apps and each depend on different versions of the same third party package. Ideally these packages would use a versioned URL so that the import paths are different but this isn't always the case. (See [http://gopkg.in](http://gopkg.in), a great tool for package authors to use for providing versioned URLs.)
 
+	> If you want to know more about how package versioning works in Go, you should read my other post: [Go and Package Versioning]({{site.url}}/2014/go-and-package-versioning)
+
 - You want to commit your third party packages as part of your application's code so that everything needed for a build is in one place. This guarantees that your app will always build regardless of the state of the third party repo and elminates a lot of headaches when working with a build server or multiple developers.
 
 	> This is equivelant to committing your NuGet `./packages` folder in .NET or your npm `./node_modules` folder in Node.
