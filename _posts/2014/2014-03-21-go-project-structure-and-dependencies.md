@@ -105,12 +105,12 @@ vendor_update: vendor_clean
 	GOPATH=${PWD}/_vendor go get -d -u -v \
 	github.com/jpoehls/gophermail \
 	github.com/codegangsta/martini
-```
 
 # http://godoc.org/code.google.com/p/go.tools/cmd/vet
 # go get code.google.com/p/go.tools/cmd/vet
 vet:
 	go vet ./src/...
+```
 
 **Notes:**
 
