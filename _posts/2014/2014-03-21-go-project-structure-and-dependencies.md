@@ -61,7 +61,7 @@ My project is at `~/mygo/bitbucket.org/USERNAME/PROJECT`.
 My Makefile looks like this:
 
 ```
-.PHONY: build run test vendor_clean vendor_update
+.PHONY: build doc fmt lint run test vendor_clean vendor_update vet
 
 # Prepend our _vendor directory to the system GOPATH
 # so that import path resolution will prioritize
@@ -73,6 +73,18 @@ default: build
 
 build:
 	go build -v -o ./bin/main_app ./src/main_app
+
+doc:
+	godoc -http=:6060 -index
+
+# http://golang.org/cmd/go/#hdr-Run_gofmt_on_package_sources
+fmt:
+	go fmt ./src/...
+
+# https://github.com/golang/lint
+# go get github.com/golang/lint/golint
+lint:
+	golint ./src
 
 run: build
 	./bin/main_app
@@ -94,6 +106,11 @@ vendor_update: vendor_clean
 	github.com/jpoehls/gophermail \
 	github.com/codegangsta/martini
 ```
+
+# http://godoc.org/code.google.com/p/go.tools/cmd/vet
+# go get code.google.com/p/go.tools/cmd/vet
+vet:
+	go vet ./src/...
 
 **Notes:**
 
