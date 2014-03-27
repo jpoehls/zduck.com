@@ -37,10 +37,10 @@ In the end, this is my recipe for Go application structure.
 
 For context, my system `GOPATH` is `~/mygo`.
 
-My project is at `~/mygo/bitbucket.org/USERNAME/PROJECT`.
+My project is at `~/mygo/src/bitbucket.org/USERNAME/PROJECT`.
 
 ```
-~/mygo/bitbucket.org/USERNAME/PROJECT
+~/mygo/src/bitbucket.org/USERNAME/PROJECT
 |-- .gitignore
 |-- README
 |-- Makefile
