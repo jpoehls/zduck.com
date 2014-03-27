@@ -63,7 +63,7 @@ My project is at `~/mygo/bitbucket.org/USERNAME/PROJECT`.
 My Makefile looks like this:
 
 ```
-.PHONY: build doc fmt lint run test vendor_clean vendor_update vet
+.PHONY: build doc fmt lint run test vendor_clean vendor_get vendor_update vet
 
 # Prepend our _vendor directory to the system GOPATH
 # so that import path resolution will prioritize
