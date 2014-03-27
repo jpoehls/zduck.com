@@ -103,10 +103,16 @@ vendor_clean:
 # This will happen if you already have the package
 # installed in GOPATH since `go get` will use
 # that existing location as the destination.
-vendor_update: vendor_clean
+vendor_get: vendor_clean
 	GOPATH=${PWD}/_vendor go get -d -u -v \
 	github.com/jpoehls/gophermail \
 	github.com/codegangsta/martini
+
+vendor_update: vendor_get
+	rm -rf `find ./_vendor/src -type d -name .git` \
+	&& rm -rf `find ./_vendor/src -type d -name .hg` \
+	&& rm -rf `find ./_vendor/src -type d -name .bzr` \
+	&& rm -rf `find ./_vendor/src -type d -name .svn`
 
 # http://godoc.org/code.google.com/p/go.tools/cmd/vet
 # go get code.google.com/p/go.tools/cmd/vet
