@@ -81,11 +81,11 @@ There is a workaround that will allow you to keep multiple versions of your pack
 
 Fortunately, someone has already done the hard work for us. [GoPkg.in][gopkgin] does exactly what I've described.
 
-I'm taking advantage of this for my gophermail package. All it means is that instead of people using `github.com/jpoehls/gophermail` to import my package, they use `gopkg.in/jpoehls/v0/gophermail`. `/v0` is because gophermail hasn't reached 1.0 yet. When I release 1.0 and declare a stable API, the import path will change to `gopkg.in/jpoehls/v1/gophermail`.
+I'm taking advantage of this for my gophermail package. All it means is that instead of people using `github.com/jpoehls/gophermail` to import my package, they use `gopkg.in/jpoehls/gophermail.v0`. The `.v0` is because gophermail hasn't reached 1.0 yet. When I release 1.0 and declare a stable API, the import path will change to `gopkg.in/jpoehls/gophermail.v1`.
 
 [GoPkg.in][gopkgin] is a fantastic service and I encourage anyone with a Go package to use it. All you have to do is tell your users to use the `gopkg.in` import path for your package. If this gets wide enough attention, hopefully similar functionality will be adopted into `go get` itself.
 
-> My dream is for `go get` to support a version number component in the import path. So `github.com/jpoehls/gophermail` would fetch the HEAD of the repository as it does today. `github.com/jpoehls/gophermail/v1` would fetch the `v1` branch or tag.
+> My dream is for `go get` to support a version number component in the import path. So `github.com/jpoehls/gophermail` would fetch the HEAD of the repository as it does today. `github.com/jpoehls/gophermail#v1` would fetch the `v1` branch or tag.
 
 [mygoprojectstructure]: {{site.url}}/2014/go-project-structure-and-dependencies
 [gopath]: http://golang.org/cmd/go/#hdr-GOPATH_environment_variable
