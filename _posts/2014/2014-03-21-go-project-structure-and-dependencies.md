@@ -1,5 +1,5 @@
 ---
-title: Go Project Structure and Dependencies
+title: Organizing Go Projects and Dependencies
 layout: post
 categories: golang
 description: "My boilerplate recipe for organizing your Go project files and managing dependencies."
