@@ -1,0 +1,49 @@
+---
+title: "Go Conventions: Constructors and Overloads"
+layout: post
+categories: golang
+description: "Mini-post showing how to implement constructors
+and function overloads in Go."
+---
+
+{{site.go_conventions_blurb}}
+
+Go doesn't have constructors in the traditional sense. The convention is to make the zero value useful whenever possible.
+
+	type Person struct {
+	     Age int
+	}
+
+	// These are all equivalent.
+	// `p` is initialized to the zero value of Person in all cases.
+	// None of these result in a nil `p` because only pointers can be nil.
+	var p Person // type Person
+	p := Person{} // type Person
+
+	// You could also use `new` to allocate which returns a pointer
+	p := new(Person) // type *Person
+
+Sometimes you want special initialization logic. If your type is named `Person` then the convention would be create a function named `NewPerson` that returns a pointer to an initialized `Person` type.
+
+	function NewPerson(int age) *Person {
+	     p := Person{age}
+	     return &p
+	}
+
+	myPerson := NewPerson(10) // type *Person
+
+Multiple constructors can be implemented by having multiple initializer functions. Go doesn't support function overloads so you will need to name your functions intelligently.
+
+	import "time"
+
+	function NewPersonWithAge(int age) *Person {
+	     p := Person{age}
+	     return &p
+	}
+
+	function NewPersonWithBirthYear(int year) *Person {
+	     p := Person{time.Now().Year() - year}
+	     return &p
+	}
+
+[Read more](http://golang.org/doc/effective_go.html#composite_literals) in Effective Go.

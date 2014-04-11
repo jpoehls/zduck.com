@@ -18,3 +18,19 @@ powershell_book_ad: |
     <p>Want to learn PowerShell? Check out <a href="http://www.amazon.com/gp/product/1935182137/ref=as_li_ss_il?ie=UTF8&camp=1789&creative=390957&creativeASIN=1935182137&linkCode=as2&tag=zduck-20">Windows PowerShell in Action</a> by Bruce Payette. This is the book that got me started and it's one of the best tech books I've read.</p>
     <div style="clear: both;" />
     </blockquote>
+
+go_conventions_blurb: |
+    <blockquote style="text-style: italic;">
+    <p>
+        Go Conventions is a series of short posts
+        to help familiarize new users with the "way to Go".
+        Topics will answer questions that a programmer
+        experienced in another object-oriented language (e.g. C#)
+        might have when they start using Go.
+    </p>
+    <p>
+        There is nothing insightful here, these are all basics
+        you can learn in
+        <a href="http://golang.org/doc/effective_go.html">Effective Go</a>.
+    </p>
+    </blockquote>
