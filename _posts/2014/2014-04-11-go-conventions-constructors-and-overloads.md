@@ -1,12 +1,12 @@
 ---
-title: "Go Conventions: Constructors and Overloads"
+title: "Go 101: Constructors and Overloads"
 layout: post
 categories: golang
 description: "Mini-post showing how to implement constructors
 and function overloads in Go."
 ---
 
-{{site.go_conventions_blurb}}
+{{site.go_101_blurb}}
 
 Go doesn't have constructors in the traditional sense. The convention is to make the zero value useful whenever possible.
 

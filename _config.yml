@@ -19,18 +19,21 @@ powershell_book_ad: |
     <div style="clear: both;" />
     </blockquote>
 
-go_conventions_blurb: |
+go_101_blurb: |
     <blockquote style="text-style: italic;">
     <p>
-        Go Conventions is a series of short posts
+        Go 101 is a series of short posts
         to help familiarize new users with the "way to Go".
         Topics will answer questions that a programmer
         experienced in another object-oriented language (e.g. C#)
         might have when they start using Go.
     </p>
-    <p>
-        There is nothing insightful here, these are all basics
-        you can learn in
-        <a href="http://golang.org/doc/effective_go.html">Effective Go</a>.
+    <ul>
+        <li><a href="/2014/go-conventions-constructors-and-overloads">Constructors and Overloads</a></li>
+        <li><a href="/2014/go-101-methods-on-pointers-vs-values">Methods on Pointers vs. Values</a></li>
+    </ul>
+    <p style="text-style: italic;">
+        Read up on <a href="http://golang.org/doc/effective_go.html">Effective Go</a>
+        and the <a href="http://golang.org/doc/faq">Go FAQ</a> to learn all of this and more.
     </p>
     </blockquote>
