@@ -23,6 +23,8 @@ Go doesn't have constructors in the traditional sense. The convention is to make
 	// You could also use `new` to allocate which returns a pointer
 	p := new(Person) // type *Person
 
+> It is most common to use the struct initializer. e.g. `p := Person{}` or `p := &Person{}` if you need the pointer.
+
 Sometimes you want special initialization logic. If your type is named `Person` then the convention would be create a function named `NewPerson` that returns a pointer to an initialized `Person` type.
 
 	function NewPerson(int age) *Person {
@@ -36,14 +38,16 @@ Multiple constructors can be implemented by having multiple initializer function
 
 	import "time"
 
-	function NewPersonWithAge(int age) *Person {
+	function NewPersonAge(int age) *Person {
 	     p := Person{age}
 	     return &p
 	}
 
-	function NewPersonWithBirthYear(int year) *Person {
-	     p := Person{time.Now().Year() - year}
+	function NewPersonBirthYear(int birthYear) *Person {
+	     p := Person{time.Now().Year() - birthYear}
 	     return &p
 	}
 
 [Read more](http://golang.org/doc/effective_go.html#composite_literals) in Effective Go.
+
+**Update:** Thanks to Joe Shaw for the comments! I've updated the article with his suggestions.
