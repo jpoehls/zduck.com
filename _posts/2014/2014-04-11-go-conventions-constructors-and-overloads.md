@@ -27,7 +27,7 @@ Go doesn't have constructors in the traditional sense. The convention is to make
 
 Sometimes you want special initialization logic. If your type is named `Person` then the convention would be create a function named `NewPerson` that returns a pointer to an initialized `Person` type.
 
-	function NewPerson(int age) *Person {
+	func NewPerson(int age) *Person {
 	     p := Person{age}
 	     return &p
 	}
@@ -38,12 +38,12 @@ Multiple constructors can be implemented by having multiple initializer function
 
 	import "time"
 
-	function NewPersonAge(int age) *Person {
+	func NewPersonAge(int age) *Person {
 	     p := Person{age}
 	     return &p
 	}
 
-	function NewPersonBirthYear(int birthYear) *Person {
+	func NewPersonBirthYear(int birthYear) *Person {
 	     p := Person{time.Now().Year() - birthYear}
 	     return &p
 	}
