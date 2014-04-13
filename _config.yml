@@ -28,11 +28,11 @@ go_101_blurb: |
         experienced in another object-oriented language (e.g. C#)
         might have when they start using Go.
     </p>
-    <ul>
+    <!--<ul>
         <li><a href="/2014/go-conventions-constructors-and-overloads">Constructors and Overloads</a></li>
-        <!--<li><a href="/2014/go-101-methods-on-pointers-vs-values">Methods on Pointers vs. Values</a></li>-->
-        <!--<li><a href="/2014/go-101-string-or-byte-slice">String or Byte Slice ([]byte)</a></li>-->
-    </ul>
+        <li><a href="/2014/go-101-methods-on-pointers-vs-values">Methods on Pointers vs. Values</a></li>
+        <li><a href="/2014/go-101-string-or-byte-slice">String or Byte Slice ([]byte)</a></li>
+    </ul>-->
     <p style="text-style: italic;">
         Read up on <a href="http://golang.org/doc/effective_go.html">Effective Go</a>
         and the <a href="http://golang.org/doc/faq">Go FAQ</a> to learn all of this and more.
