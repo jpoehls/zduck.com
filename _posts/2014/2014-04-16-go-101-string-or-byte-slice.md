@@ -21,7 +21,7 @@ They are nearly identical and differ only in mutability. The [`strings`](http://
 
 > **Q:** If strings are just arbitrary bytes, then how do you work with characters?
 > 
-> **A:** What you are thinking of as a character, Go calls a [rune](http://golang.org/ref/spec#Rune_literals). That should get you started. I may cover this more in a future post.
+> **A:** What you are thinking of as a character, Go calls a [rune](http://golang.org/ref/spec#Rune_literals). One way to iterate the characters in a string is to use the `for...range` loop. Range will parse the string as UTF-8 and iterate the runes. Read [the `for` loop](http://golang.org/doc/effective_go.html#for) section of Effective Go for more information.
 
 **When to use `string`?**
 
