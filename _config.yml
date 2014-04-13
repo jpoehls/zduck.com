@@ -30,7 +30,8 @@ go_101_blurb: |
     </p>
     <ul>
         <li><a href="/2014/go-conventions-constructors-and-overloads">Constructors and Overloads</a></li>
-        <li><a href="/2014/go-101-methods-on-pointers-vs-values">Methods on Pointers vs. Values</a></li>
+        <!--<li><a href="/2014/go-101-methods-on-pointers-vs-values">Methods on Pointers vs. Values</a></li>-->
+        <!--<li><a href="/2014/go-101-string-or-byte-slice">String or Byte Slice ([]byte)</a></li>-->
     </ul>
     <p style="text-style: italic;">
         Read up on <a href="http://golang.org/doc/effective_go.html">Effective Go</a>
