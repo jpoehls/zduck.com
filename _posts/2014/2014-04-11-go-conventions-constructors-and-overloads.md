@@ -14,14 +14,14 @@ Go doesn't have constructors in the traditional sense. The convention is to make
 	     Age int
 	}
 
-	// These are all equivalent.
-	// `p` is initialized to the zero value of Person in all cases.
-	// None of these result in a nil `p` because only pointers can be nil.
-	var p Person // type Person
-	p := Person{} // type Person
+	// These are equivalent.
+	// `p1` and `p2` are initialized to the zero value of Person.
+	// Neither of these are nil.
+	var p1 Person // type Person
+	p2 := Person{} // type Person
 
 	// You could also use `new` to allocate which returns a pointer
-	p := new(Person) // type *Person
+	p3 := new(Person) // type *Person
 
 > It is most common to use the struct initializer. e.g. `p := Person{}` or `p := &Person{}` if you need the pointer.
 
