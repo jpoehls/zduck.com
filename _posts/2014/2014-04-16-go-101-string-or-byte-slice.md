@@ -1,9 +1,8 @@
 ---
 title: "Go 101: String or Byte Slice"
 layout: post
-published: false
 categories: golang
-description: "Go has two types for representing text. Don't be confused. Let's walk through the differences and when to use what."
+description: "Go has two ways of representing text. Don't be confused. Let's walk through the differences and when to use what."
 ---
 
 {{site.go_101_blurb}}
