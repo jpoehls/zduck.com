@@ -17,6 +17,7 @@ li{margin:10px 0 10px 50px}
 ul{margin-bottom:20px;}
 h3{margin-top:20px;}
 b,strong { font-weight: bold; }
+em, i { text-style: italic; }
 
 #title{margin:20px 0;padding:10px 0 10px 10px;background:#eee;border:solid #ddd;border-width:1px 0;position:relative;}
 #title h1{font-size:28px;color:#444;}
