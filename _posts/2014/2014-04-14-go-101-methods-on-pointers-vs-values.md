@@ -55,12 +55,18 @@ Now let's do it the right way.
 
 	p := Person{}
 	p.SetAge(10)
-	fmt.Printf(“Age: %v”, p.Age()) // Age: 10
+	fmt.Printf("Age: %v", p.Age()) // Age: 10
 
 [&#9654; Run it.](http://play.golang.org/p/BbIlSUQBCr)
 
-The rule of thumb is this: declare the method on the pointer if it needs to modify the receiver. Otherwise declare the method on the value.
+My rule of thumb is this: declare the method on the pointer unless your struct is such that you don't use pointers to it.
 
-An important caveat is if the method is on a large struct. In this case, it will be more efficient to use the pointer and avoid the copy.
+Two reasons:
+
+1. Performance. Calling a method on a pointer will almost always be faster than copying the value. There may be cases wear the copy is faster but those are edge case.
+2. Consistency. It is common for at least one of your methods to need a pointer receiver and if any of the type's methods are on the pointer then they all should be. *This recommendation is direct from [the FAQ](http://golang.org/doc/faq#methods_on_values_or_pointers).*
 
 [Read the FAQ](http://golang.org/doc/faq#methods_on_values_or_pointers) "Should I define methods on values or pointers?" for more insight.
+
+**Update:** Thanks to the fine folks on reddit for suggesting some improvements.  
+[Join the discussion on reddit!](http://www.reddit.com/r/golang/comments/23060m/go_101_methods_on_pointers_vs_values/)
