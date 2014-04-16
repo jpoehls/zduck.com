@@ -3,7 +3,7 @@ title: "Go 101: String or Byte Slice"
 layout: post
 published: false
 categories: golang
-description: "Go has two types for representing text. Don't be confused. I'll explain the difference and when to use what."
+description: "Go has two types for representing text. Don't be confused. Let's walk through the differences and when to use what."
 ---
 
 {{site.go_101_blurb}}
@@ -31,7 +31,7 @@ Ask not when to use `string` but rather, when to use `[]byte`. Always start with
 
 Use `[]byte` when you need to make many changes to a string. Since `string` is immutable, any change will allocate a new `string`. You can get better performance by using `[]byte` and avoiding the allocations.
 
-From a C# perspective, `[]byte` is to [`System.StringBuilder`][stringbuilder] as `string` is to [`System.String`][systemstring] in this regard.
+> C# perspective: `[]byte` is to [`System.StringBuilder`][stringbuilder] as `string` is to [`System.String`][systemstring] when it comes to performance.
 
 Even if your code isn't directly manipulating the string, you may want to use `[]byte` if you are using packages which require it so you can avoid the conversion.
 
