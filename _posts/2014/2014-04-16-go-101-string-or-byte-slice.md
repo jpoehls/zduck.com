@@ -34,15 +34,19 @@ Use `[]byte` when you need to make many changes to a string. Since `string` is i
 
 Even if your code isn't directly manipulating the string, you may want to use `[]byte` if you are using packages which require it so you can avoid the conversion.
 
-Converting to and from `[]byte` is easy. Just remember that each conversion is a copy.
+Converting to and from `[]byte` is easy. Just remember that each conversion creates a copy of the value.
 
 	s := "some string"
 	b := []byte(s) // convert string -> []byte
 	s2 := string(b) // convert []byte -> string
 
+> Converting to/from `string` and `[]byte` copies the entire value. Using lots of type conversions in your code is typically a warning sign that you need to reevaluate the types you are using. You want to minimize conversions both for performance and clean code.
+
 **More about strings**
 
 The Go blog has posted in detail about [strings, bytes, runes, and characters in Go](http://blog.golang.org/strings). You should definitely read that post to fully understand the topic.
+
+**Update:** Thanks to [@mholt6](https://twitter.com/mholt6) for reviewing the post and helping improve it!
 
 [stringbuilder]: http://msdn.microsoft.com/en-us/library/system.text.stringbuilder(v=vs.110).aspx
 [systemstring]: http://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx
