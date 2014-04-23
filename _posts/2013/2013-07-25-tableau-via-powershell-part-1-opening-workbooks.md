@@ -31,7 +31,7 @@ function Get-TableauWorkbookXml {
     The literal file path of the TWB or TWBX file.
 
 .NOTES
-    Author: Joshua Poehls &lt;{{site.email}}&gt;
+    Author: Joshua Poehls ({{site.url}})
 #&gt;
     [CmdletBinding()]
     param(

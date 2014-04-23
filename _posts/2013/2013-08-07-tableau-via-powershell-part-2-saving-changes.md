@@ -55,7 +55,7 @@ function Export-TableauPackagedWorkbook {
     existing file.
  
 .NOTES
-    Author: Joshua Poehls &lt;{{site.email}}&gt;
+    Author: Joshua Poehls ({{site.url}})
 #&gt;
     [CmdletBinding(
         SupportsShouldProcess=$true
