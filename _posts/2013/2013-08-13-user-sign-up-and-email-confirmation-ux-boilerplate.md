@@ -14,14 +14,14 @@ It isn't hard to get this process right but it does take some planning. I've had
 
 ## Login
 
-The login is so obvious that it is hardly worth mentioning, but I shall.
+The login is so obvious that it is hardly worth mentioning.
 
 ![Login mockup]({{site.url}}/assets/forposts/ux-boilerplate-user-sign-up/login.png "Login mockup")
 
 - Show friendly messages for invalid credentials.
 - Don't make them re-enter their username on subsequent attempts.
 - Set the initial focus to the username input. **It's the little things.**
-- Provide a link for the user to sign up. They may land on the login page but already have an account, make it easy on them.
+- Provide a link for the user to sign up. They may land on the login page but not have an account, make it easy on them.
 - Provide a link for _resetting_ their password.
 
 > You should never provide a password **recovery** link because you should NEVER be able to recover their password. [How should you store passwords?](http://codahale.com/how-to-safely-store-a-password/)
