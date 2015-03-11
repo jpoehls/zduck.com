@@ -53,7 +53,7 @@ Refer [the original plugin][1] for a demo or to give credit to the author.
     }
 
     function getClip(elem) {
-        var cssClip = $(elem).css(&#39;clip&#39;) || &#39;&#39;;
+        var cssClip = jQuery(elem).css(&#39;clip&#39;) || &#39;&#39;;
 
         if (!cssClip) {
             // Try to get the clip rect another way for IE8.
