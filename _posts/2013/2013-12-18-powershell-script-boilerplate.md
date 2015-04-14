@@ -2,7 +2,8 @@
 title: "PowerShell Script Boilerplate"
 layout: post
 categories: powershell
-description: "A walkthrough of my boilerplate PowerShell script and batch file wrapper. Includes argument pass-through and exit code bubbling."
+redirect_to: http://joshua.poehls.me/powershell-script-boilerplate
+description: "A walkthrough of my boilerplate PowerShell script and batch file wrapper. Includes argument pass through and exit code bubbling."
 ---
 
 This post is as much for me as it is for you, my reader. I write a lot of
