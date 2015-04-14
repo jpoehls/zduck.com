@@ -1,6 +1,7 @@
 ---
 title: PowerShell, batch files, and exit codes. Recipes & Secrets.
 layout: post
+redirect_to: http://joshua.poehls.me/2012/powershell-script-module-boilerplate
 categories: powershell
 ---
 
