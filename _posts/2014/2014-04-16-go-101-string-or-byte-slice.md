@@ -1,5 +1,6 @@
 ---
 title: "Go 101: String or Byte Slice?"
+redirect_to: http://joshua.poehls.me/2014/04/go-101-string-or-byte-slice
 layout: post
 categories: golang
 description: "Go has two ways of representing text. Don't be confused. Let's walk through the differences and when to use what."

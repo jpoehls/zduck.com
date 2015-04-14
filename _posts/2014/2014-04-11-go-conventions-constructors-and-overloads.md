@@ -1,5 +1,6 @@
 ---
 title: "Go 101: Constructors and Overloads"
+redirect_to: http://joshua.poehls.me/2014/04/go-conventions-constructors-and-overloads
 layout: post
 categories: golang
 description: "Mini-post showing how to implement constructors

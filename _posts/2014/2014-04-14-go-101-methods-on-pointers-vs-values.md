@@ -1,5 +1,6 @@
 ---
 title: "Go 101: Methods on Pointers vs. Values"
+redirect_to: http://joshua.poehls.me/2014/04/go-101-methods-on-pointers-vs-values
 layout: post
 categories: golang
 description: "A quick breakdown of the subtle difference between declaring a method on a pointer vs. value in Go."
