@@ -1,7 +1,7 @@
 ---
 title: Recursively deleting files with PowerShell
 redirect_to: http://joshua.poehls.me/2007/powershell-search-and-destroy
-layout: post
+layout: redirect_post
 categories: powershell
 ---
 

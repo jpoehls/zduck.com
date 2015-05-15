@@ -1,6 +1,6 @@
 ---
 title: "PowerShell Script Boilerplate"
-layout: post
+layout: redirect_post
 categories: powershell
 redirect_to: http://joshua.poehls.me/powershell-script-boilerplate
 description: "A walkthrough of my boilerplate PowerShell script and batch file wrapper. Includes argument pass through and exit code bubbling."

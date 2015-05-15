@@ -1,6 +1,6 @@
 ---
 title: PowerShell Script Module Boilerplate
-layout: post
+layout: redirect_post
 categories: powershell
 redirect_to: http://joshua.poehls.me/powershell-script-module-boilerplate
 description: "My boilerplate for PowerShell Script Modules. Basic file structure and a release script for building the manifest and distributable ZIP."
