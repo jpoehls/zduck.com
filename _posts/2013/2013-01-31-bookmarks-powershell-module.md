@@ -98,7 +98,7 @@ function Invoke-Bookmark($key) {
   Goes to the location specified by the given bookmark.
 #&gt;
   if ([string]::IsNullOrEmpty($key)) {
-    Get-Bookmarks
+    Get-Bookmark
     return
   }
 
