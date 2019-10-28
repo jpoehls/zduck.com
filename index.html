@@ -64,10 +64,12 @@ h1 {
 <h1>Guten Tag.</h1>
 <ul>
     {% for post in site.posts %}
+    {% if !redirect_to %}
     <li>
         <span class="date">{{ post.date | date_to_string }}</span>
         <a href={{ post.url }}>{{ post.title | escape}}</a>
     </li>
+    {% endif %}
     {% endfor %}
 </ul>
 <script type="text/javascript">
