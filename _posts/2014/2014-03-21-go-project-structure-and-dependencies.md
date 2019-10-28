@@ -3,6 +3,7 @@ title: Organizing Go Projects and Dependencies
 layout: post
 categories: golang
 description: "My boilerplate recipe for organizing your Go project files and managing dependencies."
+redirect_to: http://joshua.poehls.me/2014/go-project-structure-and-dependencies
 ---
 
 Go is build around the concept of a [GOPATH][gopath] which is a common workspace for most (or all) of your Go source code. This works well but sometimes you don't want the third party packages you depend on to be in your primary GOPATH. I can think of a few reasons for this:

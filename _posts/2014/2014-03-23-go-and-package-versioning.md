@@ -3,6 +3,7 @@ title: Go and Package Versioning
 layout: post
 categories: golang
 description: "An explanation of how Go handles package dependencies and multiple versions of packages."
+redirect_to: http://joshua.poehls.me/2014/go-and-package-versioning
 ---
 
 *I've been working with Go on personal projects for several months. During that time, Go's intended strategy for package management and versioning has largely eluded me. My understanding really started to come together over the past week which is why I wrote about my [Go Project Structure][mygoprojectstructure] and now am writing about package versioning.*

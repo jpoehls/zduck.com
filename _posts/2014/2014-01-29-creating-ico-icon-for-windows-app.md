@@ -3,6 +3,7 @@ title: Creating an ICO icon file for your Windows app
 layout: post
 categories: windows
 description: "A quick walkthrough of how to convert PNGs into a proper ICO file for your Windows app."
+redirect_to: http://joshua.poehls.me/2014/creating-ico-icon-for-windows-app
 ---
 
 Every Windows app needs an icon. Even yours.
