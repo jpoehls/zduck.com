@@ -3,6 +3,7 @@ title: "Differential backups using 7-zip and PowerShell"
 layout: post
 categories: powershell
 description: "Setting up differential backups using 7-zip and PowerShell."
+redirect_to: http://joshua.poehls.me/2013/differential-backups-using-7zip-and-powershell
 ---
 
 Backups are like changing the oil on your car. It's the best thing you can do to extend the life of your engine and the best thing you can do to save yourself when your hard drive crashes, gets stolen, or otherwise corrupted.
