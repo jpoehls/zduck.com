@@ -6,8 +6,7 @@ published: true
 <head prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile# fb: http://ogp.me/ns/fb#">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 <title>Joshua Poehls</title>
-<link href=//atom.xml rel=alternate type=application/atom+xml>
-
+<meta http-equiv="refresh" content="0; url=http://joshua.poehls.me">
 <meta property="og:type" content="profile" /> 
 <meta property="og:url" content="{{ site.url }}" />
 <meta property="og:image" content="{{ site.url }}/assets/j-shield256.png" />
@@ -54,23 +53,8 @@ h1 {
 </style>
 </head>
 <body>
-<p>
-    <a href=//github.com/jpoehls>github</a>
-    <a href=//twitter.com/joshuapoehls>twitter</a>
-    <a href=//silent__thought.newsblur.com>blurblog</a>
-    <a href=/atom.xml>rss</a>
-</p>
 <h1>Guten Tag.</h1>
-<ul>
-    {% for post in site.posts %}
-    {% unless post.redirect_to %}
-    <li>
-        <span class="date">{{ post.date | date_to_string }}</span>
-        <a href={{ post.url }}>{{ post.title | escape}}</a>
-    </li>
-    {% endunless %}
-    {% endfor %}
-</ul>
+<p style="float: none;">This blog has moved to <a href="http://joshua.poehls.me">http://joshua.poehls.me</a>.</p>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
