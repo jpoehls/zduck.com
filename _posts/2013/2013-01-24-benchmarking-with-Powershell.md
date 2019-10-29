@@ -3,6 +3,7 @@ title: Benchmarking scripts and programs with PowerShell
 layout: post
 categories: powershell
 description: "UNIX has the `time` command that will measure the execution time of a program. Timings are returned for the wall clock and CPU time. PowerShell's equivalent of `time` is `Measure-Command`. Unfortunately it only measures wall clock time. It also swallows the output of the command you are measuring."
+redirect_to: http://joshua.poehls.me/2013/benchmarking-with-powershell
 ---
 
 UNIX has the `time` command that will measure the execution time of a program. Timings are returned for the wall clock and CPU time. It looks something like this.

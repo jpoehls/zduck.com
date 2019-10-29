@@ -3,6 +3,7 @@ title: Detecting ZIP files with PowerShell
 layout: post
 description: "Have you heard of magic numbers? Every ZIP file, for example, has same first 4 bytes. I'll show you how to find ZIP files by checking for these header bytes."
 categories: powershell
+redirect_to: http://joshua.poehls.me/2013/detecting-zip-files-with-powershell
 ---
 
 Have you heard of [magic numbers][magicnumbers]? Some file formats are designed such that files are always saved with a specific byte sequence in the header. JPEG, PDF, and ZIP are all such formats.

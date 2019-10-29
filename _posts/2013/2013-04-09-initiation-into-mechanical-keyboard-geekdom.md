@@ -4,6 +4,7 @@ layout: post
 categories: gear
 og_image: ducky-keyboard.png
 description: "I recently switched from a cheap Logitech keyboard to a Ducky DK9087 mechanical keyboard with Cherry MX Brown switches and green LED backlighting. Now I'm totally hooked on mechanical keyboards!"
+redirect_to: http://joshua.poehls.me/2013/initiation-into-mechanical-keyboard-geekdom
 ---
 
 A laptop style short keyed keyboard has been my instrument of choice for years now. They are easy to type on and fast. I gave up the stock Dell keyboards years ago for a bare bones Logitech.

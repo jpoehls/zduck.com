@@ -4,6 +4,7 @@ layout: post
 categories: powershell
 description: "Push ups. Every hour, on the hour. Can you handle it?"
 og_image: pushitout.png
+redirect_to: http://joshua.poehls.me/2013/push-it-out-push-ups-every-hour
 ---
 
 **Push ups. Every hour, on the hour. Can you handle it?**

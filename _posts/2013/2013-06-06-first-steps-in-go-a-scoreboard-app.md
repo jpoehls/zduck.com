@@ -4,6 +4,7 @@ layout: post
 og_image: scores.png
 categories: golang
 description: "I've created a scoreboard app for competing with friends for personal bests. I wrote it in Go and I'm sharing it with you. Let me now what you think!"
+redirect_to: http://joshua.poehls.me/2013/first-steps-in-go-a-scoreboard-app
 ---
 
 Mostly I just read about new programming languages. Call it a hobby. Only once in awhile am I struck with enough interest to want to try something out on a real project. [Go](http://golang.org) is the most recent of such interests. As someone who loves a lot about [Node.js](http://nodejs.org), I'm looking forward to seeing how Go compares and whether it solves my Node and JavaScript pain points.

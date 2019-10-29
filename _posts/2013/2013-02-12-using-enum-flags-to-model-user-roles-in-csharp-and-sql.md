@@ -3,6 +3,7 @@ title: Using enum flags to model user roles in C#, SQL, and Go
 layout: post
 categories: c# sql golang
 description: "Using an enum flags property to hold users' roles is just one trick I've learned from @SeiginoRaikou, one of my co-geniuses at InterWorks."
+redirect_to: http://joshua.poehls.me/2013/using-enum-flags-to-model-user-roles-in-csharp-and-sql
 ---
 
 Using an enum flags property to hold users' roles is just one trick

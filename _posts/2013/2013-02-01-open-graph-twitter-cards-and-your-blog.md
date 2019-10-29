@@ -3,6 +3,7 @@ title: Open Graph, Twitter Cards, and your blog
 layout: post
 categories: web
 description: "Have you ever wondered why some web pages have a great preview when linked on Twitter, Facebook, or Google+ while others look so lacking? It's all about the metadata."
+redirect_to: http://joshua.poehls.me/2013/open-graph-twitter-cards-and-your-blog
 ---
 
 Have you ever wondered why some web pages have a great preview when linked on Twitter, Facebook, or Google+ while others look so lacking?

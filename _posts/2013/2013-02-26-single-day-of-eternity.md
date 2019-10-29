@@ -3,6 +3,7 @@ title: Single day of eternity
 layout: post
 categories: quote
 description: "High up in the North in the land called Svithjod, there stands a rock. It is a hundred miles high and a hundred miles wide..."
+redirect_to: http://joshua.poehls.me/2013/single-day-of-eternity
 ---
 
 > High up in the North in the land called Svithjod, there stands a rock.

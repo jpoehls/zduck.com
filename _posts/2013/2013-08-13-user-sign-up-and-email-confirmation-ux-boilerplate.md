@@ -4,6 +4,7 @@ layout: post
 categories: ux
 description: "Sign up, confirm your email, login. The three steps that almost all web apps share. This is my boilerplate for the UX during this process. Use it as a starting point for your own projects!"
 og_image: signup-boilerplate.png
+redirect_to: http://joshua.poehls.me/2013/user-sign-up-and-email-confirmation-ux-boilerplate
 ---
 
 Sign up, confirm your email address, login. The three steps that almost all web apps share.

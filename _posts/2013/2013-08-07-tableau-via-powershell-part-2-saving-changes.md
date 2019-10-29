@@ -4,6 +4,7 @@ layout: post
 categories: powershell tableau
 iwpost: https://www.interworks.com/blogs/jpoehls/2013/08/07/tableau-powershell-part-2-saving-changes
 description: "In part 1 I showed you how to open a Tableau workbook in PowerShell to start editing the workbook XML. Now I'll show you how to save those changes back to a TWB or TWBX file!"
+redirect_to: http://joshua.poehls.me/2013/tableau-via-powershell-part-2-saving-changes
 ---
 
 > This is part 2 of my mini-series on exploring Tableau workbooks with PowerShell. If you missed it, you should read [Part 1: Opening Workbooks]({{site.url}}/2013/exploring-tableau-workbooks-with-powershell-part-1-opening-workbooks/), before continuing.

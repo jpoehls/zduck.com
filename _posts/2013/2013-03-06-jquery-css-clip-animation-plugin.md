@@ -3,6 +3,7 @@ title: jQuery CSS Clip Animation Plugin
 layout: post
 categories: css jquery
 description: "I needed to animate the CSS clip property using jQuery. I found a plugin but had to update it for jQuery 1.8.0+."
+redirect_to: http://joshua.poehls.me/2013/jquery-css-clip-animation-plugin
 ---
 
 Yesterday I needed to animate the CSS [clip property](https://developer.mozilla.org/en-US/docs/CSS/clip) using jQuery.

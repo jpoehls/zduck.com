@@ -3,6 +3,7 @@ title: "Go Beginners: Iota Enumerations"
 layout: post
 categories: golang
 description: "Enum constants in Go have a super power. As opposed to C# where you only have two options for assigning enum values, Go has a third option. Say hello to `iota` and repeating expressions."
+redirect_to: http://joshua.poehls.me/2013/go-beginners-iota-enumerations
 ---
 
 Enum constants in Go have a super power. As opposed to C# where you only have two options for enums, either you assign each value yourself or let the compiler increment each value by one, Go has a third option.

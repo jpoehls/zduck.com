@@ -3,6 +3,7 @@ title: "ERRORLEVEL is not %ERRORLEVEL%"
 layout: post
 categories: windows
 description: "ERRORLEVEL is not the same as %ERRORLEVEL%. Use the right one in your command line scripts, or else!"
+redirect_to: http://joshua.poehls.me/2013/errorlevel-is-not-errorlevel
 ---
 
 **DO** use `IF ERRORLEVEL 1 ECHO error level is 1 or more` to check for errors

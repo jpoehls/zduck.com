@@ -3,6 +3,7 @@ title: Non-enumerable properties in JavaScript
 layout: post
 categories: javascript
 description: "JavaScript ES5 supports non-enumerable and read-only properties. Non-enumerable properties will be ignored by JSON.stringify(). I spent way too long figuring this out tonight."
+redirect_to: http://joshua.poehls.me/2013/non-enumerable-properties-in-javascript
 ---
 
 It isn't very common in the wild but JavaScript (as of ES5) does support non-enumerable properties.
